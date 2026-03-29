@@ -1,608 +1,576 @@
 <!DOCTYPE html>
-<html lang="en">
-<head><meta charset="utf-8"><!-- Meta, title, CSS, favicons, etc. --><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content=""><meta name="author" content="">
-	<title>About - Rahul Godbole</title>
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --><!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<script src="js/respond.min.js"></script>
-<![endif]--><!-- Favicons -->
-	<link href="/images/favicon.ico" rel="shortcut icon" /><!-- CSS -->
-	<link href="css/erisgrd.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="style.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="css/plugin.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="css/responsive.css" media="all" rel="stylesheet" type="text/css" /><!-- Color Style --><!-- Remove comment to use custom color. Replace ###### by your HEX color --><!-->
-<link rel='stylesheet' id="colors" href='css/color/color.php?color=######' type='text/css' media='all' />
-<!--><!-- jQuery & Google Map API --><script src="js/jquery.min.js"></script><script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script><!-- Revolution Slider -->
-	<link href="rs-plugin/css/settings.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="rs-plugin/css/captions.css" media="all" rel="stylesheet" type="text/css" /><script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | CA Rahul Godbole</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        primary: '#0b3464',
+                        accent: '#d1a15e',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .glass-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .page-header-bg {
+            background: linear-gradient(135deg, rgba(11, 52, 100, 0.9) 0%, rgba(11, 52, 100, 0.95) 100%), url('images/audit.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .progress-bar-fill {
+            transition: width 1.5s ease-in-out;
+        }
+    </style>
 </head>
-<body autocomplete="off">
-<div class="container" id="layout">
-<div class="top-widget" id="top-widget">
-<div class="wrap widget-content" style="height:0">
-<div class="top-widget-container">
-<div class="cols">
-<div class="col-8">
-<h4>Contact</h4>
-
-<form class="form cols">
-<div class="col-3"><span class="field"><label for="name">Your name</label> <input id="name" name="name" type="text" /> </span> <span class="field"> <label for="email">Your email</label> <input id="email" name="email" type="text" /> </span> <span class="field"> <label for="subject">Subject</label> <input id="subject" name="subject" type="text" /> </span></div>
-
-<div class="col-5"><span class="field"><label for="messages">Messages</label><textarea cols="30" id="messages" name="messages" rows="5"></textarea> </span>
-
-<div class="field"><button class="button color">Submit</button></div>
-</div>
-</form>
-</div>
-
-<div class="col-4">
-<h4>Flickr Images</h4>
-
-<div class="flickr-widget clearfix"><script type="text/javascript" src="https://www.flickr.com/badge_code_v2.gne?count=10&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=72179079@N00"></script></div>
-
-<p>Aliquid, nihil quia a esse dolor cumque minus in repellendus cum saepe similique distinctio quis ratione!</p>
-</div>
-</div>
-
-<div class="divider"></div>
-
-<div class="quick-search">
-<form><input name="s" placeholder="Type text to search ..." type="text" /></form>
-</div>
-</div>
-<!-- // .top-widget-container --></div>
-<!-- // .widget-content -->
-
-<div class="actions-top-widget">
-<div class="wrap"><a href="about.html#">Open</a></div>
-</div>
-<!-- // .actions-top-widget --></div>
-<!-- // #top-widget -->
-
-<header>
-<div id="top-info"></div>
-<!-- // #top-info -->
-
-<div id="header">
-<div class="wrap">
-<div class="logo">
-<h1 class="site-title"><a href="index.html" title="CA RAHUL GODBOLE"><img alt="CA RAHUL GODBOLE" src="images/calogo.png" /> RAHUL GODBOLE</a></h1>
-<span class="site-description">Chartered Accountants</span></div>
-<!-- // #logo -->
-
-<div class="header-widget" id="header-widget">
-<div class="contact-widget"><!--<span>call us for free</span>
-						<h3>1900-1570-LEAF</h3>--></div>
-</div>
-<!-- // .header-widget --></div>
-<!-- // #wrap -->
-
-<div class="site-menu clearfix" id="full-menu">
-<nav class="menu wrap" id="site-menu-secondary">
-<ul class="sf-menu menu clearfix">
-	<li><a href="index.html">Homepage</a></li>
-	<li class="current"><a href="about.html">About Us</a>
-	<ul>
-		<li><a href="careers.html">Careers</a></li>
-	</ul>
-	</li>
-	<li><a href="services.html">Services</a>
-	<ul>
-		<li><a href="auditing-detail.html">Auditing</a></li>
-		<li><a href="taxation-detail.html">Taxation</a></li>
-		<li><a href="account-outsource-detail.html">Accounts Outsourcing</a></li>
-		<li><a href="financial-planning-detail.html">Financial Advisers</a></li>
-		<li><a href="compliance-detail.html">Corporate Compliance</a></li>
-	</ul>
-	</li>
-	<li><a href="about.html#">FAQ&#39;s</a>
-	<ul>
-		<li><a href="faq-taxation.html">Taxation</a></li>
-	</ul>
-	</li>
-	<li><a href="sme-services.html">SME&#39;s</a></li>
-	<li><a href="contact-us.html">Contact</a></li>
-</ul>
-</nav>
-</div>
-<!-- // #full-menu -->
-
-<div id="mobile-menu">
-<div class="wrap">
-<div class="mobile-menu-container"></div>
-</div>
-</div>
-<!-- // #mobile-menu --></div>
-<!-- // #header --></header>
-
-<div id="heading"><!--<div class="heading-images">
-			<img src="images/placeholder/1700x300.gif" alt="">
-		</div>-->
-<div class="wrap">
-<div class="cols">
-<div class="col-6" id="sub-title">
-<h2 class="page-sub-title">About</h2>
-</div>
-
-<div class="col-6" id="breadcrumb">
-<ul class="clearfix">
-	<li><a href="index.html">Home</a></li>
-	<li><span class="current">About</span></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-
-<div id="content-full-width">
-<div class="wrap">
-<div class="cols">
-<div class="col-12" id="content">
-<article class="blog-item">
-<div class="cols">
-<div class="col-9">
-<h4>Who We Are ?</h4>
-
-<p>CA Rahul Godbole is an Associate Member of the Institute of Chartered Accountants of India. He practices in the small and medium scale enterprises segment. He is associated as a financial consultant to various business organizations in India</p>
-
-<p>Rahul Godbole with his team of eminent professionals &amp; expert staff endeavors to provide tailor made financial solutions to the clients. Along with the traditional practice of audit and taxation, we are specialized in developing MIS system &amp; Project Management for various business organizations.</p>
-
-<p>We are working with a wide range of clients from different industries and handled a variety of assignments for them. Our team is committed to provide the best of financial services to our clients.</p>
-
-<p>CA Rahul Godbole has also been auditor of various government organizations. He has worked in association with various firms of chartered accountants in India. He also provides various advisory services to many NGOs in India.</p>
-</div>
-
-<div class="col-3">
-
-</div>
-</div>
-
-<div id="content-full-width">
-<div class="wrap">
-<div class="cols">
-<div class="col-6">
-<h4>Our Expertise</h4>
-<span class="skill-title">Taxation &amp; Representation before Taxation authorities</span>
-
-<div class="skill-bar">
-<div class="skill-bar-content" data-percentage="100" style="width: 100%;">100%</div>
-</div>
-<span class="skill-title">Auditing</span>
-
-<div class="skill-bar">
-<div class="skill-bar-content" data-percentage="100" style="width: 100%;">100%</div>
-</div>
-<span class="skill-title">Project Reports &amp; Feasibility Study</span>
-
-<div class="skill-bar">
-<div class="skill-bar-content" data-percentage="100" style="width: 100%;">100%</div>
-</div>
-<span class="skill-title">Accounts writing</span>
-
-<div class="skill-bar">
-<div class="skill-bar-content" data-percentage="100" style="width: 100%;">100%</div>
-</div>
-<span class="skill-title">Financial &amp; Management consultancy</span>
-
-<div class="skill-bar">
-<div class="skill-bar-content" data-percentage="100" style="width: 100%;">100%</div>
-</div>
-</div>
-
-<div class="col-6">
-<h4 class="no-top bot-20">Meet The Team</h4>
-
-<div class="cols">
-<div class="col-6">
-<div class="user">
-<div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a></div>
-
-<div class="user-info">
-<h4>Rahul Godbole</h4>
-<span class="pos">Founder</span>
-
-<div class="user-social-profile"></div>
-
-<p>Rahul Godbole was a student of Venutai Chavan Commerce College, Karad. He is a Commerce Graduate. He completed his Articleship with Milind Kshirsagar, Chartered Accountant, Pune.</p>
-
-<p>He qualified as a Chartered Accountant in 2004 and practising since then. He is Associate Member of the Institute of Chartered Accountants of India. He completed ISA of ICAI in 2006. He has worked in association with various firms of Chartered Accountants in India.</p>
-
-<p></p>
-
-<p></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div></div>
-
-
-<div id="content-full-width">
-	<div class="wrap">
-		<div class="cols">
-			<div class="col-12"  id="content">
-				<h4 class="no-top bot-20">Our Leadership Team</h4>
-			</div>
-		</div>
-	</div>
-</div>
-<div id="content-full-width">
-	<div class="wrap">
-		<div class="cols">
-			<div class="col-4">
-				<div class="user">
-					<div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a>
-					</div>
-					<div class="user-info">
-						<h4>Shraddha Joshi</h4>
-							<span class="pos">Tax Manager</span>
-							<div class="user-social-profile"></div>
-						   <p>Shraddha is Tax Manager. She is CA (Inter) ICAI and having experience of 8 years in the field. Shraddha is heading tax and assurance division which includes tax assessments, compliances, returns, Income Tax audits, appeals, litigation and GST Audits.</p>
-							<p></p>
-							<p></p>
-					</div>
-				</div>
-			</div>
-
-			 <div class="col-4">
-				   <div class="user">
-						 <div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a></div>
-
-						 <div class="user-info">
-							   <h4>Harshali Uttekar</h4>
-							   <span class="pos">Audit Manager and team leader</span>
-
-							   <div class="user-social-profile"></div>
-
-							   <p>Harshali is Audit Manager and team leader. She is CA Finalist - ICAI and having experience of 5 years in the field. She is expert in risk management, advisory and governance services. She has excellent problem solving and analytical skills.</p>
-
-							   <p></p>
-							   <p></p>
-						 </div>
-				   </div>
-			  </div>
-
-			 <div class="col-4">
-				   <div class="user">
-						 <div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a></div>
-
-						 <div class="user-info">
-							   <h4>Sonal Vaishnav </h4>
-							   <span class="pos">Manager – Internal Audit</span>
-
-							   <div class="user-social-profile"></div>
-
-							   <p>Sonal is Manager – Internal Audit. She is CA (Inter) ICAI, lawyer and having experience of 6 years in the field. She shoulders audit segment and has experience in the audits of manufacturing and other companies. </p>
-
-							   <p></p>
-							   <p></p>
-						 </div>
-				   </div>
-			  </div>
-		</div>
-	</div>
-</div>
-
-<!--<div id="content-full-width">
-	<div class="wrap">
-		<div class="cols">
-			<div class="col-4">
-				<div class="user">
-					<div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a>
-					</div>
-					<div class="user-info">
-						<h4>Tanvi Awati</h4>
-							<span class="pos">Tax Manager</span>
-							<div class="user-social-profile"></div>
-						   <p>She is CA (Inter) ICAI and having experience of 6 years in the field. Tanvi is heading tax and assurance division which includes tax assessments, compliances, returns, Income Tax audits, appeals, litigation and GST Audits.</p>
-							<p></p>
-							<p></p>
-					</div>
-				</div>
-			</div>
-
-			 <div class="col-4">
-				   <div class="user">
-						 <div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a></div>
-
-						 <div class="user-info">
-							   <h4>Avadhoot Saradesai</h4>
-							   <span class="pos">Audit Manager and team leader</span>
-
-							   <div class="user-social-profile"></div>
-
-							   <p>Avadhoot is Audit Manager and team leader. He is CA (Inter) ICAI and having experience of 4 years in the field. He is expert in risk management, advisory and governance services. He has excellent problem solving and analytical skills.</p>
-
-							   <p></p>
-							   <p></p>
-						 </div>
-				   </div>
-			  </div>
-
-			 <div class="col-4">
-				   <div class="user">
-						 <div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a></div>
-
-						 <div class="user-info">
-							   <h4>Madhav Suryawanshi</h4>
-							   <span class="pos">Manager – Internal Audit</span>
-
-
-
-							   <div class="user-social-profile"></div>
-
-							   <p>Madhav is Manager – Internal Audit. He is graduate of Commerce from Pune University. He shoulders audit segment and has experience in the audits of manufacturing and other companies. </p>
-
-							   <p></p>
-							   <p></p>
-						 </div>
-				   </div>
-			  </div>
-		</div>
-	</div>
-</div>-->
-
-<div id="content-full-width">
-	<div class="wrap">
-		<div class="cols">
-			<div class="col-4">
-				<div class="user">
-					<div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a>
-					</div>
-					<div class="user-info">
-						<h4>Arya Marne</h4>
-							<span class="pos">Manager – Accounting Division</span>
-							<div class="user-social-profile"></div>
-						   <p>Arya is Manager – Accounting Division. He is Graduate of Commerce from Pune University. He is currently perusing Master Degree. He handles accounts outsourcing division of the organization. He looks after special outsourced projects in specific fields. </p>
-							<p></p>
-							<p></p>
-					</div>
-				</div>
-			</div>
-
-			 <div class="col-4">
-				   <div class="user">
-						 <div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a></div>
-
-						 <div class="user-info">
-							   <h4>Pradnya Dalvi</h4>
-							   <span class="pos">Commerce Student of SPPU</span>
-
-							   <div class="user-social-profile"></div>
-
-							   <p>Pradnya is a commerce student of SPPU, Pune. Her specialization is in corporate accounting of businesses engaged in various sectors such as experiential media, industrial automation, financial sector companies etc. </p>
-
-							   <p></p>
-							   <p></p>
-						 </div>
-				   </div>
-			  </div>
-
-			 <div class="col-4">
-				   <div class="user">
-						 <div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a></div>
-
-						 <div class="user-info">
-							   <h4>Vikram Patil </h4>
-							   <!--<span class="pos">Persuing CA Articleship </span>-->
-
-							   <div class="user-social-profile"></div>
-
-							   <p>Vikram is has done post-graduation from Shivaji University. He handles Income Tax and GST related compliances. He also handles assignments related to medical professionals, engineering goods manufacturers etc. </p>
-
-</p>
-
-							   <p></p>
-							   <p></p>
-						 </div>
-				   </div>
-			  </div>
-		</div>
-	</div>
-</div>
-
-<!--<div id="content-full-width">
-	<div class="wrap">
-		<div class="cols">
-			<div class="col-4">
-				<div class="user">
-					<div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a>
-					</div>
-					<div class="user-info">
-						<h4>Arya Marne</h4>
-							<span class="pos">Manager – Accounting Division</span>
-							<div class="user-social-profile"></div>
-						   <p>Arya is Manager – Accounting Division. He handles accounts outsourcing division of the organization. He looks after special outsourced projects in specific fields. He also handles assignments in the defense sector.</p>
-							<p></p>
-							<p></p>
-					</div>
-				</div>
-			</div>
-
-			 <div class="col-4">
-				   <div class="user">
-						 <div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a></div>
-
-						 <div class="user-info">
-							   <h4>Pradnya Dalvi</h4>
-							   <span class="pos">Commerce Student of SPPU</span>
-
-							   <div class="user-social-profile"></div>
-
-							   <p>Pradnya is a commerce student of SPPU, Pune. Her specialization is in corporate accounting of businesses engaged in various sectors such as experiential media, industrial automation, etc. </p>
-
-							   <p></p>
-							   <p></p>
-						 </div>
-				   </div>
-			  </div>
-
-			 <div class="col-4">
-				   <div class="user">
-						 <div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a></div>
-
-						 <div class="user-info">
-							   <h4>Kanchan Bungla </h4>
-							   <span class="pos">Persuing CA Articleship </span>
-
-							   <div class="user-social-profile"></div>
-
-							   <p>Kanchan is persuing CA Articleship in the organization. She handles Income Tax and GST related compliances. </p>
-
-</p>
-
-							   <p></p>
-							   <p></p>
-						 </div>
-				   </div>
-			  </div>
-		</div>
-	</div>
-</div>-->
-<div id="content-full-width">
-	<div class="wrap">
-		<div class="cols">
-			<div class="col-4">
-				<div class="user">
-					<div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a>
-					</div>
-					<div class="user-info">
-						<h4>Rushikesh Patil</h4>
-							<span class="pos">Persuing CA Articleship</span>
-							<div class="user-social-profile"></div>
-						   <p>Rushikesh is persuing CA Articleship in the organization. He has expertise in various accounting and tax software. He is effectively handles accounts of clients engaged in various sectors such as media and entertainment and other service sectors.</p>
-							<p></p>
-							<p></p>
-					</div>
-				</div>
-			</div>
-
-			 <div class="col-4">
-				   <div class="user">
-						 <div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a></div>
-
-						 <div class="user-info">
-							   <h4>Rohan Shinde</h4>
-							   <span class="pos">Accountant</span>
-
-							   <div class="user-social-profile"></div>
-
-							   <p>Rohan is Accountant in the organization. In addition to this, he handles compliances related to co-operative organizations and NGOs. He also handles assignments in the defense sector.</p>
-
-							   <p></p>
-							   <p></p>
-						 </div>
-				   </div>
-			  </div>
-
-<!--<div id="content-full-width">
-	<div class="wrap">
-		<div class="cols">
-			<div class="col-4">
-				<div class="user">
-					<div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a>
-					</div>
-					<div class="user-info">
-						<h4>Rushikesh Patil</h4>
-							<span class="pos">Persuing CA Articleship</span>
-							<div class="user-social-profile"></div>
-						   <p>Rushikesh is persuing CA Articleship in the organization. In addition to this, he handles compliances related to co-operative organizations and NGOs.</p>
-							<p></p>
-							<p></p>
-					</div>
-				</div>
-			</div>
-
-			 <div class="col-4">
-				   <div class="user">
-						 <div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a></div>
-
-						 <div class="user-info">
-							   <h4>Rohit Kore</h4>
-							   <span class="pos">Accountant</span>
-
-							   <div class="user-social-profile"></div>
-
-							   <p>Rohit is Accountant in the organization. He is effectively handles accounts of clients engaged in various sectors such as medical professionals, engineering goods manufacturers etc.</p>
-
-							   <p></p>
-							   <p></p>
-						 </div>
-				   </div>
-			  </div>-->
-
-			 <!--<div class="col-4">
-				   <div class="user">
-						 <div class="user-image"><a href="about.html#"><img alt="User" src="images/placeholder/320x320.gif" /></a></div>
-
-						 <div class="user-info">
-							   <h4>Arya Marne</h4>
-							   <span class="pos">Accountant</span>
-
-							   <div class="user-social-profile"></div>
-
-							   <p>Arya is Tax Consultant – Indirect Taxes. He handles indirect taxes division and looks after GST related compliances. In addition to this, he handles compliances related to co-operative organizations and NGOs.</p>
-
-</p>
-
-							   <p></p>
-							   <p></p>
-						 </div>
-				   </div>
-			  </div>-->
-		</div>
-	</div>
-</div>
-
-
-
-  <div>  <h4>Our Cilents</h4>
-
-                      <p>We have widened our client-base in various sectors and segments. The success of our service is trust of our clients. Our integrated solutions with the help of our business associates and team of professionals have enabled us to serve clients from various industries such as:</p></div>
-
-<div class="cols">
-<div class="col-3 text-center"><a href="about.html#"><img alt="" src="images/placeholder/220x60.gif" /></a><br />
-Manufacturing, Engineering, Packaging</div>
-
-<div class="col-3 text-center"><a href="about.html#"><img alt="" src="images/placeholder/220x60.gif" /></a><br />
-Construction</div>
-
-<div class="col-3 text-center"><a href="about.html#"><img alt="" src="images/placeholder/220x60.gif" /></a><br />
-Trust&#39;s, Societies and NGO&#39;s</div>
-
-<div class="col-3 text-center"><a href="about.html#"><img alt="" src="images/placeholder/220x60.gif" /></a><br />
-Service Industry</div>
-</div>
-</article>
-</div>
-</div>
-</div>
-</div>
-<!-- // #content-full-width -->
-
-<footer>
-<div class="wrap">
-<div class="credit">
-<div class="wrap">
-<div class="cols">
-<div class="col-6">
-<p class="no-margin">Maintained by <a href="http://www.carvingit.com/" target="_BLANK">Carving IT</a></p>
-</div>
-
-<div class="col-6">
-<ul class="footer-menu">
-	<li><a href="about.html#">Term of use</a></li>
-	<li><a href="about.html#">Privacy policy</a></li>
-	<li><a href="about.html#">License</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<!-- .credit --></div>
-</footer>
-</div>
-<!-- .container --><!-- JavaScript Library --><script src="js/jquery.easing.1.3.js"></script><script src="js/jquery.magnific-popup.js"></script><script src="js/superfish.js"></script><script src="js/tooltip.js"></script><script src="js/tab.js"></script><script src="js/jquery.isotope.js"></script><script src="js/jquery.fitvids.js"></script><script src="js/jquery.flexslider.js"></script><script src="js/mediaelement.js"></script><script src="js/retina-1.1.0.js"></script><script src="js/jquery.carouFredSel-6.2.1.js"></script><script src="js/jquery.easypiechart.min.js"></script><script src="js/masonry.pkgd.min.js"></script><script src="js/load.js"></script></body>
+
+<body class="font-sans text-gray-700 antialiased bg-gray-50 selection:bg-accent selection:text-white">
+
+    <!-- Navigation -->
+    <header class="glass-header sticky top-0 z-50 border-b border-gray-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-3 group">
+                        <img src="images/calogo.png" alt="CA Logo"
+                            class="h-12 w-auto transition transform group-hover:scale-105"
+                            onerror="this.src='https://ui-avatars.com/api/?name=CA&background=0b3464&color=fff&rounded=true'">
+                        <div>
+                            <h1 class="font-serif text-2xl font-bold text-primary uppercase tracking-wide">Rahul Godbole
+                            </h1>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold mt-0.5">Chartered
+                                Accountants</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">Home</a>
+                    <div class="relative group">
+                        <button
+                            class="text-primary font-semibold border-b-2 border-accent py-2 flex items-center gap-1 transition focus:outline-none">
+                            <a href="about.html">About Us</a> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <!-- Submenu -->
+                        <div
+                            class="absolute left-0 top-full mt-0 w-48 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
+                            <div class="py-2">
+                                <a href="careers.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Careers</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button
+                            class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition focus:outline-none">
+                            <a href="services.html">Services</a> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <!-- Submenu -->
+                        <div
+                            class="absolute left-0 top-full mt-0 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
+                            <div class="py-2">
+                                <a href="auditing-detail.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Auditing</a>
+                                <a href="taxation-detail.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Taxation</a>
+                                <a href="account-outsource-detail.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Accounts
+                                    Outsourcing</a>
+                                <a href="financial-planning-detail.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Financial
+                                    Advisers</a>
+                                <a href="compliance-detail.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Corporate
+                                    Compliance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="sme-services.html"
+                        class="text-gray-600 hover:text-primary font-medium py-2 transition">SME's</a>
+                    <div class="relative group">
+                        <button
+                            class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition focus:outline-none">
+                            <a href="faq-taxation.html">FAQ's</a> <i
+                                class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full mt-0 w-48 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
+                            <div class="py-2">
+                                <a href="faq-taxation.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Taxation</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex">
+                    <a href="contact-us.html"
+                        class="bg-primary hover:bg-accent text-white px-6 py-2.5 rounded-md font-semibold transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Contact
+                        Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu-panel"
+            class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl overflow-hidden transition-all duration-300 origin-top">
+            <div class="px-4 py-4 space-y-2">
+                <a href="index.html"
+                    class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Home</a>
+                <a href="about.html"
+                    class="block px-4 py-3 rounded-md text-base font-semibold text-primary bg-blue-50/50">About Us</a>
+                <a href="services.html"
+                    class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Services</a>
+                <a href="sme-services.html"
+                    class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50">SME's</a>
+                <a href="faq-taxation.html"
+                    class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50">FAQ's</a>
+                <a href="contact-us.html"
+                    class="block px-4 py-3 mt-4 text-center rounded-md text-base font-semibold text-white bg-primary hover:bg-accent transition drop-shadow-md">Contact
+                    Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header (Breadcrumb Section) -->
+    <section class="page-header-bg py-16 relative">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row justify-between items-center">
+            <h2 class="text-4xl font-serif font-bold text-white mb-4 md:mb-0 drop-shadow-md">About Us</h2>
+            <nav class="flex text-blue-100 text-sm font-medium">
+                <ol
+                    class="inline-flex items-center space-x-2 border border-white/20 bg-black/20 backdrop-blur-md px-4 py-2 rounded-full">
+                    <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                    <li><i class="fa-solid fa-chevron-right text-[10px] mx-1 opacity-70"></i></li>
+                    <li class="text-accent font-semibold">About Us</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Text Content -->
+                <div class="space-y-6">
+                    <div
+                        class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold uppercase tracking-wider mb-2">
+                        Company Overview
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 leading-tight">
+                        Who We Are <span class="text-accent">?</span>
+                    </h2>
+                    <div class="w-20 h-1.5 bg-accent rounded-full mb-6"></div>
+
+                    <div class="prose prose-lg text-gray-600 leading-relaxed">
+                        <p class="text-xl font-medium text-gray-800">CA Rahul Godbole is an Associate Member of the
+                            Institute of Chartered Accountants of India, practicing in the SME segment.</p>
+
+                        <p>Rahul Godbole, with his team of eminent professionals and expert staff, endeavors to provide
+                            tailor-made financial solutions to clients. Along with the traditional practice of audit and
+                            taxation, we are specialized in developing MIS systems and Project Management for various
+                            business organizations.</p>
+
+                        <p>We work with a wide range of clients from different industries, handling a variety of
+                            assignments. Our team is committed to providing the best financial services to our clients,
+                            ensuring transparency and growth.</p>
+
+                        <div class="flex items-start gap-4 p-5 bg-blue-50/50 rounded-xl mt-6 border border-blue-100">
+                            <div
+                                class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-building-columns text-xl"></i>
+                            </div>
+                            <p class="text-sm text-gray-700 m-0">CA Rahul Godbole has served as auditor for various
+                                government organizations, worked with top CA firms in India, and currently provides
+                                advisory services to several NGOs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills/Expertise Bars -->
+                <div class="bg-gray-50 p-8 md:p-10 rounded-2xl border border-gray-100 shadow-lg">
+                    <h3 class="text-2xl font-serif font-bold text-primary mb-8 border-b border-gray-200 pb-4">Our
+                        Expertise</h3>
+
+                    <div class="space-y-6">
+                        <!-- Skill 1 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-semibold text-gray-800">Taxation & Representation</span>
+                                <span class="text-sm font-bold text-accent">100%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div class="bg-primary h-3 rounded-full progress-bar-fill" style="width: 100%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Skill 2 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-semibold text-gray-800">Auditing</span>
+                                <span class="text-sm font-bold text-accent">100%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div class="bg-primary h-3 rounded-full progress-bar-fill" style="width: 100%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Skill 3 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-semibold text-gray-800">Project Reports & Feasibility
+                                    Study</span>
+                                <span class="text-sm font-bold text-accent">100%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div class="bg-primary h-3 rounded-full progress-bar-fill" style="width: 100%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Skill 4 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-semibold text-gray-800">Accounts Writing</span>
+                                <span class="text-sm font-bold text-accent">100%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div class="bg-primary h-3 rounded-full progress-bar-fill" style="width: 100%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Skill 5 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-sm font-semibold text-gray-800">Financial & Management
+                                    Consultancy</span>
+                                <span class="text-sm font-bold text-accent">100%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div class="bg-primary h-3 rounded-full progress-bar-fill" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team Section -->
+    <section class="py-20 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Our Leadership Team</h2>
+                <div class="w-24 h-1 bg-accent mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 text-lg">Meet the experienced professionals dedicated to driving financial
+                    success and compliance for our clients.</p>
+            </div>
+
+            <!-- Founder Card (Prominent) -->
+            <div
+                class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden mb-16 border border-gray-100 flex flex-col md:flex-row transform transition duration-500 hover:-translate-y-1 hover:shadow-2xl">
+                <div
+                    class="md:w-1/3 bg-primary/5 flex items-center justify-center p-8 border-b md:border-b-0 md:border-r border-gray-100">
+                    <div class="w-50 h-50 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                        <!-- Placeholder using UI Avatars -->
+                        <img src="images/CArahulgodboleprofpic.png" alt="Rahul Godbole"
+                            class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="md:w-2/3 p-8 flex flex-col justify-center">
+                    <div class="mb-4">
+                        <span
+                            class="text-xs font-bold text-accent uppercase tracking-wider bg-accent/10 px-3 py-1 rounded-full">Founder</span>
+                        <h3 class="text-3xl font-serif font-bold text-gray-900 mt-2">Rahul Godbole</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        A Commerce Graduate from Venutai Chavan Commerce College, Karad. Completed his Articleship with
+                        Milind Kshirsagar, CA, Pune.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Qualified as a Chartered Accountant in 2004. Associate Member of the ICAI. Completed ISA of ICAI
+                        in 2006. Has worked in association with various premier firms across India.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Team Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Team Member: Shraddha Joshi -->
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 p-8 border border-gray-100 text-center group">
+                    <div
+                        class="w-24 h-24 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-6 border-2 border-transparent group-hover:border-accent transition">
+                        <i class="fa-solid fa-user-tie text-3xl text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Shraddha Joshi</h4>
+                    <p class="text-accent font-medium text-sm mb-4 uppercase tracking-wide">Tax Manager</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        CA (Inter) ICAI with 8 years experience. Heads tax and assurance division including assessments,
+                        returns, IT audits, appeals, litigation and GST Audits.
+                    </p>
+                </div>
+
+                <!-- Team Member: Harshali Uttekar -->
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 p-8 border border-gray-100 text-center group">
+                    <div
+                        class="w-24 h-24 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-6 border-2 border-transparent group-hover:border-accent transition">
+                        <i class="fa-solid fa-user-tie text-3xl text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Harshali Uttekar</h4>
+                    <p class="text-accent font-medium text-sm mb-4 uppercase tracking-wide">Audit Manager & Team Leader
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        CA Finalist - ICAI with 5 years experience. Expert in risk management, advisory, and governance
+                        services with excellent analytical skills.
+                    </p>
+                </div>
+
+                <!-- Team Member: Sonal Vaishnav -->
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 p-8 border border-gray-100 text-center group">
+                    <div
+                        class="w-24 h-24 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-6 border-2 border-transparent group-hover:border-accent transition">
+                        <i class="fa-solid fa-user-tie text-3xl text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Sonal Vaishnav</h4>
+                    <p class="text-accent font-medium text-sm mb-4 uppercase tracking-wide">Manager – Internal Audit</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        CA (Inter) ICAI, lawyer with 6 years experience. Shoulders audit segment and has vast experience
+                        in manufacturing and corporate audits.
+                    </p>
+                </div>
+
+                <!-- Team Member: Arya Marne -->
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 p-8 border border-gray-100 text-center group">
+                    <div
+                        class="w-24 h-24 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-6 border-2 border-transparent group-hover:border-accent transition">
+                        <i class="fa-solid fa-user-tie text-3xl text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Arya Marne</h4>
+                    <p class="text-accent font-medium text-sm mb-4 uppercase tracking-wide">Manager – Accounting Div</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Commerce Graduate handling the accounts outsourcing division and looking after special
+                        outsourced projects in specific fields.
+                    </p>
+                </div>
+
+                <!-- Team Member: Pradnya Dalvi -->
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 p-8 border border-gray-100 text-center group">
+                    <div
+                        class="w-24 h-24 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-6 border-2 border-transparent group-hover:border-accent transition">
+                        <i class="fa-solid fa-user-tie text-3xl text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Pradnya Dalvi</h4>
+                    <p class="text-accent font-medium text-sm mb-4 uppercase tracking-wide">Corporate Accounting
+                        Specialist</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Specializes in corporate accounting of businesses across experiential media, industrial
+                        automation, and financial sector companies.
+                    </p>
+                </div>
+
+                <!-- Team Member: Vikram Patil -->
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 p-8 border border-gray-100 text-center group">
+                    <div
+                        class="w-24 h-24 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-6 border-2 border-transparent group-hover:border-accent transition">
+                        <i class="fa-solid fa-user-tie text-3xl text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Vikram Patil</h4>
+                    <p class="text-accent font-medium text-sm mb-4 uppercase tracking-wide">Tax & Compliance</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Post-graduate. Handles Income Tax and GST compliances, specifically dealing with medical
+                        professionals and engineering manufacturers.
+                    </p>
+                </div>
+
+                <!-- Team Member: Rushikesh Patil -->
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 p-8 border border-gray-100 text-center group">
+                    <div
+                        class="w-24 h-24 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-6 border-2 border-transparent group-hover:border-accent transition">
+                        <i class="fa-solid fa-user-tie text-3xl text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Rushikesh Patil</h4>
+                    <p class="text-accent font-medium text-sm mb-4 uppercase tracking-wide">CA Articleship</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Software expertise spanning multiple accounting tools. Effectively handles accounts in media,
+                        entertainment, and service sectors.
+                    </p>
+                </div>
+
+                <!-- Team Member: Rohan Shinde -->
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 p-8 border border-gray-100 text-center group">
+                    <div
+                        class="w-24 h-24 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-6 border-2 border-transparent group-hover:border-accent transition">
+                        <i class="fa-solid fa-user-tie text-3xl text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-1">Rohan Shinde</h4>
+                    <p class="text-accent font-medium text-sm mb-4 uppercase tracking-wide">Accountant</p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Handles compliances related to co-operative organizations and NGOs, along with specialized
+                        assignments in the defense sector.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Clients Section -->
+    <section class="py-20 bg-primary text-white relative flex flex-col justify-center">
+        <!-- Abstract shape -->
+        <div class="absolute inset-0 opacity-10 overflow-hidden pointer-events-none">
+            <svg class="absolute -top-24 -right-24 text-white" width="400" height="400" fill="currentColor"
+                viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4 text-white">Sectors We Serve</h2>
+                <div class="w-24 h-1 bg-accent mx-auto rounded-full mb-6"></div>
+                <p class="text-blue-100 text-lg">
+                    The success of our service is the trust of our clients. Our integrated solutions enable us to serve
+                    clients across a diverse array of industries seamlessly.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Sector 1 -->
+                <div
+                    class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-8 text-center hover:bg-white/20 transition duration-300 transform hover:-translate-y-1">
+                    <i class="fa-solid fa-industry text-4xl text-accent mb-4"></i>
+                    <h4 class="font-bold text-lg">Manufacturing & Engineering</h4>
+                </div>
+
+                <!-- Sector 2 -->
+                <div
+                    class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-8 text-center hover:bg-white/20 transition duration-300 transform hover:-translate-y-1">
+                    <i class="fa-solid fa-building text-4xl text-accent mb-4"></i>
+                    <h4 class="font-bold text-lg">Construction & Real Estate</h4>
+                </div>
+
+                <!-- Sector 3 -->
+                <div
+                    class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-8 text-center hover:bg-white/20 transition duration-300 transform hover:-translate-y-1">
+                    <i class="fa-solid fa-hands-holding-child text-4xl text-accent mb-4"></i>
+                    <h4 class="font-bold text-lg">NGOs & Trust Societies</h4>
+                </div>
+
+                <!-- Sector 4 -->
+                <div
+                    class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-8 text-center hover:bg-white/20 transition duration-300 transform hover:-translate-y-1">
+                    <i class="fa-solid fa-laptop-code text-4xl text-accent mb-4"></i>
+                    <h4 class="font-bold text-lg">Services & Tech Industry</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b1120] text-gray-400 py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+
+                <div class="flex items-center gap-4">
+                    <div class="bg-white p-2 rounded max-w-[60px]">
+                        <img src="images/calogo.png" alt="CA Logo" class="h-auto w-full object-contain"
+                            onerror="this.style.display='none'">
+                    </div>
+                    <div>
+                        <span class="font-serif font-bold text-white text-2xl tracking-wide uppercase">Rahul
+                            Godbole</span>
+                        <p class="text-sm text-gray-500 mt-1 uppercase tracking-widest font-semibold">Chartered
+                            Accountants &copy; 2026</p>
+                    </div>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <p class="text-base">Maintained by <a href="http://www.carvingit.com/" target="_blank"
+                            class="text-accent font-semibold hover:text-white transition">Carving IT</a></p>
+                    <div class="flex flex-wrap gap-6 mt-4 justify-center md:justify-end text-sm font-medium">
+                        <a href="#" class="hover:text-accent transition">Terms of use</a>
+                        <a href="#" class="hover:text-accent transition">Privacy policy</a>
+                        <a href="#" class="hover:text-accent transition">License</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for mobile menu toggle behavior -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu-panel');
+
+            btn.addEventListener('click', () => {
+                if (menu.classList.contains('hidden')) {
+                    menu.classList.remove('hidden');
+                } else {
+                    menu.classList.add('hidden');
+                }
+            });
+
+            // Progress Bar Animation Trigger
+            setTimeout(() => {
+                const bars = document.querySelectorAll('.progress-bar-fill');
+                bars.forEach(bar => {
+                    bar.style.width = '100%';
+                });
+            }, 500);
+        });
+    </script>
+</body>
+
 </html>

@@ -1,445 +1,365 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<!-- Meta, title, CSS, favicons, etc. -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
-
-<title>CA Rahul Godbole</title>
-
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<script src="js/respond.min.js"></script>
-<![endif]-->
-
-<!-- Favicons -->
-<link rel="shortcut icon" href="/images/favicon.ico">
-
-<!-- CSS -->
-
-<link rel='stylesheet' href='css/erisgrd.css' type='text/css' media='all' />
-<link rel='stylesheet' href='style.css' type='text/css' media='all' />
-<link rel='stylesheet' href='css/plugin.css' type='text/css' media='all' />
-<link rel='stylesheet' href='css/responsive.css' type='text/css' media='all' />
-
-<!-- Remove comment to use custom color. Replace ###### by your HEX color -->
-<!-->
-<link rel='stylesheet' id="colors" href='css/color/color.php?color=######' type='text/css' media='all' />
-<!-->
-
-<!-- jQuery & Google Map API -->
-<script src="js/jquery.min.js"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-
-<!-- Revolution Slider -->
-<link rel='stylesheet' href='rs-plugin/css/settings.css' type='text/css' media='all' />
-<link rel='stylesheet' href='rs-plugin/css/captions.css' type='text/css' media='all' />
-<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Rahul Godbole | Chartered Accountants</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN for instant modern framework without build) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        primary: '#0b3464',
+                        accent: '#d1a15e',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .glass-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(11, 52, 100, 0.85), rgba(11, 52, 100, 0.85)), url('images/audit.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-<body>
-<div id="layout" class="container">
-	<div id="top-widget" class="top-widget">
-		<div class="wrap widget-content" style="height:0">
-			<div class="top-widget-container">
-				<div class="cols">
-					<div class="col-8">
-						<h4>Contact</h4>
-						<form class="form cols">
-						<div class="col-3">
-								<span class="field">
-									<label for="name">Your name</label>
-									<input type="text" name="name" id="name">
-								</span>
-								<span class="field">
-									<label for="email">Your email</label>
-									<input type="email" name="email" id="email">
-								</span>
-								<span class="field">
-									<label for="subject">Subject</label>
-									<input type="text" name="subject" id="subject">
-								</span>
-						</div>
-						<div class="col-5">
-							<span class="field">
-								<label for="messages">Messages</label>
-								<textarea name="messages" id="messages" cols="30" rows="5"></textarea>
-							</span>
-							<div class="field">
-								<button class="button color">Submit</button>
-							</div>
-						</div>
-						</form>
-					</div>
-					<div class="col-4">
-						<h4>Flickr Images</h4>
-						<div class="flickr-widget clearfix">
-							<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=10&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=72179079@N00"></script>
-						</div>
-						<p>Aliquid, nihil quia a esse dolor cumque minus in repellendus cum saepe similique distinctio quis ratione!</p>
-					</div>
-				</div>
-				<div class="divider"></div>
-				<div class="quick-search">
-					<form>
-						<input type="text" name="s" placeholder="Type text to search ...">
-					</form>
-				</div>
-				
-			</div><!-- // .top-widget-container -->
-		</div><!-- // .widget-content -->
+<body class="font-sans text-gray-700 antialiased bg-gray-50 selection:bg-accent selection:text-white">
 
-		<div class="actions-top-widget">
-			<div class="wrap">
-				<a href="index.html#">Open</a>
-			</div>
-		</div><!-- // .actions-top-widget -->
-	</div><!-- // #top-widget -->	
-	<header>
-		 <div id="top-info">
-			
-			
-		</div><!-- // #top-info -->
+    <!-- Navigation -->
+    <header class="glass-header sticky top-0 z-50 border-b border-gray-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-3 group">
+                        <img src="images/calogo.png" alt="CA Logo" class="h-12 w-auto transition transform group-hover:scale-105" onerror="this.src='https://ui-avatars.com/api/?name=CA&background=0b3464&color=fff&rounded=true'">
+                        <div>
+                            <h1 class="font-serif text-2xl font-bold text-primary uppercase tracking-wide">Rahul Godbole</h1>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold mt-0.5">Chartered Accountants</p>
+                        </div>
+                    </a>
+                </div>
 
-		<div id="header">
-			<div class="wrap">
-				<div class="logo">
-					<h1 class="site-title">
-						<a title="CA RAHUL GODBOLE" href="index.html"><img src="images/calogo.png" alt="CA RAHUL GODBOLE"> RAHUL GODBOLE</a>
-					</h1>
-					<span class="site-description">Chartered Accountants</span>
-				</div><!-- // #logo -->
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-primary font-semibold border-b-2 border-accent py-2 transition">Home</a>
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition focus:outline-none">
+                            <a href="about.html">About Us</a> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <!-- Submenu -->
+                        <div class="absolute left-0 top-full mt-0 w-48 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
+                            <div class="py-2">
+                                <a href="careers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Careers</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition focus:outline-none">
+                            <a href="services.html">Services</a> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <!-- Submenu -->
+                        <div class="absolute left-0 top-full mt-0 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
+                            <div class="py-2">
+                                <a href="auditing-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Auditing</a>
+                                <a href="taxation-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Taxation</a>
+                                <a href="account-outsource-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Accounts Outsourcing</a>
+                                <a href="financial-planning-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Financial Advisers</a>
+                                <a href="compliance-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Corporate Compliance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="sme-services.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">SME's</a>
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition focus:outline-none">
+                            <a href="faq-taxation.html">FAQ's</a> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-0 w-48 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
+                            <div class="py-2">
+                                <a href="faq-taxation.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Taxation</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
 
-				<div class="header-widget" id="header-widget">
-					<div class="contact-widget">
-						<!--<span>call us for free</span>
-						<h3>1900-1570-LEAF</h3>-->
-					</div>
-				</div><!-- // .header-widget -->
-			</div><!-- // #wrap -->
+                <!-- CTA Button -->
+                <div class="hidden md:flex">
+                    <a href="contact-us.html" class="bg-primary hover:bg-accent text-white px-6 py-2.5 rounded-md font-semibold transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Contact Us</a>
+                </div>
 
-<div class="site-menu clearfix" id="full-menu">
-<nav class="menu wrap" id="site-menu-secondary">
-<ul class="sf-menu menu clearfix">
-	<li><a href="index.html">Homepage</a></li>
-	<li class="current"><a href="about.html">About Us</a>
-	<ul>
-		<li><a href="careers.html">Careers</a></li>
-	</ul>
-	</li>
-	<li><a href="services.html">Services</a>
-	<ul>
-		<li><a href="auditing-detail.html">Auditing</a></li>
-		<li><a href="taxation-detail.html">Taxation</a></li>
-		<li><a href="account-outsource-detail.html">Accounts Outsourcing</a></li>
-		<li><a href="financial-planning-detail.html">Financial Advisers</a></li>
-		<li><a href="compliance-detail.html">Corporate Compliance</a></li>
-	</ul>
-	</li>
-	<li><a href="about.html#">FAQ&#39;s</a>
-	<ul>
-		<li><a href="faq-taxation.html">Taxation</a></li>
-	</ul>
-	</li>
-	<li><a href="sme-services.html">SME&#39;s</a></li>
-	<li><a href="contact-us.html">Contact</a></li>
-</ul>
-</nav>
-</div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
 
-			<div id="mobile-menu">
-				<div class="wrap">
-					<div class="mobile-menu-container"></div>
-				</div>
-			</div><!-- // #mobile-menu -->
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu-panel" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl overflow-hidden transition-all duration-300 origin-top">
+            <div class="px-4 py-4 space-y-2">
+                <a href="index.html" class="block px-4 py-3 rounded-md text-base font-semibold text-primary bg-blue-50/50">Home</a>
+                <a href="about.html" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50">About Us</a>
+                <a href="services.html" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Services</a>
+                <a href="sme-services.html" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50">SME's</a>
+                <a href="faq-taxation.html" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50">FAQ's</a>
+                <a href="contact-us.html" class="block px-4 py-3 mt-4 text-center rounded-md text-base font-semibold text-white bg-primary hover:bg-accent transition drop-shadow-md">Contact Us</a>
+            </div>
+        </div>
+    </header>
 
-		</div><!-- // #header -->
-	</header>
-	<section class="slide">
-		<div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" style="margin:0px auto;background-color:#E9E9E9;padding:0px;margin-top:0px;margin-bottom:0px;max-height:450px;">
-			<div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style="display:none;max-height:450px;height:450;">						
-				<ul>
-					<li data-transition="slidedown" data-slotamount="7" data-masterspeed="300" >
-						<img src="images/audit.jpg"  alt="slide_red_bg"  data-fullwidthcentering="on">
-						
-						<div class="tp-caption big_white_line randomrotate" data-x="549" data-y="128" data-speed="800" data-start="1500" data-easing="easeOutExpo"  >Auditing Services</div>
-						<div class="tp-caption text_white sfb" data-x="549" data-y="190" data-speed="800" data-start="1800" data-easing="easeOutExpo"  >Audit is not only examination of books and reporting<br/>but a function which has  legal, economic, ethical and financial repercussions.</div>
-						<div class="tp-caption text_white sfb" data-x="549" data-y="270" data-speed="800" data-start="2100" data-easing="easeOutExpo"  ><a href="http://www.carahulgodbole.com/audit-detail.html" class="button blue">Know More</a></div>
-					</li>
+    <!-- Hero Section -->
+    <section class="hero-bg relative flex items-center justify-center min-h-[80vh] text-center px-4">
+        <div class="relative z-10 max-w-4xl mx-auto space-y-8 animate-fade-in-up py-20">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-accent text-sm font-semibold tracking-widest uppercase mb-2">Trusted Financial Expertise</span>
+            
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight drop-shadow-lg">
+                Empowering Your <br/><span class="text-accent">Financial Future</span>
+            </h2>
+            
+            <p class="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+                Comprehensive auditing, taxation, and financial compliance services tailored for modern SMEs and ambitious startups.
+            </p>
+            
+            <div class="pt-8 flex flex-col sm:flex-row justify-center items-center gap-5">
+                <a href="services.html" class="w-full sm:w-auto bg-accent hover:bg-[#b88c4d] text-white px-8 py-4 rounded-lg font-bold text-lg transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Explore Services
+                </a>
+                <a href="contact-us.html" class="w-full sm:w-auto bg-transparent border-2 border-white/80 text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg font-bold text-lg transition duration-300 backdrop-blur-sm">
+                    Book Consultation
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+            <i class="fa-solid fa-chevron-down text-white/50 text-2xl"></i>
+        </div>
+    </section>
 
-					<li data-transition="random" data-slotamount="7" data-masterspeed="300" >
-						<img src="images/sme.jpg"  alt="slide__bg"  data-fullwidthcentering="on">							
-						<div class="tp-caption big_black_line randomrotate" data-x="0" data-y="128" data-speed="800" data-start="1200" data-easing="easeOutExpo"  >Services for the SME's</div>
-						<div class="tp-caption text_black sfb" data-x="0" data-y="190" data-speed="800" data-start="1800" data-easing="easeOutExpo"  >The Role of Chartered Accountant is not only to comply with certain formalities like Tax Audits, Project Reports, VAT Audits etc.<br/>but cross traditional approach to understand the need of their clients. </div>
-						<div class="tp-caption text_white sfb" data-x="0" data-y="270" data-speed="800" data-start="2100" data-easing="easeOutExpo"  ><a href="index.html#" class="button black no-background">More info</a></div>
-								
-					</li>
+    <!-- Excellence Features (Replaces 3-column block) -->
+    <section class="py-20 bg-white relative -mt-10 z-20 rounded-t-3xl shadow-[0_-15px_30px_-15px_rgba(0,0,0,0.1)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 p-10 border border-gray-100 group transform hover:-translate-y-2 flex flex-col h-full">
+                    <div class="w-16 h-16 bg-blue-50 text-primary rounded-xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition duration-300 shadow-sm">
+                        <i class="fa-solid fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-gray-900 mb-4">SME's Focus</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed flex-grow">
+                        Small and Medium Enterprises are the backbone of growth. We resolve classic financial hurdles, allowing you to focus on expanding your core business.
+                    </p>
+                    <a href="sme-services.html" class="inline-flex items-center text-accent font-bold group/link hover:text-primary transition">
+                        Read More <i class="fa-solid fa-arrow-right ml-2 text-sm transform group-hover/link:translate-x-1 transition"></i>
+                    </a>
+                </div>
 
-					<li data-transition="slotzoom-vertical" data-slotamount="7" data-masterspeed="300" >
-						<img src="images/taxation-01.jpg"  alt="slide__bg"  data-fullwidthcentering="on">
-						<div class="tp-caption sfb" data-x="418" data-y="120" data-speed="1800" data-start="1200" data-easing="easeOutExpo"><img src="images/placeholder/slide-01.png"  alt="slide__bg"  data-fullwidthcentering="on"></div>	
-						<div class="tp-caption sfb" data-x="80" data-y="120" data-speed="1800" data-start="1600" data-easing="easeOutExpo"><img src="images/placeholder/slide-02.png"  alt="slide__bg"  data-fullwidthcentering="on"></div>
-						<div class="tp-caption sft" data-x="750" data-y="120" data-speed="1800" data-start="2000" data-easing="easeOutExpo"><img src="images/placeholder/slide-03.png"  alt="slide__bg"  data-fullwidthcentering="on"></div>
-						<div class="tp-caption big_white_line randomrotate" data-x="295" data-y="35" data-speed="1800" data-start="2400" data-easing="easeOutExpo"  >Our Expert Services</div>								
-					</li>
-				</ul>
-				<div class="tp-bannertimer"></div>					
-			</div>
-		</div><!-- // #rev_slider_1_1_wrapper -->								
-								
-		<script type="text/javascript">
+                <!-- Feature 2 (Highlighted) -->
+                <div class="bg-primary rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 p-10 text-white transform hover:-translate-y-2 flex flex-col h-full relative overflow-hidden">
+                    <!-- Decorative blob -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -mr-4 -mt-4"></div>
+                    
+                    <div class="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-8 shadow-inner relative z-10">
+                        <i class="fa-solid fa-leaf text-2xl text-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-4 relative z-10">Our Expert Services</h3>
+                    <p class="text-blue-100 mb-8 leading-relaxed flex-grow relative z-10">
+                        Top-tier Auditing, Taxation, Accounts Outsourcing, and Corporate Compliance handled by an elite team of associates and experts.
+                    </p>
+                    <a href="services.html" class="inline-flex items-center text-accent hover:text-white font-bold group/link transition relative z-10">
+                        Read More <i class="fa-solid fa-arrow-right ml-2 text-sm transform group-hover/link:translate-x-1 transition"></i>
+                    </a>
+                </div>
 
-			var tpj=jQuery;
-			
-			tpj.noConflict();
-							
-			var revapi1;
-			
-			tpj(document).ready(function() {
-			
-			if (tpj.fn.cssOriginal != undefined)
-				tpj.fn.css = tpj.fn.cssOriginal;
-			
-			if(tpj('#rev_slider_1_1').revolution == undefined)
-				revslider_showDoubleJqueryError('#rev_slider_1_1');
-			else
-			   revapi1 = tpj('#rev_slider_1_1').show().revolution(
-				{
-					delay:9000,
-					startwidth:1170,
-					startheight:450,
-					hideThumbs:200,
-					
-					thumbWidth:100,
-					thumbHeight:50,
-					thumbAmount:1,
-					
-					navigationType:"bullet",
-					navigationArrows:"solo",
-					navigationStyle:"round",
-					
-					touchenabled:"on",
-					onHoverStop:"on",
-					
-					navigationHAlign:"center",
-					navigationVAlign:"bottom",
-					navigationHOffset:0,
-					navigationVOffset:20,
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 p-10 border border-gray-100 group transform hover:-translate-y-2 flex flex-col h-full">
+                    <div class="w-16 h-16 bg-blue-50 text-primary rounded-xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition duration-300 shadow-sm">
+                        <i class="fa-solid fa-user-tie text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-gray-900 mb-4">Our Profile</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed flex-grow">
+                        CA Rahul Godbole (Associate Member, ICAI) acts as a trusted financial consultant and guide to dynamic business organizations across India.
+                    </p>
+                    <a href="about.html" class="inline-flex items-center text-accent font-bold group/link hover:text-primary transition">
+                        Read More <i class="fa-solid fa-arrow-right ml-2 text-sm transform group-hover/link:translate-x-1 transition"></i>
+                    </a>
+                </div>
 
-					soloArrowLeftHalign:"left",
-					soloArrowLeftValign:"center",
-					soloArrowLeftHOffset:20,
-					soloArrowLeftVOffset:0,
+            </div>
+        </div>
+    </section>
 
-					soloArrowRightHalign:"right",
-					soloArrowRightValign:"center",
-					soloArrowRightHOffset:20,
-					soloArrowRightVOffset:0,
-							
-					shadow:0,
-					fullWidth:"on",
-					fullScreen:"off",
+    <!-- Startup Services & Contact Segment -->
+    <section class="py-24 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                
+                <!-- Content Side -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-primary text-sm font-bold uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span> Specialized Growth
+                    </div>
+                    
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold text-gray-900 leading-tight">Startup Services & Incubation</h2>
+                    <div class="w-24 h-1.5 bg-accent rounded-full"></div>
+                    
+                    <div class="prose prose-lg text-gray-600 pt-2">
+                        <p class="text-xl font-medium text-gray-800">A Start up is a venture to explore business ideas focusing any typical business solution, skill or model.</p>
+                        
+                        <p>There are lakhs of start-ups in India who are promoted by young entrepreneurs. Our team provides tailor-made, end-to-end solutions to handle the heavy lifting of compliance.</p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                            <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+                                <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-green-50 flex items-center justify-center text-green-500">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <span class="font-medium text-gray-800">Funding & Finance Mentoring</span>
+                            </div>
+                            <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+                                <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-green-50 flex items-center justify-center text-green-500">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <span class="font-medium text-gray-800">CFO & Advisory Services</span>
+                            </div>
+                            <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+                                <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-green-50 flex items-center justify-center text-green-500">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <span class="font-medium text-gray-800">Accounts & Audits Outsourcing</span>
+                            </div>
+                            <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+                                <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-green-50 flex items-center justify-center text-green-500">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <span class="font-medium text-gray-800">IPR & Due Diligence</span>
+                            </div>
+                        </div>
 
-					stopLoop:"off",
-					stopAfterLoops:-1,
-					stopAtSlide:-1,
+                        <blockquote class="mt-8 border-l-4 border-accent pl-6 py-2 text-gray-700 italic bg-white p-4 shadow-sm rounded-r-lg">
+                            "We shoulder the responsibility of complete compliance so entrepreneurs can concentrate on their own business. We grow with each other."
+                        </blockquote>
+                    </div>
+                </div>
 
-					shuffle:"off",
-					
-					hideSliderAtLimit:0,
-					hideCaptionAtLimit:0,
-					hideAllCaptionAtLilmit:0,
-					startWithSlide:0,
-					videoJsPath:"http://localhost/meros/wp-content/plugins/revslider/rs-plugin/videojs/",
-					fullScreenOffsetContainer: ""	
-				});
-			
-			});	//ready
-			
-		</script>
-		<!-- END REVOLUTION SLIDER -->
-	</section><!-- // .slide -->
-	<section class="block">
-		<div class="wrap">
-			<div class="info-block">
-				<div class="cols">
-					<div class="col-4">
-						<div class="block-service">
-							<div class="block-icon">
-								<i class="icon-group"></i>
-							</div>
-							<div class="block-content">
-								<h3>SME's</h3>
-								<p>Small and Medium Enterprises play a very important role in the development of India.  They not only generate high employment opportunities but also contribute to the GDP Growth and Export of the nation on a very high scale. Though Indian SMEs are booming with higher rate of growth, they have their classic problems too.</p>
-								<a href="sme-services.html" class="button">Readmore</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-4">
-						<div class="block-service">
-							<div class="block-icon">
-								<i class="icon-leaf"></i>
-							</div>
-							<div class="block-content">
-								<h3>Our Expert Services</h3>
-								<p>Rahul Godbole with his team of associates & expert staff handles different assignments in different segments of business & non-business organizations. We offer various services such as  Auditing, Taxation, Accounts Outsourcing, Financial Advisers, Corporate Compliance.
+                <!-- Contact Box -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col border border-gray-100">
+                        <div class="bg-primary p-10 text-center relative overflow-hidden">
+                            <!-- Background pattern -->
+                            <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9IiNmZmYiLz48L3N2Zz4=')]"></div>
+                            
+                            <h3 class="text-3xl font-serif font-bold text-white mb-3 relative z-10">Quick Contact</h3>
+                            <p class="text-blue-200 font-medium relative z-10">Drop in or send a message today.</p>
+                        </div>
+                        
+                        <div class="p-10 flex-grow flex flex-col justify-center space-y-8">
+                            <div class="flex items-start gap-5">
+                                <div class="w-14 h-14 bg-blue-50 text-primary rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                                    <i class="fa-solid fa-location-dot text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-lg">Office Address</h4>
+                                    <p class="text-gray-600 mt-2 leading-relaxed">Flat 504, Bldg. No. A1, Rahul Residency,<br>Opp. Maharaja Complex, Indira Shankar Nagari,<br>Paud Road, Pune - 411 038.</p>
+                                </div>
+                            </div>
 
-</p>
-								<a href="services.html" class="button">Readmore</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-4">
-						<div class="block-service">
-							<div class="block-icon">
-								<i class="icon-picture"></i>
-							</div>
-							<div class="block-content">
-								<h3>Our Profile</h3>
-								<p>CA Rahul Godbole is an Associate Member of the Institute of Chartered Accountants of India. He practices in the small and medium scale enterprises segment. He is associated as a financial consultant to various business organizations in India </p>
-								<a href="about.html" class="button">Readmore</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	<section class="block">
-		<div class="wrap">
-			<div class="cols">
-				<div class="col-6">
-					<div class="heading-block">
-						<h3>Startup Services</h3>
-					</div>
-					<div class="block-content">
-							
-								<p>A Start up is a venture to explore business ideas focusing any typical business solution, skill or model. </p> 
-<p>There are lakhs of start-ups in India who are promoted by young entrepreneurs to enter into the business world. The start-up venture is founded and based upon any new technological solutions, social cause, I T products, engineering field etc.  
-</p>
-<p>The Indian Government has promoted Start up India project and also launched various schemes for the start-ups.</p>
-<p>Our team provides various services to the start-ups. These services include company registration, funding & finance, mentoring, CFO Services, project consultancy, I P R relate services, Accounts & Audits, taxation, outsourcing, valuation, due diligence, etc.</p>
-<p>Our team shoulders the responsibility of complete outsourcing of compliances under various acts, regulations, banking, accounts etc. so that the entrepreneurs can concentrate on their own business rather than nitty-gritty of the compliances.  </p>
-<p>Our team provides tailor made solutions to the start-ups. We understand the eco-system of business venture. Our professional team believes that we grow with each other and empower the start-ups to enter into the business with confidence and achieve their targets in the desired manner. </p>
-							</div>
-					
-				</div>
-				<div class="col-6">
-					<div class="heading-block">
-						<h4>Quick contact</h4>
-					</div>
-					<div class="contact-block clearfix">
-						<div id="map2" class="google_map"></div>
-						<div class="contact-info">
-							<div class="inner-content">
-								<h5>Rahul Godbole. CA.</h5>
-								<span><i class="icon-home"></i>
-									Flat 504, Bldg. No. A1, Rahul Residency,<br/>
-									Opp. Maharaja Complex, Indira Shankar Nagari,<br/>
-									Paud Road, Pune - 411 038.
-								</span>
-								<span><i class="icon-envelope"></i> god_rahul@yahoo.com</span>
-								<span><i class="icon-phone-sign"></i> </span>
-								<a href="index.html#" class="button color">Contact us <i class="icon-envelope-alt"></i></a>
-							</div>
-						</div>
-						<!--<script type="text/javascript">
-							var latlng = new google.maps.LatLng(0, 0);
-							var myOptions = {
-								zoom: 14,
-								center: latlng,
-								scrollwheel: true,
-								scaleControl: false,
-								disableDefaultUI: false,
-								mapTypeId: google.maps.MapTypeId.ROADMAP
-							};
-							var map2 = new google.maps.Map(document.getElementById("map2"),
-							myOptions);
-							
-							    var geocoder_map2 = new google.maps.Geocoder();
-								var address = 'rahul residency,  paud road, Pune, Maharashtra, India';
-								geocoder_map2.geocode( { 'address': address}, function(results, status) {
-									if (status == google.maps.GeocoderStatus.OK) {
-										map2.setCenter(results[0].geometry.location);
-										
-											var marker = new google.maps.Marker({
-												map: map2, 
-												
-												position: map2.getCenter()
-											});
-											
-												var contentString = '<img src="images/calogo.png" alt="CA RAHUL GODBOLE">'+' Rahul Godbole';
-												var infowindow = new google.maps.InfoWindow({
-													content: contentString
-												});
-															
-												google.maps.event.addListener(marker, 'click', function() {
-												  infowindow.open(map2,marker);
-												});
-												
-														infowindow.open(map2,marker);
-													
-									} else {
-									alert("Geocode was not successful for the following reason: " + status);
-								}
-								});
-						</script>-->
-						<div class="images-background">
-							<img src="images/placeholder/950x600.gif" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
+                            <div class="flex items-start gap-5">
+                                <div class="w-14 h-14 bg-amber-50 text-accent rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                                    <i class="fa-solid fa-envelope text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-lg">Email Us</h4>
+                                    <a href="mailto:god_rahul@yahoo.com" class="text-gray-600 hover:text-primary hover:underline transition mt-2 block font-medium">god_rahul@yahoo.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="pt-6">
+                                <a href="contact-us.html" class="w-full flex justify-center items-center gap-3 bg-primary hover:bg-[#082a55] text-white font-bold py-4 px-6 rounded-xl transition duration-300 shadow-md hover:shadow-xl transform hover:-translate-y-0.5">
+                                    Consult With Us <i class="fa-solid fa-paper-plane"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-			
+            </div>
+        </div>
+    </section>
 
-		</div>
-	</section>
-	<footer>
-		<div class="wrap">
-			
+    <!-- Footer -->
+    <footer class="bg-[#0b1120] text-gray-400 py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                
+                <div class="flex items-center gap-4">
+                    <div class="bg-white p-2 rounded max-w-[60px]">
+                        <img src="images/calogo.png" alt="CA Logo" class="h-auto w-full object-contain" onerror="this.style.display='none'">
+                    </div>
+                    <div>
+                        <span class="font-serif font-bold text-white text-2xl tracking-wide uppercase">Rahul Godbole</span>
+                        <p class="text-sm text-gray-500 mt-1 uppercase tracking-widest font-semibold">Chartered Accountants &copy; 2026</p>
+                    </div>
+                </div>
 
-			
+                <div class="text-center md:text-right">
+                    <p class="text-base">Maintained by <a href="http://www.carvingit.com/" target="_blank" class="text-accent font-semibold hover:text-white transition">Carving IT</a></p>
+                    <div class="flex flex-wrap gap-6 mt-4 justify-center md:justify-end text-sm font-medium">
+                        <a href="#" class="hover:text-accent transition">Terms of use</a>
+                        <a href="#" class="hover:text-accent transition">Privacy policy</a>
+                        <a href="#" class="hover:text-accent transition">License</a>
+                    </div>
+                </div>
 
-		<div class="credit">
-			<div class="wrap">
-				<div class="cols">
-					<div class="col-6">
-						<p class="no-margin">Maintained by <a href="http://www.carvingit.com/" target="_BLANK">Carving IT</a></p>
-					</div>
-					
-					<div class="col-6">
-						<ul class="footer-menu">
-							<li><a href="index.html#">Term of use</a></li>
-							<li><a href="index.html#">Privacy policy</a></li>
-							<li><a href="index.html#">License</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div><!-- .credit -->
-	</footer>
-</div><!-- .container -->
+            </div>
+        </div>
+    </footer>
 
-<!-- JavaScript Library -->
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/jquery.magnific-popup.js"></script>
-<script src="js/superfish.js"></script>
-<script src="js/tooltip.js"></script>
-<script src="js/tab.js"></script>
-<script src="js/jquery.isotope.js"></script>
-<script src="js/jquery.fitvids.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/mediaelement.js"></script>
-<script src="js/retina-1.1.0.js"></script>
-<script src="js/jquery.carouFredSel-6.2.1.js"></script>
-<script src="js/jquery.easypiechart.min.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-<script src="js/load.js"></script>
-
+    <!-- Script for mobile menu toggle behavior -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu-panel');
+            
+            btn.addEventListener('click', () => {
+                if (menu.classList.contains('hidden')) {
+                    menu.classList.remove('hidden');
+                } else {
+                    menu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
