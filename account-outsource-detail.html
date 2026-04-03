@@ -1,528 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<!-- Meta, title, CSS, favicons, etc. -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
-
-<title>Accounts Outsourcing - CA Rahul Godbole</title>
-
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<script src="js/respond.min.js"></script>
-<![endif]-->
-
-<!-- Favicons -->
-<link rel="shortcut icon" href="/images/favicon.ico">
-
-<!-- CSS -->
-<link rel='stylesheet' href='css/erisgrd.css' type='text/css' media='all' />
-<link rel='stylesheet' href='style.css' type='text/css' media='all' />
-<link rel='stylesheet' href='css/plugin.css' type='text/css' media='all' />
-<link rel='stylesheet' href='css/responsive.css' type='text/css' media='all' />
-
-<!-- Remove comment to use custom color. Replace ###### by your HEX color -->
-<!-->
-<link rel='stylesheet' id="colors" href='css/color/color.php?color=######' type='text/css' media='all' />
-<!-->
-
-<!-- jQuery & Google Map API -->
-<script src="js/jquery.min.js"></script>
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
-
-<!-- Revolution Slider -->
-<link rel='stylesheet' href='rs-plugin/css/settings.css' type='text/css' media='all' />
-<link rel='stylesheet' href='rs-plugin/css/captions.css' type='text/css' media='all' />
-<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts Outsourcing | CA Rahul Godbole</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }, colors: { primary: '#0b3464', accent: '#d1a15e' } } } }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style> .glass-header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); } .page-header-bg { background: linear-gradient(135deg, rgba(11, 52, 100, 0.9) 0%, rgba(11, 52, 100, 0.95) 100%), url('images/account-outsourcing.jpg'); background-size: cover; background-position: center; } </style>
 </head>
-<body>
-<div id="layout" class="container">
-	<div id="top-widget" class="top-widget">
-		<div class="wrap widget-content" style="height:0">
-			<div class="top-widget-container">
-				<div class="cols">
-					<div class="col-8">
-						<h4>Contact</h4>
-						<form class="form cols">
-						<div class="col-3">
-								<span class="field">
-									<label for="name">Your name</label>
-									<input type="text" name="name" id="name">
-								</span>
-								<span class="field">
-									<label for="email">Your email</label>
-									<input type="text" name="email" id="email">
-								</span>
-								<span class="field">
-									<label for="subject">Subject</label>
-									<input type="text" name="subject" id="subject">
-								</span>
-						</div>
-						<div class="col-5">
-							<span class="field">
-								<label for="messages">Messages</label>
-								<textarea name="messages" id="messages" cols="30" rows="5"></textarea>
-							</span>
-							<div class="field">
-								<button class="button color">Submit</button>
-							</div>
-						</div>
-						</form>
-					</div>
-					<div class="col-4">
-						<h4>Flickr Images</h4>
-						<div class="flickr-widget clearfix">
-							<script type="text/javascript" src="https://www.flickr.com/badge_code_v2.gne?count=10&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=72179079@N00"></script>
-						</div>
-						<p>Aliquid, nihil quia a esse dolor cumque minus in repellendus cum saepe similique distinctio quis ratione!</p>
-					</div>
-				</div>
-				<div class="divider"></div>
-				<div class="quick-search">
-					<form>
-						<input type="text" name="s" placeholder="Type text to search ...">
-					</form>
-				</div>
-				
-			</div><!-- // .top-widget-container -->
-		</div><!-- // .widget-content -->
+<body class="font-sans text-gray-700 bg-gray-50">
 
-		<div class="actions-top-widget">
-			<div class="wrap">
-				<a href="account-outsource-detail.html#">Open</a>
-			</div>
-		</div><!-- // .actions-top-widget -->
-	</div><!-- // #top-widget -->	
-	<header>
-		 <div id="top-info">
-			
-			
-		</div><!-- // #top-info -->
+    <header class="glass-header sticky top-0 z-50 border-b border-gray-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <img src="images/calogo.png" alt="CA Logo" class="h-12 w-auto" onerror="this.src='https://ui-avatars.com/api/?name=CA&background=0b3464&color=fff&rounded=true'">
+                        <div>
+                            <h1 class="font-serif text-2xl font-bold text-primary uppercase tracking-wide">Rahul Godbole</h1>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold mt-0.5">Chartered Accountants</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2 rounded-md">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">About Us</a>
+                    <div class="relative group">
+                        <button class="text-primary font-semibold border-b-2 border-accent py-2 flex items-center gap-1">
+                            <a href="services.html">Services</a> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-0 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <div class="py-2">
+                                <a href="auditing-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Auditing</a>
+                                <a href="taxation-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Taxation</a>
+                                <a href="account-outsource-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Accounts Outsourcing</a>
+                                <a href="financial-planning-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Financial Advisers</a>
+                                <a href="compliance-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Corporate Compliance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="sme-services.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">SME's</a>
+                    <a href="faq-taxation.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">FAQ's</a>
+                </nav>
+                <div class="hidden md:flex">
+                    <a href="contact-us.html" class="bg-primary hover:bg-accent text-white px-6 py-2.5 rounded-md font-semibold transition shadow-md shadow-primary/20">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 max-h-[70vh] overflow-y-auto">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Home</a>
+                <a href="about.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">About Us</a>
+                <div class="border-y border-gray-100 py-2 my-2">
+                    <a href="services.html" class="block px-3 py-2 text-base font-semibold text-primary">Services</a>
+                    <div class="pl-6 space-y-1">
+                        <a href="auditing-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Auditing</a>
+                        <a href="taxation-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Taxation</a>
+                        <a href="account-outsource-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Accounts Outsourcing</a>
+                        <a href="financial-planning-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Financial Advisers</a>
+                        <a href="compliance-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Corporate Compliance</a>
+                    </div>
+                </div>
+                <a href="sme-services.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">SME's Services</a>
+                <a href="faq-taxation.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">FAQ's</a>
+                <div class="pt-4">
+                    <a href="contact-us.html" class="block w-full text-center px-4 py-3 rounded-md font-bold text-white bg-primary hover:bg-accent transition shadow-md">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-		<div id="header">
-			<div class="wrap">
-				<div class="logo">
-					<h1 class="site-title">
-						<a title="CA RAHUL GODBOLE" href="index.html"><img src="images/calogo.png" alt="CA RAHUL GODBOLE"> RAHUL GODBOLE</a>
-					</h1>
-					<span class="site-description">Chartered Accountants</span>
-				</div><!-- // #logo -->
+    <section class="page-header-bg py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row justify-between items-center">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6 md:mb-0">Accounts Outsourcing</h2>
+            <nav class="flex text-blue-100 text-sm font-medium">
+                <ol class="inline-flex items-center space-x-2 border border-white/20 bg-black/20 backdrop-blur-md px-4 py-2 rounded-full">
+                    <li><a href="index.html" class="hover:text-white">Home</a></li>
+                    <li><i class="fa-solid fa-chevron-right text-[10px] mx-1 opacity-70"></i></li>
+                    <li><a href="services.html" class="hover:text-white">Services</a></li>
+                    <li><i class="fa-solid fa-chevron-right text-[10px] mx-1 opacity-70"></i></li>
+                    <li class="text-accent font-semibold">Accounts Outsourcing</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
 
-				<div class="header-widget" id="header-widget">
-					<div class="contact-widget">
-						<!--<span>call us for free</span>
-						<h3>1900-1570-LEAF</h3>-->
-					</div>
-				</div><!-- // .header-widget -->
-			</div><!-- // #wrap -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl mb-12 group">
+                        <img src="images/account-outsourcing.jpg" alt="Accounts Outsourcing" class="w-full h-[450px] object-cover transform group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                    
+                    <div class="prose prose-lg text-gray-600 max-w-none">
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-6 flex items-center gap-4">
+                            <span class="w-12 h-1 bg-accent inline-block"></span>
+                            Accounts Outsourcing Overview
+                        </h2>
+                        <p class="text-xl font-medium text-gray-700 leading-relaxed mb-8">We offer special Accounts Outsourcing assignments handling accounts of different business organizations especially in the small & medium segment. Moreover, we actively provide structured Accounting BPO Services effectively for foreign clients globally.</p>
+                        
+                        <div class="bg-gray-50 border border-gray-100 rounded-2xl p-8 md:p-10 mt-12 shadow-sm">
+                            <h3 class="text-2xl font-serif font-bold text-gray-900 mb-8 border-b border-gray-200 pb-4">Core Deliverables</h3>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8">
+                                <li class='flex items-start gap-4'><div class='mt-1'><i class='fa-solid fa-check text-white text-xs bg-green-500 p-1.5 rounded-full'></i></div><span class='text-gray-800 font-semibold'>Book Keeping & End-to-end Accounting</span></li><li class='flex items-start gap-4'><div class='mt-1'><i class='fa-solid fa-check text-white text-xs bg-green-500 p-1.5 rounded-full'></i></div><span class='text-gray-800 font-semibold'>Preparation of Financial Statements</span></li><li class='flex items-start gap-4'><div class='mt-1'><i class='fa-solid fa-check text-white text-xs bg-green-500 p-1.5 rounded-full'></i></div><span class='text-gray-800 font-semibold'>Statutory Requirements Compliance</span></li><li class='flex items-start gap-4'><div class='mt-1'><i class='fa-solid fa-check text-white text-xs bg-green-500 p-1.5 rounded-full'></i></div><span class='text-gray-800 font-semibold'>Filing Tax Returns (TDS/GST)</span></li><li class='flex items-start gap-4'><div class='mt-1'><i class='fa-solid fa-check text-white text-xs bg-green-500 p-1.5 rounded-full'></i></div><span class='text-gray-800 font-semibold'>Payroll Processing & Automation</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-<div class="site-menu clearfix" id="full-menu">
-<nav class="menu wrap" id="site-menu-secondary">
-<ul class="sf-menu menu clearfix">
-	<li><a href="index.html">Homepage</a></li>
-	<li class="current"><a href="about.html">About Us</a>
-	<ul>
-		<li><a href="careers.html">Careers</a></li>
-	</ul>
-	</li>
-	<li><a href="services.html">Services</a>
-	<ul>
-		<li><a href="auditing-detail.html">Auditing</a></li>
-		<li><a href="taxation-detail.html">Taxation</a></li>
-		<li><a href="account-outsource-detail.html">Accounts Outsourcing</a></li>
-		<li><a href="financial-planning-detail.html">Financial Advisers</a></li>
-		<li><a href="compliance-detail.html">Corporate Compliance</a></li>
-	</ul>
-	</li>
-	<li><a href="about.html#">FAQ&#39;s</a>
-	<ul>
-		<li><a href="faq-taxation.html">Taxation</a></li>
-	</ul>
-	</li>
-	<li><a href="sme-services.html">SME&#39;s</a></li>
-	<li><a href="contact-us.html">Contact</a></li>
-</ul>
-</nav>
-</div>
+                <!-- Sidebar -->
+                <div class="lg:col-span-1 mt-10 lg:mt-0">
+                    <div class="bg-white border text-center md:text-left border-gray-100 rounded-2xl p-8 shadow-xl sticky top-32">
+                        <h3 class="text-2xl font-serif font-bold text-primary mb-6 border-b-2 border-accent/30 pb-3 inline-block">Other Services</h3>
+                        <div class="flex flex-col space-y-3 mt-2">
+                            <a href="auditing-detail.html" class="group flex items-center justify-between p-4 bg-gray-50 rounded-xl border border-transparent hover:border-accent hover:bg-white hover:shadow-md transition duration-300">
+                                <span class="font-semibold text-gray-700 group-hover:text-primary transition">Auditing</span>
+                                <i class="fa-solid fa-arrow-right text-accent opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all duration-300"></i>
+                            </a>
+                            <a href="taxation-detail.html" class="group flex items-center justify-between p-4 bg-gray-50 rounded-xl border border-transparent hover:border-accent hover:bg-white hover:shadow-md transition duration-300">
+                                <span class="font-semibold text-gray-700 group-hover:text-primary transition">Taxation</span>
+                                <i class="fa-solid fa-arrow-right text-accent opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all duration-300"></i>
+                            </a>
+                            <a href="account-outsource-detail.html" class="group flex items-center justify-between p-4 bg-gray-50 rounded-xl border border-transparent hover:border-accent hover:bg-white hover:shadow-md transition duration-300">
+                                <span class="font-semibold text-gray-700 group-hover:text-primary transition">Accounts Outsourcing</span>
+                                <i class="fa-solid fa-arrow-right text-accent opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all duration-300"></i>
+                            </a>
+                            <a href="financial-planning-detail.html" class="group flex items-center justify-between p-4 bg-gray-50 rounded-xl border border-transparent hover:border-accent hover:bg-white hover:shadow-md transition duration-300">
+                                <span class="font-semibold text-gray-700 group-hover:text-primary transition">Financial Advisers</span>
+                                <i class="fa-solid fa-arrow-right text-accent opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all duration-300"></i>
+                            </a>
+                            <a href="compliance-detail.html" class="group flex items-center justify-between p-4 bg-gray-50 rounded-xl border border-transparent hover:border-accent hover:bg-white hover:shadow-md transition duration-300">
+                                <span class="font-semibold text-gray-700 group-hover:text-primary transition">Corporate Compliance</span>
+                                <i class="fa-solid fa-arrow-right text-accent opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all duration-300"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="mt-10 pt-8 border-t border-gray-200">
+                            <div class="flex items-center justify-center md:justify-start gap-4 mb-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                    <i class="fa-solid fa-headset text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-gray-900">Need Consultation?</h3>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6 text-sm">Reach out to our experts to get a tailored solution for your business.</p>
+                            <a href="contact-us.html" class="flex items-center justify-center gap-2 w-full text-center bg-primary hover:bg-accent text-white py-4 rounded-xl font-bold transition shadow-lg hover:shadow-primary/30 transform hover:-translate-y-1">
+                                Get In Touch <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<div id="mobile-menu">
-				<div class="wrap">
-					<div class="mobile-menu-container"></div>
-				</div>
-			</div><!-- // #mobile-menu -->
-
-		</div><!-- // #header -->
-	</header>
-	<div id="heading">
-		<div class="wrap">
-			<div class="cols">
-				<div class="col-6" id="sub-title">
-					<h2 class="page-sub-title">
-						Accounts Outsourcing
-					</h2>
-				</div>
-				<div class="col-6" id="breadcrumb">
-					<ul class="clearfix">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="services.html">Services</a></li>
-						<li><span class="current">Accounts Outsourcing</span></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="content-sidebar">
-		<div class="wrap">
-			<div class="cols">
-				<div class="col-8" id="content">
-					<article class="blog-item">
-						<div class="blog-item-image">
-							
-							<img src="images/account-outsourcing.jpg" alt="">
-						</div><!-- // .blog-item-image -->
-
-						<div class="blog-item-content">
-							<h1 class="entry-title">
-								Accounts Outsourcing
-							</h1><!-- // .entry-title -->
-
-							<div class="entry-meta separate">
-								<time datetime="2013-09">
-									<i class="icon-time"></i>2 hour ago
-								</time>
-								<span>
-									<i class="icon-pencil"></i><a href="about.html">Admin</a>
-								</span>
-								<span>
-									<i class="icon-th-list"></i><a href="about.html">CA Rahul Godbole</a>
-								</span>
-							</div>
-
-							<div class="entry-content">
-								<p>We offer special Accounts Outsourcing assignment especially of two types. First is handling accounts of different business organizations especially in small & medium segment; secondly we offer Accounting BPO Services for foreign clients.</p>
-								<p>We offer following accounts outsourcing services:<p>
-<p>
-<ul>
-<li><i class="icon-double-angle-right"></i> Book Keeping</li>
-<li><i class="icon-double-angle-right"></i> Accounting</li>
-<li><i class="icon-double-angle-right"></i> Preparation of Financial Statements</li>
-<li><i class="icon-double-angle-right"></i> Compliance various statutory requirements</li>
-<li><i class="icon-double-angle-right"></i> FFiling of Tax Returns including TDS, GST, Profession Tax etc.</li>
-<li><i class="icon-double-angle-right"></i> Payroll Processing</li>
-</ul>
-</p>
-							</div><!-- // .entry-content -->
-
-							<div class="entry-info">
-								<div class="tags">
-									<a href="account-outsource-detail.html#">services</a>
-									<a href="account-outsource-detail.html#">accounting</a>
-									<a href="account-outsource-detail.html#">book keeping</a>
-									<a href="account-outsource-detail.html#">payroll processing</a>
-									<a href="account-outsource-detail.html#">outsource</a>
-									<a href="account-outsource-detail.html#">tax returns</a>
-									<a href="account-outsource-detail.html#">financial statements</a>
-								</div>
-							</div><!-- // .entry-info -->
-
-							<div class="entry-share clearfix">
-								<h5>Share this post</h5>
-								<ul class="social">
-									<li class="facebook"><a href="account-outsource-detail.html#"><i class="icon-facebook"></i><span>facebook</span></a></li>
-									<li class="twitter"><a href="account-outsource-detail.html#"><i class="icon-twitter"></i><span>twitter</span></a></li>
-									<li class="pinterest"><a href="account-outsource-detail.html#"><i class="icon-pinterest"></i><span>pinterest</span></a></li>
-									<li class="googleplus"><a href="account-outsource-detail.html#"><i class="icon-google-plus"></i><span>google plus</span></a></li>
-								</ul>
-							</div><!-- // .entry-share -->
-						</div><!-- // .blog-item-content -->
-					</article><!-- // article -->
-
-					
-					<div class="relate-posts">
-						<div class="heading-block">
-							<h4>You may also interested</h4>
-						</div>
-						
-						<ul class="cols">
-							<li class="col-2 related-post-item">
-								<a href="auditing-detail.html"><img src="images/audit.jpg" alt=""></a>
-								<h3 class="entry-title"><a rel="bookmark" href="auditing-detail.html">Audit Services</a></h3>
-							</li>
-							<li class="col-2 related-post-item">
-								<a href="taxation-detail.html"><img src="images/taxation-01.jpg" alt=""></a>
-								<h3 class="entry-title"><a rel="bookmark" href="taxation-detail.html">Taxation Services</a></h3>
-							</li>
-							<li class="col-2 related-post-item">
-								<a href="financial-planning-detail.html"><img src="images/financial-planning.jpg" alt=""></a>
-								<h3 class="entry-title"><a rel="bookmark" href="financial-planning-detail.html">Financial Advisers</a></h3>
-							</li>
-							<li class="col-2 related-post-item">
-								<a href="/complaince-detail.html"><img src="images/compliance.jpg" alt=""></a>
-								<h3 class="entry-title"><a rel="bookmark" href="http://www.carahulgodbole.com/complaince-detail.html">Corporate Compliance</a></h3>
-							</li>
-						</ul>
-					</div>
-					
-				</div><!-- // #content -->
-
-				<div class="col-3 offset-1" id="sidebar">
-					<!--<div class="widget news-letter">
-						<h5 class="widget-title">
-							Newsletter
-						</h5>
-						<div class="widget-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-							<form action="">
-								<input type="text">
-								<button class="button color">Ok</button>
-							</form>
-						</div>
-					</div><!-- // .widget.news-letter -->
-
-					<div class="widget menu">
-						<h5 class="widget-title">
-							Services
-						</h5>
-						<div class="widget-content">
-							<ul>
-								<li class="clearfix"><a href="http://www.carahulgodbole.com/auditing-details.html">Auditing</a></li>
-								<li class="clearfix"><a href="taxation-detail.html">Taxation</a></li>
-								<li class="clearfix"><a href="account-outsource-detail.html">Accounts Outsourcing</a></li>
-								<li class="clearfix"><a href="financial-planning-detail.html">Financial Advisers</a></li>
-								<li class="clearfix"><a href="compliance-detail.html">Corporate Compliance</a></li>
-							</ul>
-						</div>
-					</div><!-- // .widget.menu -->
-
-					<!--<div class="widget recent-posts">
-						<h5 class="widget-title">
-							Recent Posts
-						</h5>
-						<div class="widget-content">
-							<ul>
-								<li class="clearfix">
-									<a href="#"><img src="images/placeholder/85x85.gif" alt="sample"></a>
-									<div class="post-content">
-										<h3 class="entry-title">
-											<a href="#">Sed aliquet risus a tortor sodales libero eget ante</a>
-										</h3>
-										<div class="entry-meta">
-											<time datetime="2013-09">
-												<i class="icon-time"></i>2 hour ago
-											</time>
-										</div>
-									</div>
-								</li>
-
-								<li class="clearfix">
-									<a href="#"><img src="images/placeholder/85x85.gif" alt="sample"></a>
-									<div class="post-content">
-										<h3 class="entry-title">
-											<a href="#">Sed aliquet risus a tortor sodales libero eget ante</a>
-										</h3>
-										<div class="entry-meta">
-											<time datetime="2013-09">
-												<i class="icon-time"></i>2 hour ago
-											</time>
-										</div>
-									</div>
-								</li>
-
-								<li class="clearfix">
-									<a href="#"><img src="images/placeholder/85x85.gif" alt="sample"></a>
-									<div class="post-content">
-										<h3 class="entry-title">
-											<a href="#">Sed aliquet risus a tortor sodales libero eget ante</a>
-										</h3>
-										<div class="entry-meta">
-											<time datetime="2013-09">
-												<i class="icon-time"></i>2 hour ago
-											</time>
-										</div>
-									</div>
-								</li>
-
-								<li class="clearfix">
-									<a href="#"><img src="images/placeholder/85x85.gif" alt="sample"></a>
-									<div class="post-content">
-										<h3 class="entry-title">
-											<a href="#">Sed aliquet risus a tortor sodales libero eget ante</a>
-										</h3>
-										<div class="entry-meta">
-											<time datetime="2013-09">
-												<i class="icon-time"></i>2 hour ago
-											</time>
-										</div>
-									</div>
-								</li>
-
-							</ul>
-						</div>
-					</div><!-- // .widget.recent-posts -->
-
-					<!--<div class="widget tags">
-						<h5 class="widget-title">
-							Tags
-						</h5>
-						<div class="widget-content">
-							<a href="#">quaerat</a>
-							<a href="#">laboriosam</a>
-							<a href="#">incidunt</a>
-							<a href="#">officiis</a>
-							<a href="#">amet</a>
-							<a href="#">quaerat</a>
-							<a href="#">laboriosam</a>
-							<a href="#">incidunt</a>
-							<a href="#">officiis</a>
-							<a href="#">amet</a>
-							<a href="#">quaerat</a>
-							<a href="#">laboriosam</a>
-							<a href="#">incidunt</a>
-							<a href="#">officiis</a>
-							<a href="#">amet</a>
-							<a href="#">quaerat</a>
-							<a href="#">laboriosam</a>
-							<a href="#">incidunt</a>
-							<a href="#">officiis</a>
-							<a href="#">amet</a>
-						</div>
-					</div><!-- // .widget.tabs -->
-
-					<!--<div class="widget portfolio-slide">
-						<div class="widget-title">
-							<h5>Portfolio</h5>
-							<div class="button-area">
-								<a href="#" class="prev" id="wp_prev"><i class="icon-angle-left"></i></a>
-								<a href="#" class="next" id="wp_next"><i class="icon-angle-right"></i></a>
-							</div>
-						</div>
-						<div class="widget-content">
-							<div class="cols portfolio-widget">
-								<div class="col-3">
-									<div class="portfolio-item">
-										<div class="portfolio-content">
-											<div class="portfolio-link">
-												<a class="image-link" href="images/demo/portfolio_4_full.png"><i class="icon-zoom-in"></i></a>
-												<a class="detail-link" href="portfolio-detail.html"><i class="icon-link"></i></a>
-											</div>
-											<div class="portfolio-title">
-												<h5>Kengston</h5>
-												<span><a href="portfolio.html">Architecture</a></span>
-											</div>
-										</div>
-										<div class="portfolio-image">
-											<img src="images/placeholder/450x535.gif" alt="Kengston">
-										</div>
-									</div><!-- // .portfolio-item -->
-							<!--	</div><!-- // .col-3 -->
-
-								<!--<div class="col-3">
-									<div class="portfolio-item">
-										<div class="portfolio-content">
-											<div class="portfolio-link">
-												<a class="image-link" href="images/demo/portfolio_5_full.png"><i class="icon-zoom-in"></i></a>
-												<a class="detail-link" href="portfolio-detail.html"><i class="icon-link"></i></a>
-											</div>
-											<div class="portfolio-title">
-												<h5>Collis</h5>
-												<span><a href="portfolio.html">Branding</a></span>
-											</div>
-										</div>
-										<div class="portfolio-image">
-											<img src="images/placeholder/450x535.gif" alt="Collis">
-										</div>
-									</div><!-- // .portfolio-item -->
-								<!--</div><!-- // .col-3 -->
-
-								<!--<div class="col-3">
-									<div class="portfolio-item">
-										<div class="portfolio-content">
-											<div class="portfolio-link">
-												<a class="image-link" href="images/demo/portfolio_6_full.png"><i class="icon-zoom-in"></i></a>
-												<a class="detail-link" href="portfolio-detail.html"><i class="icon-link"></i></a>
-											</div>
-											<div class="portfolio-title">
-												<h5>Rockable</h5>
-												<span><a href="portfolio.html">Branding</a></span>
-											</div>
-										</div>
-										<div class="portfolio-image">
-											<img src="images/placeholder/450x535.gif" alt="Rockable">
-										</div>
-									</div><!-- // .portfolio-item -->
-								<!--</div><!-- // .col-3 -->
-
-								<!--<div class="col-3">
-									<div class="portfolio-item">
-										<div class="portfolio-content">
-											<div class="portfolio-link">
-												<a class="image-link" href="images/demo/portfolio_7_full.png"><i class="icon-zoom-in"></i></a>
-												<a class="detail-link" href="portfolio-detail.html"><i class="icon-link"></i></a>
-											</div>
-											<div class="portfolio-title">
-												<h5>Rocard</h5>
-												<span><a href="portfolio.html">Branding</a></span>
-											</div>
-										</div>
-										<div class="portfolio-image">
-											<img src="images/placeholder/450x535.gif" alt="Rocard">
-										</div>
-									</div><!-- // .portfolio-item -->
-								<!--</div><!-- // .col-3 -->
-								
-						<!--	</div>
-						</div>
-					</div><!-- // .widget.portfolio-slide -->			
-				</div><!-- // #sidebar -->
-
-			</div><!-- // .cols [column format] -->
-		</div><!-- // .wrap -->
-	</div><!-- // #content-sidebar -->
-	
-	<footer>
-		<div class="wrap">
-			
-
-			
-
-		<div class="credit">
-			<div class="wrap">
-				<div class="cols">
-					<div class="col-6">
-						<p class="no-margin">Maintained by <a href="http://www.carvingit.com/" target="_BLANK">Carving IT</a></p>
-                         </div>
-					<div class="col-6">
-						<ul class="footer-menu">
-							<li><a href="account-outsource-detail.html#">Term of use</a></li>
-							<li><a href="account-outsource-detail.html#">Privacy policy</a></li>
-							<li><a href="account-outsource-detail.html#">License</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div><!-- .credit -->
-	</footer>
-</div><!-- .container -->
-
-<!-- JavaScript Library -->
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/jquery.magnific-popup.js"></script>
-<script src="js/superfish.js"></script>
-<script src="js/tooltip.js"></script>
-<script src="js/tab.js"></script>
-<script src="js/jquery.isotope.js"></script>
-<script src="js/jquery.fitvids.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/mediaelement.js"></script>
-<script src="js/retina-1.1.0.js"></script>
-<script src="js/jquery.carouFredSel-6.2.1.js"></script>
-<script src="js/jquery.easypiechart.min.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-<script src="js/load.js"></script>
-
+    <!-- Footer -->
+    <footer class="bg-[#0b1120] text-gray-400 py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="bg-white p-2 rounded max-w-[60px]"><img src="images/calogo.png" class="h-auto w-full object-contain" onerror="this.style.display='none'"></div>
+                    <div>
+                        <span class="font-serif font-bold text-white text-2xl tracking-wide uppercase">Rahul Godbole</span>
+                        <p class="text-sm text-gray-500 mt-1 uppercase tracking-widest font-semibold">Chartered Accountants &copy; 2026</p>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-base">Maintained by <a href="http://www.carvingit.com/" target="_blank" class="text-accent font-semibold hover:text-white transition">Carving IT</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    const icon = btn.querySelector('i');
+                    if(menu.classList.contains('hidden')) {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    } else {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-xmark');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

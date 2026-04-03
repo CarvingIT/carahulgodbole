@@ -1,409 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<!-- Meta, title, CSS, favicons, etc. -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
-
-<title>Services - CA Rahul Godbole</title>
-
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<script src="js/respond.min.js"></script>
-<![endif]-->
-
-<!-- Favicons -->
-<link rel="shortcut icon" href="/images/favicon.ico">
-
-<!-- CSS -->
-<link rel='stylesheet' href='css/erisgrd.css' type='text/css' media='all' />
-<link rel='stylesheet' href='style.css' type='text/css' media='all' />
-<link rel='stylesheet' href='css/plugin.css' type='text/css' media='all' />
-<link rel='stylesheet' href='css/responsive.css' type='text/css' media='all' />
-
-<!-- Remove comment to use custom color. Replace ###### by your HEX color -->
-<!-->
-<link rel='stylesheet' id="colors" href='css/color/color.php?color=######' type='text/css' media='all' />
-<!-->
-
-<!-- jQuery & Google Map API -->
-<script src="js/jquery.min.js"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-
-<!-- Revolution Slider -->
-<link rel='stylesheet' href='rs-plugin/css/settings.css' type='text/css' media='all' />
-<link rel='stylesheet' href='rs-plugin/css/captions.css' type='text/css' media='all' />
-<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | CA Rahul Godbole</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }, colors: { primary: '#0b3464', accent: '#d1a15e' } } } }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style> .glass-header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); } .page-header-bg { background: linear-gradient(135deg, rgba(11, 52, 100, 0.9) 0%, rgba(11, 52, 100, 0.95) 100%), url('images/account-outsourcing.jpg'); background-size: cover; background-position: center; } </style>
 </head>
-<body>
-<div id="layout" class="container">
-	<div id="top-widget" class="top-widget">
-		<div class="wrap widget-content" style="height:0">
-			<div class="top-widget-container">
-				<div class="cols">
-					<div class="col-8">
-						<h4>Contact</h4>
-						<form class="form cols">
-						<div class="col-3">
-								<span class="field">
-									<label for="name">Your name</label>
-									<input type="text" name="name" id="name">
-								</span>
-								<span class="field">
-									<label for="email">Your email</label>
-									<input type="text" name="email" id="email">
-								</span>
-								<span class="field">
-									<label for="subject">Subject</label>
-									<input type="text" name="subject" id="subject">
-								</span>
-						</div>
-						<div class="col-5">
-							<span class="field">
-								<label for="messages">Messages</label>
-								<textarea name="messages" id="messages" cols="30" rows="5"></textarea>
-							</span>
-							<div class="field">
-								<button class="button color">Submit</button>
-							</div>
-						</div>
-						</form>
-					</div>
-					<div class="col-4">
-						<h4>Flickr Images</h4>
-						<div class="flickr-widget clearfix">
-							<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=10&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=72179079@N00"></script>
-						</div>
-						<p>Aliquid, nihil quia a esse dolor cumque minus in repellendus cum saepe similique distinctio quis ratione!</p>
-					</div>
-				</div>
-				<div class="divider"></div>
-				<div class="quick-search">
-					<form>
-						<input type="text" name="s" placeholder="Type text to search ...">
-					</form>
-				</div>
-				
-			</div><!-- // .top-widget-container -->
-		</div><!-- // .widget-content -->
+<body class="font-sans text-gray-700 bg-gray-50">
 
-		<div class="actions-top-widget">
-			<div class="wrap">
-				<a href="services.html#">Open</a>
-			</div>
-		</div><!-- // .actions-top-widget -->
-	</div><!-- // #top-widget -->	
+    <header class="glass-header sticky top-0 z-50 border-b border-gray-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <img src="images/calogo.png" alt="CA Logo" class="h-12 w-auto" onerror="this.src='https://ui-avatars.com/api/?name=CA&background=0b3464&color=fff&rounded=true'">
+                        <div>
+                            <h1 class="font-serif text-2xl font-bold text-primary uppercase tracking-wide">Rahul Godbole</h1>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold mt-0.5">Chartered Accountants</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2 rounded-md">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                <!-- Desktop nav -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">About Us</a>
+                    <div class="relative group">
+                        <button class="text-primary font-semibold border-b-2 border-accent py-2 flex items-center gap-1">
+                            <a href="services.html">Services</a> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-0 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <div class="py-2">
+                                <a href="auditing-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Auditing</a>
+                                <a href="taxation-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Taxation</a>
+                                <a href="account-outsource-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Accounts Outsourcing</a>
+                                <a href="financial-planning-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Financial Advisers</a>
+                                <a href="compliance-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Corporate Compliance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="sme-services.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">SME's</a>
+                    <a href="faq-taxation.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">FAQ's</a>
+                </nav>
+                <div class="hidden md:flex">
+                    <a href="contact-us.html" class="bg-primary hover:bg-accent text-white px-6 py-2.5 rounded-md font-semibold transition shadow-md shadow-primary/20">Contact Us</a>
+                </div>
+            </div>
+        </div>
 
-	<header>
-		 <div id="top-info">
-			
-			
-		</div><!-- // #top-info -->
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 max-h-[70vh] overflow-y-auto">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Home</a>
+                <a href="about.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">About Us</a>
+                <div class="border-y border-gray-100 py-2 my-2">
+                    <a href="services.html" class="block px-3 py-2 text-base font-semibold text-primary">Services</a>
+                    <div class="pl-6 space-y-1">
+                        <a href="auditing-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Auditing</a>
+                        <a href="taxation-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Taxation</a>
+                        <a href="account-outsource-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Accounts Outsourcing</a>
+                        <a href="financial-planning-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Financial Advisers</a>
+                        <a href="compliance-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Corporate Compliance</a>
+                    </div>
+                </div>
+                <a href="sme-services.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">SME's Services</a>
+                <a href="faq-taxation.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">FAQ's</a>
+                <div class="pt-4">
+                    <a href="contact-us.html" class="block w-full text-center px-4 py-3 rounded-md font-bold text-white bg-primary hover:bg-accent transition shadow-md">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-		<div id="header">
-			<div class="wrap">
-				<div class="logo">
-					<h1 class="site-title">
-						<a title="CA RAHUL GODBOLE" href="index.html"><img src="images/calogo.png" alt="CA RAHUL GODBOLE"> RAHUL GODBOLE</a>
-					</h1>
-					<span class="site-description">Chartered Accountants</span>
-				</div><!-- // #logo -->
+    <section class="page-header-bg py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row justify-between items-center">
+            <h2 class="text-4xl font-serif font-bold text-white mb-4 md:mb-0">Our Services</h2>
+            <nav class="flex text-blue-100 text-sm font-medium">
+                <ol class="inline-flex items-center space-x-2 border border-white/20 bg-black/20 backdrop-blur-md px-4 py-2 rounded-full">
+                    <li><a href="index.html" class="hover:text-white">Home</a></li>
+                    <li><i class="fa-solid fa-chevron-right text-[10px] mx-1 opacity-70"></i></li>
+                    <li class="text-accent font-semibold">Services</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
 
-				<div class="header-widget" id="header-widget">
-					<div class="contact-widget">
-						<!--<span>call us for free</span>
-						<h3>1900-1570-LEAF</h3>-->
-					</div>
-				</div><!-- // .header-widget -->
-			</div><!-- // #wrap -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h3 class="text-primary font-bold tracking-widest uppercase text-sm mb-3">What We Offer</h3>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">Expert Financial & Corporate Solutions</h2>
+                <p class="text-lg text-gray-600">We provide a comprehensive range of services tailored to meet the dynamic needs of businesses, ensuring full compliance and sustainable growth.</p>
+            </div>
 
-<div class="site-menu clearfix" id="full-menu">
-<nav class="menu wrap" id="site-menu-secondary">
-<ul class="sf-menu menu clearfix">
-	<li><a href="index.html">Homepage</a></li>
-	<li class="current"><a href="about.html">About Us</a>
-	<ul>
-		<li><a href="careers.html">Careers</a></li>
-	</ul>
-	</li>
-	<li><a href="services.html">Services</a>
-	<ul>
-		<li><a href="auditing-detail.html">Auditing</a></li>
-		<li><a href="taxation-detail.html">Taxation</a></li>
-		<li><a href="account-outsource-detail.html">Accounts Outsourcing</a></li>
-		<li><a href="financial-planning-detail.html">Financial Advisers</a></li>
-		<li><a href="compliance-detail.html">Corporate Compliance</a></li>
-	</ul>
-	</li>
-	<li><a href="about.html#">FAQ&#39;s</a>
-	<ul>
-		<li><a href="faq-taxation.html">Taxation</a></li>
-	</ul>
-	</li>
-	<li><a href="sme-services.html">SME&#39;s</a></li>
-	<li><a href="contact-us.html">Contact</a></li>
-</ul>
-</nav>
-</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Auditing -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl transition duration-300 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="images/audit.jpg" alt="Auditing" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <h3 class="text-2xl font-serif font-bold text-white">Auditing</h3>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-600 mb-6 line-clamp-3">Audit is not only examination of books and reporting but a function which has legal, economic, ethical and financial repercussions.</p>
+                        <a href="auditing-detail.html" class="inline-flex items-center text-primary font-bold hover:text-accent transition">Read More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </div>
 
-			<div id="mobile-menu">
-				<div class="wrap">
-					<div class="mobile-menu-container"></div>
-				</div>
-			</div><!-- // #mobile-menu -->
+                <!-- Taxation -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl transition duration-300 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="images/taxation-01.jpg" alt="Taxation" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1586486855514-8c633cc15394?w=600'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <h3 class="text-2xl font-serif font-bold text-white">Taxation</h3>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-600 mb-6 line-clamp-3">Taxation has been one of the most critical areas. We offer different taxation services including tax planning, compliance and representation.</p>
+                        <a href="taxation-detail.html" class="inline-flex items-center text-primary font-bold hover:text-accent transition">Read More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </div>
 
-		</div><!-- // #header -->
-	</header>
-	<div id="heading">
-		<div class="wrap">
-			<div class="cols">
-				<div class="col-6" id="sub-title">
-					<h2 class="page-sub-title">
-						Services
-					</h2>
-				</div>
-				<div class="col-6" id="breadcrumb">
-					<ul class="clearfix">
-						<li><a href="services.html#">Home</a></li>
-						<li><span class="current">Services</span></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div><!-- //#heading -->
+                <!-- Accounts Outsourcing -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl transition duration-300 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="images/account-outsourcing.jpg" alt="Accounts Outsourcing" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <h3 class="text-2xl font-serif font-bold text-white">Accounts Outsourcing</h3>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-600 mb-6 line-clamp-3">We offer special Accounts Outsourcing assignment especially handling accounts of different business organizations in the SME segment.</p>
+                        <a href="account-outsource-detail.html" class="inline-flex items-center text-primary font-bold hover:text-accent transition">Read More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </div>
 
-	<div id="content-full-width">
-		<div class="wrap">
-			<div class="cols">
-				<div class="third mansory clearfix" id="content">
-					<div class="blog-item bb col-4">
-						<div class="blog-item-image">
-							<div class="blog-item-image-cover">
-								<div class="blog-item-image-cover-link">
-									<a href="auditing-detail.html" class=""><i class="icon-plus"></i></a>
-								</div>
-							</div>
-							<img src="images/audit.jpg" alt="">
-						</div><!-- .blog-item-image -->
+                <!-- Financial Advisers -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl transition duration-300 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="images/financial-planning.jpg" alt="Financial Planning" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=600'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <h3 class="text-2xl font-serif font-bold text-white">Financial Advisers</h3>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-600 mb-6 line-clamp-3">We offer a bouquet of various financial services catering to various needs of small entrepreneurs to complex corporate organizations.</p>
+                        <a href="financial-planning-detail.html" class="inline-flex items-center text-primary font-bold hover:text-accent transition">Read More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </div>
 
-						<div class="blog-item-content">
-							<h4 class="entry-title">
-								<a href="auditing-detail.html">Auditing</a>
-							</h4>
-							<div class="entry-meta separate">
-								<time datetime="2013-09">
-									<i class="icon-time"></i>2 hour ago
-								</time>
-								<span>
-									<i class="icon-pencil"></i><a href="about.html">Admin</a>
-								</span>
-								<span>
-									<i class="icon-th-list"></i><a href="about.html">CA Rahul Godbole</a>
-								</span>
-							</div>
-							<p class="entry-summary">
-								Audit is not only examination of books and reporting but a function which has  legal, economic, ethical and financial repercussions. Our team is expertised in analysis of data in different parameters... </p>
-<a href="auditing-detail.html" class="button">Read More</a>
+                <!-- Corporate Compliance -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl transition duration-300 group lg:col-span-2">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="images/compliance.jpg" alt="Corporate Compliance" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <h3 class="text-2xl font-serif font-bold text-white">Corporate Compliance</h3>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-600 mb-6 line-clamp-3">In India, the corporate structure is governed by the Companies Act, 2013. We navigate complex e-filing and compliance needs, providing a critical role in structuring and statutory requirements.</p>
+                        <a href="compliance-detail.html" class="inline-flex items-center text-primary font-bold hover:text-accent transition">Read More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="bg-[#0b1120] text-gray-400 py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="bg-white p-2 rounded max-w-[60px]"><img src="images/calogo.png" class="h-auto w-full object-contain" onerror="this.style.display='none'"></div>
+                    <div>
+                        <span class="font-serif font-bold text-white text-2xl tracking-wide uppercase">Rahul Godbole</span>
+                        <p class="text-sm text-gray-500 mt-1 uppercase tracking-widest font-semibold">Chartered Accountants &copy; 2026</p>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-base">Maintained by <a href="http://www.carvingit.com/" target="_blank" class="text-accent font-semibold hover:text-white transition">Carving IT</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-					
-						
-						</div>
-					</div><!-- .blog-item.bb -->
-
-					<div class="blog-item bb col-4">
-						<div class="blog-item-image">
-							<div class="blog-item-image-cover">
-								<div class="blog-item-image-cover-link">
-									<a href="taxation-detail.html" class=""><i class="icon-plus"></i></a>
-								</div>
-							</div>
-							<img src="images/taxation-01.jpg" alt="">
-						</div>
-						<div class="blog-item-content">
-							<h4 class="entry-title">
-								<a href="taxation-detail.html">Taxation</a>
-							</h4>
-							<div class="entry-meta separate">
-								<time datetime="2013-09">
-									<i class="icon-time"></i>2 hour ago
-								</time>
-								<span>
-									<i class="icon-pencil"></i><a href="about.html">Admin</a>
-								</span>
-								<span>
-									<i class="icon-th-list"></i><a href="about.html">CA Rahul Godbole</a>
-								</span>
-							</div>
-							<p class="entry-summary">
-								Taxation has been one of the most critical areas in complex financial services. We offer different taxation services including tax planning, compliance and representation. We are engaged on both the tax segments i.e., Direct Taxes & Indirect Taxes.
-							</p>
-							<a href="taxation-detail.html" class="button">Read More</a>
-						</div>
-					</div><!-- .blog-item.bb -->
-
-					<div class="blog-item bb col-4">
-						<div class="blog-item-image">
-							<div class="blog-item-image-cover">
-								<div class="blog-item-image-cover-link">
-									<a href="account-outsource-detail.html" class=""><i class="icon-plus"></i></a>
-								</div>
-							</div>
-							<img src="images/account-outsourcing.jpg" alt="">
-						</div>
-						<div class="blog-item-content">
-							<h4 class="entry-title">
-								<a href="account-outsource-detail.html">Accounts Outsourcing</a>
-							</h4>
-							<div class="entry-meta separate">
-								<time datetime="2013-09">
-									<i class="icon-time"></i>2 hour ago
-								</time>
-								<span>
-									<i class="icon-pencil"></i><a href="about.html">Admin</a>
-								</span>
-								<span>
-									<i class="icon-th-list"></i><a href="about.html">CA Rahul Godbole</a>
-								</span>
-							</div>
-							<p class="entry-summary">
-								We offer special Accounts Outsourcing assignment especially of two types. First is handling accounts of different business organizations especially in small & medium segment; secondly we offer Accounting BPO Services for foreign clients.
-							</p>
-							<a href="account-outsource-detail.html" class="button">Read More</a>
-						</div>
-					</div><!-- .blog-item.bb -->
-					
-					<div class="blog-item bb col-4">
-						<div class="blog-item-image">
-							<div class="blog-item-image-cover">
-								<div class="blog-item-image-cover-link">
-									<a href="financial-planning-detail.html" class=""><i class="icon-plus"></i></a>
-								</div>
-							</div>
-							<img src="images/financial-planning.jpg" alt="">
-						</div>
-						<div class="blog-item-content">
-							<h4 class="entry-title">
-								<a href="financial-planning-detail.html">Financial Advisers</a>
-							</h4>
-							<div class="entry-meta separate">
-								<time datetime="2013-09">
-									<i class="icon-time"></i>2 hour ago
-								</time>
-								<span>
-									<i class="icon-pencil"></i><a href="about.html">Admin</a>
-								</span>
-								<span>
-									<i class="icon-th-list"></i><a href="about.html">CA Rahul Godbole</a>
-								</span>
-							</div>
-							<p class="entry-summary">
-								We offer a bouquet of various financial services. Our services cater to various needs of a small entrepreneur as well as a complex corporate organization.
-							</p>
-							<a href="financial-planning-detail.html" class="button">Read More</a>
-						</div>
-					</div><!-- .blog-item.bb -->
-					
-					<div class="blog-item bb col-4">
-						<div class="blog-item-image">
-							<div class="blog-item-image-cover">
-								<div class="blog-item-image-cover-link">
-									<a href="compliance-detail.html" class=""><i class="icon-plus"></i></a>
-								</div>
-							</div>
-							<img src="images/compliance.jpg" alt="">
-						</div>
-						<div class="blog-item-content">
-							<h4 class="entry-title">
-								<a href="compliance-detail.html">Corporate Compliance</a>
-							</h4>
-							<div class="entry-meta separate">
-								<time datetime="2013-09">
-									<i class="icon-time"></i>2 hour ago
-								</time>
-								<span>
-									<i class="icon-pencil"></i><a href="about.html">Admin</a>
-								</span>
-								<span>
-									<i class="icon-th-list"></i><a href="about.html">CA Rahul Godbole</a>
-								</span>
-							</div>
-							<p class="entry-summary">
-								In India, the corporate structure is governed by the Companies Act, 1956. In the era of e-filing, the Role of a CA has been very important.
-							</p>
-							<a href="compliance-detail.html" class="button">Read More</a>
-						</div>
-					</div><!-- .blog-item.bb -->
-					
-					
-					
-					
-					
-					
-					
-
-					<div class="clearfix"></div>
-					
-					<!--<div class="col-12 pagenavi center">
-						<ul class="clearfix">
-							<li><span class="current">1</span></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">5</a></li>
-							<li class="nextpost"><a href="#">Next <i class="icon-long-arrow-right"></i></a></li>
-						</ul>
-					</div>-->
-
-				</div>
-			</div>
-		</div>
-	</div><!-- //#content-full-width -->
-
-	<footer>
-		<div class="wrap">
-			
-
-			
-
-		<div class="credit">
-			<div class="wrap">
-				<div class="cols">
-					<div class="col-6">
-						<p class="no-margin">Maintained by <a href="http://www.carvingit.com/" target="_BLANK">Carving IT</a></p>
-                       </div>
-					<div class="col-6">
-						<ul class="footer-menu">
-							<li><a href="services.html#">Term of use</a></li>
-							<li><a href="services.html#">Privacy policy</a></li>
-							<li><a href="services.html#">License</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div><!-- .credit -->
-	</footer>
-</div><!-- .container -->
-
-<!-- JavaScript Library -->
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/jquery.magnific-popup.js"></script>
-<script src="js/superfish.js"></script>
-<script src="js/tooltip.js"></script>
-<script src="js/tab.js"></script>
-<script src="js/jquery.isotope.js"></script>
-<script src="js/jquery.fitvids.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/mediaelement.js"></script>
-<script src="js/retina-1.1.0.js"></script>
-<script src="js/jquery.carouFredSel-6.2.1.js"></script>
-<script src="js/jquery.easypiechart.min.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-<script src="js/load.js"></script>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    const icon = btn.querySelector('i');
+                    if(menu.classList.contains('hidden')) {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    } else {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-xmark');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
