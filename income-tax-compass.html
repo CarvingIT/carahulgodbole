@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Compass 2026 | CA Rahul Godbole</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }, colors: { primary: '#0b3464', accent: '#d1a15e' } } } }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glass-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .page-header-bg {
+            background: linear-gradient(135deg, rgba(11, 52, 100, 0.9) 0%, rgba(11, 52, 100, 0.95) 100%), url('images/taxation-01.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-700 bg-gray-50">
+
+    <header class="glass-header sticky top-0 z-50 border-b border-gray-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <img src="images/calogo.png" alt="CA Logo" class="h-12 w-auto"
+                            onerror="this.src='https://ui-avatars.com/api/?name=CA&background=0b3464&color=fff&rounded=true'">
+                        <div>
+                            <h1 class="font-serif text-2xl font-bold text-primary uppercase tracking-wide">Rahul Godbole
+                            </h1>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold mt-0.5">Chartered
+                                Accountants</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn"
+                        class="text-gray-600 hover:text-primary focus:outline-none p-2 rounded-md">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">About
+                        Us</a>
+                    <div class="relative group">
+                        <button
+                            class="text-primary font-semibold border-b-2 border-accent py-2 flex items-center gap-1">
+                            <a href="services.html">Services</a> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full mt-0 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <div class="py-2">
+                                <a href="auditing-detail.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Auditing</a>
+                                <a href="taxation-detail.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Income
+                                    Tax Compass 2026</a>
+                                <a href="account-outsource-detail.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Accounts
+                                    Outsourcing</a>
+                                <a href="financial-planning-detail.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Financial
+                                    Advisers</a>
+                                <a href="compliance-detail.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Corporate
+                                    Compliance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="sme-services.html"
+                        class="text-gray-600 hover:text-primary font-medium py-2 transition">SME's</a>
+                    <a href="faq-taxation.html"
+                        class="text-gray-600 hover:text-primary font-medium py-2 transition">FAQ's</a>
+                    <div class="relative group">
+                        <button
+                            class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition focus:outline-none">
+                            <span>Compass</span> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <div
+                            class="absolute left-0 top-full mt-0 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
+                            <div class="py-2">
+                                <a href="income-tax-compass.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition"
+                                    style="white-space: nowrap;">Income Tax Compass</a>
+                                <a href="gst-compass.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition"
+                                    style="white-space: nowrap;">GST Compass</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="hidden md:flex">
+                    <a href="contact-us.html"
+                        class="bg-primary hover:bg-accent text-white px-6 py-2.5 rounded-md font-semibold transition shadow-md shadow-primary/20">Contact
+                        Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 max-h-[70vh] overflow-y-auto">
+                <a href="index.html"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">About
+                    Us</a>
+                <div class="border-y border-gray-100 py-2 my-2">
+                    <a href="services.html" class="block px-3 py-2 text-base font-semibold text-primary">Services</a>
+                    <div class="pl-6 space-y-1">
+                        <a href="auditing-detail.html"
+                            class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Auditing</a>
+                        <a href="taxation-detail.html"
+                            class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Income
+                            Tax Compass 2026</a>
+                        <a href="account-outsource-detail.html"
+                            class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Accounts
+                            Outsourcing</a>
+                        <a href="financial-planning-detail.html"
+                            class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Financial
+                            Advisers</a>
+                        <a href="compliance-detail.html"
+                            class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Corporate
+                            Compliance</a>
+                    </div>
+                </div>
+                <a href="sme-services.html"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">SME's
+                    Services</a>
+                <a href="faq-taxation.html"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">FAQ's</a>
+                <div class="pt-4">
+                    <a href="contact-us.html"
+                        class="block w-full text-center px-4 py-3 rounded-md font-bold text-white bg-primary hover:bg-accent transition shadow-md">Contact
+                        Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header-bg py-20 relative">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row justify-between items-center">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6 md:mb-0">Income Tax Compass 2026</h2>
+            <nav class="flex text-blue-100 text-sm font-medium">
+                <ol
+                    class="inline-flex items-center space-x-2 border border-white/20 bg-black/20 backdrop-blur-md px-4 py-2 rounded-full">
+                    <li><a href="index.html" class="hover:text-white">Home</a></li>
+                    <li><i class="fa-solid fa-chevron-right text-[10px] mx-1 opacity-70"></i></li>
+                    <li><a href="services.html" class="hover:text-white">Services</a></li>
+                    <li><i class="fa-solid fa-chevron-right text-[10px] mx-1 opacity-70"></i></li>
+                    <li class="text-accent font-semibold">Income Tax Compass 2026</li>
+                </ol>
+                <div class="relative group">
+                    <button
+                        class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition focus:outline-none">
+                        <span>Compass</span> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                    </button>
+                    <div
+                        class="absolute left-0 top-full mt-0 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
+                        <div class="py-2">
+                            <a href="income-tax-compass.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition"
+                                style="white-space: nowrap;">Income Tax Compass</a>
+                            <a href="gst-compass.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition"
+                                style="white-space: nowrap;">GST Compass</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="max-w-5xl mx-auto w-full py-16">
+                <div class="text-center mb-16 relative">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+                        <i class="fa-solid fa-compass text-9xl"></i>
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-serif font-extrabold text-gray-900 mb-6 relative z-10">
+                        Income Tax Compass
+                    </h2>
+                    <div class="w-24 h-1.5 bg-accent mx-auto rounded-full mb-8 relative z-10"></div>
+                    <p class="text-gray-600 leading-relaxed text-xl max-w-3xl mx-auto font-medium relative z-10">A
+                        Professional Revision and Compliance Strategy Guide for Income Tax 2026</p>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+                    <div class="p-8 md:p-12 lg:p-16">
+                        <h3
+                            class="text-2xl md:text-3xl font-serif font-bold text-primary mb-6 pb-3 border-b-2 border-gray-100 flex items-center gap-3">
+                            <span class="w-2 h-8 bg-accent inline-block rounded-full"></span>INCOME TAX NAVIGATOR 2025
+                        </h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-10 font-medium">Subtitle: A Comprehensive
+                            Client Guide to India's New Direct Tax Era | Godbole Office</p>
+
+                        <!-- Alert Banner -->
+                        <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg mb-10 flex gap-4 items-start">
+                            <i class="fa-solid fa-triangle-exclamation text-red-500 mt-1"></i>
+                            <div>
+                                <h5 class="font-bold text-red-900">CRITICAL TRANSITION NOTE</h5>
+                                <p class="text-sm text-red-800 mt-1">While this guide heralds the 2025 era,
+                                    practitioners must remember that compliance for all income earned up to March 31,
+                                    2026, remains strictly governed by the Income Tax Act, 1961. The transition is
+                                    phased.</p>
+                            </div>
+                        </div>
+
+                        <!-- 1. Core Paradigm Shifts -->
+                        <h4 class="text-xl font-bold text-primary mb-4 flex items-center gap-2"><i
+                                class="fa-solid fa-arrows-rotate text-accent"></i> 1. Core Paradigm Shifts</h4>
+                        <ul class="space-y-4 mb-10">
+                            <li class="bg-gray-50 border border-gray-200 rounded-lg p-4"><strong>The 'Tax Year'
+                                    Revolution:</strong> Goodbye 'Financial Year' and 'Assessment Year'. If you earn
+                                between April 1, 2026, and March 31, 2027, you file for Tax Year 2026-27.</li>
+                            <li class="bg-gray-50 border border-gray-200 rounded-lg p-4"><strong>Smart Forms:</strong>
+                                Tax forms now feature real-time validation and auto-population based on your 'Taxpayer
+                                Profile'.</li>
+                        </ul>
+
+                        <!-- 2. The Default Shift: New Tax Regime (Section 202) -->
+                        <h4 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 mt-10"><i
+                                class="fa-solid fa-scale-balanced text-accent"></i> 2. The Default Shift: New Tax Regime
+                            (Section 202)</h4>
+                        <p class="text-gray-600 leading-relaxed mb-6">The New Tax Regime is now the automatic default.
+                            To use the Old Regime (with 80C/80D deductions), you must proactively Opt-In every year.</p>
+
+                        <!-- Table New Tax Regime Slabs -->
+                        <h5 class="font-bold text-gray-800 mb-4">Income Slab (TY 25-26)</h5>
+                        <div class="overflow-x-auto mb-6">
+                            <table class="min-w-full bg-white border border-gray-200 rounded-lg overflow-hidden">
+                                <thead class="bg-gray-50 border-b border-gray-200">
+                                    <tr>
+                                        <th
+                                            class="py-3 px-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                            Income Slab</th>
+                                        <th
+                                            class="py-3 px-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                            Rate</th>
+                                        <th
+                                            class="py-3 px-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                            Effective Liability</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-100 text-sm">
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-3 px-4 font-medium text-gray-800">Up to ₹4,00,000</td>
+                                        <td class="py-3 px-4 text-gray-600">NIL</td>
+                                        <td class="py-3 px-4 text-gray-600">Effective Liability: ZERO</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-3 px-4 font-medium text-gray-800">₹4L to ₹8L</td>
+                                        <td class="py-3 px-4 text-gray-600">5%</td>
+                                        <td class="py-3 px-4 text-gray-600">Effective Liability: ZERO (if income till
+                                            ₹12L)</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-3 px-4 font-medium text-gray-800">₹8L to ₹12L</td>
+                                        <td class="py-3 px-4 text-gray-600">10%</td>
+                                        <td class="py-3 px-4 text-gray-600">Effective Liability: ZERO (Due to Rebate)
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-3 px-4 font-medium text-gray-800">₹12L to ₹16L</td>
+                                        <td class="py-3 px-4 text-gray-600">15%</td>
+                                        <td class="py-3 px-4 text-gray-600">Effective Liability: ₹60,000 - ₹1,20,000
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-3 px-4 font-medium text-gray-800">Above ₹24L</td>
+                                        <td class="py-3 px-4 text-gray-600">30%</td>
+                                        <td class="py-3 px-4 text-gray-600">Effective Liability: 30% + ₹3.0L Base</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Highlight Box -->
+                        <div class="bg-blue-50 border border-blue-200 p-5 rounded-lg mb-10 shadow-sm">
+                            <h5 class="font-bold text-blue-800 mb-2 flex items-center gap-2"><i
+                                    class="fa-solid fa-gift text-blue-600"></i> The 12 Lakh Benefit</h5>
+                            <p class="text-sm text-blue-900">Due to Tax Rebates, individuals with income up to
+                                ₹12,00,000 pay absolutely Zero Tax. For salaried staff, this threshold effectively rises
+                                to ₹12.75L after the standard deduction.</p>
+                        </div>
+
+                        <!-- 3. Key Changes by Income Head -->
+                        <h4 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 mt-10"><i
+                                class="fa-solid fa-layer-group text-accent"></i> 3. Key Changes by Income Head</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                            <!-- Salaries -->
+                            <div
+                                class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+                                <h5 class="font-bold text-primary border-b pb-2 mb-3"><i
+                                        class="fa-solid fa-user-tie mr-2 text-gray-400"></i>Salaries</h5>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i><strong>Standard
+                                            Deduction:</strong> Increased to ₹75,000 under the New Regime.</li>
+                                    <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i><strong>Perks &
+                                            Gifts:</strong> Employer gifts tax-free up to ₹15,000. NPS Employer
+                                        Contribution (up to 14%) remains deductible.</li>
+                                </ul>
+                            </div>
+                            <!-- House Property -->
+                            <div
+                                class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+                                <h5 class="font-bold text-primary border-b pb-2 mb-3"><i
+                                        class="fa-solid fa-house mr-2 text-gray-400"></i>House Property</h5>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i><strong>Unrealized
+                                            Rent:</strong> If a tenant defaults, missing income is excluded from taxable
+                                        income (if proven).</li>
+                                    <li><i
+                                            class="fa-solid fa-circle-check text-green-500 mr-2"></i><strong>Maintenance:</strong>
+                                        A flat 30% standard deduction is automatically allowed.</li>
+                                </ul>
+                            </div>
+                            <!-- Business & Profession -->
+                            <div
+                                class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+                                <h5 class="font-bold text-primary border-b pb-2 mb-3"><i
+                                        class="fa-solid fa-briefcase mr-2 text-gray-400"></i>Business & Profession</h5>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i><strong>Audit
+                                            Threshold:</strong> Jumps to ₹10 Crores if 95%+ of transactions are digital.
+                                    </li>
+                                    <li><i
+                                            class="fa-solid fa-circle-check text-green-500 mr-2"></i><strong>Professionals:</strong>
+                                        Presumptive income (50% profit declaration) allowed up to ₹75 Lakhs.</li>
+                                    <li><i class="fa-solid fa-circle-xmark text-red-500 mr-2"></i><strong>Cash
+                                            Rule:</strong> Single-day cash payments over ₹10,000 are disallowed as
+                                        expenses.</li>
+                                </ul>
+                            </div>
+                            <!-- Capital Gains -->
+                            <div
+                                class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+                                <h5 class="font-bold text-primary border-b pb-2 mb-3"><i
+                                        class="fa-solid fa-chart-line mr-2 text-gray-400"></i>Capital Gains (No
+                                    Indexation!)</h5>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i><strong>Listed
+                                            Equity:</strong> 12.5% tax (above ₹1.25L) after 12 months.</li>
+                                    <li><i
+                                            class="fa-solid fa-circle-check text-green-500 mr-2"></i><strong>Property:</strong>
+                                        Flat 12.5% tax after 24 months. Indexation benefits have been abolished for
+                                        radical simplicity.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 4. Digital Economy & Critical Compliance -->
+                        <h4 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 mt-10"><i
+                                class="fa-solid fa-laptop-code text-accent"></i> 4. Digital Economy & Critical
+                            Compliance</h4>
+
+                        <!-- Warning Box -->
+                        <div class="bg-orange-50 border-l-4 border-orange-500 p-5 rounded-r-lg mb-6">
+                            <h5 class="font-bold text-orange-900 mb-3"><i
+                                    class="fa-brands fa-bitcoin text-orange-600 mr-2"></i>Crypto, Gaming & E-Commerce:
+                            </h5>
+                            <ul class="space-y-2 text-sm text-orange-800">
+                                <li><strong>Online Gaming & VDA (Crypto):</strong> Profits are taxed at a flat 30%. No
+                                    basic exemptions, no set-offs for losses, and no deductions (except purchase price).
+                                </li>
+                                <li><strong>E-Commerce Sellers:</strong> Platforms (Amazon/Zomato) will deduct 1% TDS on
+                                    gross sales.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Highlight Box -->
+                        <div class="bg-yellow-50 border border-yellow-200 p-5 rounded-lg mb-10 shadow-sm">
+                            <h5 class="font-bold text-yellow-800 mb-3"><i
+                                    class="fa-solid fa-id-card text-yellow-600 mr-2"></i>Identity & Trusts:</h5>
+                            <ul class="space-y-2 text-sm text-yellow-900">
+                                <li><strong>PAN-Aadhaar Link:</strong> Mandatory. Unlinked PANs become inoperative,
+                                    forcing TDS deduction at double the rate (20%).</li>
+                                <li><strong>Charitable Trusts:</strong> Must possess a 16-Digit URN. Cash donations
+                                    above ₹2,000 yield no tax deduction.</li>
+                            </ul>
+                        </div>
+
+                        <!-- 5. Compliance Roadmap 2026 & Dispute Resolution -->
+                        <h4 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 mt-10"><i
+                                class="fa-solid fa-calendar-check text-accent"></i> 5. Compliance Roadmap 2026 & Dispute
+                            Resolution</h4>
+
+                        <!-- Table Filing Deadlines -->
+                        <h5 class="font-bold text-gray-800 mb-4">Filing Deadlines (2026)</h5>
+                        <div class="overflow-x-auto mb-6">
+                            <table class="min-w-full bg-white border border-gray-200 rounded-lg overflow-hidden">
+                                <thead class="bg-gray-50 border-b border-gray-200">
+                                    <tr>
+                                        <th
+                                            class="py-3 px-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                            Category</th>
+                                        <th
+                                            class="py-3 px-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                            Forms</th>
+                                        <th
+                                            class="py-3 px-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                            Due Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-100 text-sm">
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-3 px-4 font-medium text-gray-800">Salaried / Pensioners</td>
+                                        <td class="py-3 px-4 text-gray-600">ITR-1, 2</td>
+                                        <td class="py-3 px-4 font-semibold text-primary">July 31, 2026</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-3 px-4 font-medium text-gray-800">Non-Audit Business / Trusts</td>
+                                        <td class="py-3 px-4 text-gray-600">ITR-3, 4</td>
+                                        <td class="py-3 px-4 font-semibold text-primary">August 31, 2026</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-3 px-4 font-medium text-gray-800">Audit Cases (Business)</td>
+                                        <td class="py-3 px-4 text-gray-600">ITR-3, 6</td>
+                                        <td class="py-3 px-4 font-semibold text-primary">October 31, 2026</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="bg-gray-50 border-l-4 border-gray-400 p-4 mb-8 text-sm text-gray-700">
+                            <strong>Note:</strong> The law now permits a 48-Month 'Updated Return' window for fixing
+                            honest errors with immunity from prosecution, provided specified additional tax is paid.
+                        </div>
+
+                        <h5 class="font-bold text-gray-800 mb-3">Dispute Resolution</h5>
+                        <p class="text-gray-600 text-sm leading-relaxed">Appeals are now Faceless (video conferencing)
+                            and officers will issue Combined Orders (tax + penalty), ending 'double jeopardy'. Legal
+                            heirs only face tax liability up to the value of inherited assets.</p>
+
+                    </div>
+                    <div class="bg-primary p-8 text-center flex flex-col items-center border-t border-primary/20">
+                        <div
+                            class="max-w-2xl text-white/90 text-sm mb-6 border border-white/20 p-4 rounded bg-black/10">
+                            <p class="font-serif font-bold text-accent mb-2 uppercase tracking-wide">Godbole Office
+                                Advisory</p>
+                            <p>This navigator is for informational purposes only. Information for income earned until
+                                31.03.2026 is governed by the 1961 Act. Always consult a tax professional for
+                                personalized advice.</p>
+                            <p class="mt-2 text-accent font-medium">Contact: <a href="mailto:godbole.office@gmail.com"
+                                    class="hover:text-white transition underline">godbole.office@gmail.com</a> | Ph:
+                                7755907695</p>
+                        </div>
+                        <p class="text-white text-lg font-medium mb-6">Need expert assistance with these tax updates?
+                        </p>
+                        <a href="contact-us.html"
+                            class="inline-block bg-accent hover:bg-[#b88c4d] text-white px-8 py-3 rounded-full font-bold text-lg transition duration-300 shadow-lg transform hover:-translate-y-1">Schedule
+                            a Consultation</a>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b1120] text-gray-400 py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="bg-white p-2 rounded max-w-[60px]"><img src="images/calogo.png"
+                            class="h-auto w-full object-contain" onerror="this.style.display='none'"></div>
+                    <div>
+                        <span class="font-serif font-bold text-white text-2xl tracking-wide uppercase">Rahul
+                            Godbole</span>
+                        <p class="text-sm text-gray-500 mt-1 uppercase tracking-widest font-semibold">Chartered
+                            Accountants &copy; 2026</p>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-base">Maintained by <a href="http://www.carvingit.com/" target="_blank"
+                            class="text-accent font-semibold hover:text-white transition">Carving IT</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    const icon = btn.querySelector('i');
+                    if (menu.classList.contains('hidden')) {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    } else {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-xmark');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

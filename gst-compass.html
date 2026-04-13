@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Compass 2026 | CA Rahul Godbole</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }, colors: { primary: '#0b3464', accent: '#d1a15e' } } } }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style> .glass-header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); } .page-header-bg { background: linear-gradient(135deg, rgba(11, 52, 100, 0.9) 0%, rgba(11, 52, 100, 0.95) 100%), url('images/taxation-01.jpg'); background-size: cover; background-position: center; } </style>
+</head>
+<body class="font-sans text-gray-700 bg-gray-50">
+
+    <header class="glass-header sticky top-0 z-50 border-b border-gray-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <img src="images/calogo.png" alt="CA Logo" class="h-12 w-auto" onerror="this.src='https://ui-avatars.com/api/?name=CA&background=0b3464&color=fff&rounded=true'">
+                        <div>
+                            <h1 class="font-serif text-2xl font-bold text-primary uppercase tracking-wide">Rahul Godbole</h1>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold mt-0.5">Chartered Accountants</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2 rounded-md">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">About Us</a>
+                    <div class="relative group">
+                        <button class="text-primary font-semibold border-b-2 border-accent py-2 flex items-center gap-1">
+                            <a href="services.html">Services</a> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-0 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <div class="py-2">
+                                <a href="auditing-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Auditing</a>
+                                <a href="taxation-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">GST Compass 2026</a>
+                                <a href="account-outsource-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Accounts Outsourcing</a>
+                                <a href="financial-planning-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Financial Advisers</a>
+                                <a href="compliance-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Corporate Compliance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="sme-services.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">SME's</a>
+                    <a href="faq-taxation.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">FAQ's</a>
+                                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition focus:outline-none">
+                            <span>Compass</span> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-0 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
+                            <div class="py-2">
+                                <a href="income-tax-compass.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition" style="white-space: nowrap;">Income Tax Compass</a>
+                                <a href="gst-compass.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition" style="white-space: nowrap;">GST Compass</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="hidden md:flex">
+                    <a href="contact-us.html" class="bg-primary hover:bg-accent text-white px-6 py-2.5 rounded-md font-semibold transition shadow-md shadow-primary/20">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 max-h-[70vh] overflow-y-auto">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Home</a>
+                <a href="about.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">About Us</a>
+                <div class="border-y border-gray-100 py-2 my-2">
+                    <a href="services.html" class="block px-3 py-2 text-base font-semibold text-primary">Services</a>
+                    <div class="pl-6 space-y-1">
+                        <a href="auditing-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Auditing</a>
+                        <a href="taxation-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">GST Compass 2026</a>
+                        <a href="account-outsource-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Accounts Outsourcing</a>
+                        <a href="financial-planning-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Financial Advisers</a>
+                        <a href="compliance-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Corporate Compliance</a>
+                    </div>
+                </div>
+                <a href="sme-services.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">SME's Services</a>
+                <a href="faq-taxation.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">FAQ's</a>
+                <div class="pt-4">
+                    <a href="contact-us.html" class="block w-full text-center px-4 py-3 rounded-md font-bold text-white bg-primary hover:bg-accent transition shadow-md">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header-bg py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row justify-between items-center">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6 md:mb-0">GST Compass 2026</h2>
+            <nav class="flex text-blue-100 text-sm font-medium">
+                <ol class="inline-flex items-center space-x-2 border border-white/20 bg-black/20 backdrop-blur-md px-4 py-2 rounded-full">
+                    <li><a href="index.html" class="hover:text-white">Home</a></li>
+                    <li><i class="fa-solid fa-chevron-right text-[10px] mx-1 opacity-70"></i></li>
+                    <li><a href="services.html" class="hover:text-white">Services</a></li>
+                    <li><i class="fa-solid fa-chevron-right text-[10px] mx-1 opacity-70"></i></li>
+                    <li class="text-accent font-semibold">GST Compass 2026</li>
+                </ol>
+                                <div class="relative group">
+                        <button class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition focus:outline-none">
+                            <span>Compass</span> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-0 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
+                            <div class="py-2">
+                                <a href="income-tax-compass.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition" style="white-space: nowrap;">Income Tax Compass</a>
+                                <a href="gst-compass.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition" style="white-space: nowrap;">GST Compass</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+    <div class="max-w-5xl mx-auto w-full py-16">
+        <div class="text-center mb-16 relative">
+            <div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+                <i class="fa-solid fa-compass text-9xl"></i>
+            </div>
+            <h2 class="text-4xl md:text-6xl font-serif font-extrabold text-gray-900 mb-6 relative z-10">
+                GST Compass
+            </h2>
+            <div class="w-24 h-1.5 bg-accent mx-auto rounded-full mb-8 relative z-10"></div>
+            <p class="text-gray-600 leading-relaxed text-xl max-w-3xl mx-auto font-medium relative z-10">Professional Revision and Implementation Guide for GST 2026</p>
+        </div>
+        
+        <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+            <div class="p-8 md:p-12 lg:p-16">
+    <h3 class="text-2xl md:text-3xl font-serif font-bold text-primary mb-6 pb-3 border-b-2 border-gray-100 flex items-center gap-3"><span class="w-2 h-8 bg-accent inline-block rounded-full"></span>GST COMPASS 2026: PROFESSIONAL REVISION</h3>
+    <p class="text-gray-600 text-lg leading-relaxed mb-10 font-medium">Subtitle: Godbole Office | Tax Advisory</p>
+
+    <!-- 1. Registration Thresholds -->
+    <h4 class="text-xl font-bold text-primary mb-4 flex items-center gap-2"><i class="fa-solid fa-building text-accent"></i> 1. Registration Thresholds (Section 22)</h4>
+    <p class="text-gray-600 leading-relaxed mb-6">Registration requirements are now governed strictly by state-specific thresholds based on aggregate turnover. The previous "$10/20" blanket rule is no longer applicable.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+            <h5 class="font-bold text-primary mb-3">Special (Group A) States</h5>
+            <p class="text-sm text-gray-500 mb-4 h-10">Manipur, Mizoram, Nagaland, Tripura</p>
+            <ul class="space-y-2">
+                <li class="flex justify-between text-sm"><span class="text-gray-600">Supply of Goods:</span> <span class="font-semibold">10 Lakhs</span></li>
+                <li class="flex justify-between text-sm"><span class="text-gray-600">Supply of Services/Mixed:</span> <span class="font-semibold">10 Lakhs</span></li>
+            </ul>
+        </div>
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+            <h5 class="font-bold text-primary mb-3">Special (Group B) States</h5>
+            <p class="text-sm text-gray-500 mb-4 h-10">Arunachal, Sikkim, Telangana, Meghalaya, Puducherry, Uttarakhand</p>
+            <ul class="space-y-2">
+                <li class="flex justify-between text-sm"><span class="text-gray-600">Supply of Goods:</span> <span class="font-semibold">20 Lakhs</span></li>
+                <li class="flex justify-between text-sm"><span class="text-gray-600">Supply of Services/Mixed:</span> <span class="font-semibold">20 Lakhs</span></li>
+            </ul>
+        </div>
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition border-t-4 border-t-primary">
+            <h5 class="font-bold text-primary mb-3">Standard (Rest of India)</h5>
+            <p class="text-sm text-gray-500 mb-4 h-10">e.g., Maharashtra, Delhi, Gujarat, Himachal Pradesh</p>
+            <ul class="space-y-2">
+                <li class="flex justify-between text-sm"><span class="text-gray-600">Supply of Goods:</span> <span class="font-semibold">40 Lakhs</span></li>
+                <li class="flex justify-between text-sm"><span class="text-gray-600">Supply of Services/Mixed:</span> <span class="font-semibold">20 Lakhs</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Alert Banner -->
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg mb-10 flex gap-4 items-start">
+        <i class="fa-solid fa-circle-info text-blue-500 mt-1"></i>
+        <div>
+            <h5 class="font-bold text-blue-900">E-Commerce Update</h5>
+            <p class="text-sm text-blue-800 mt-1">While Inter-State supply generally mandates registration, small e-commerce sellers (with turnover below the threshold) now enjoy certain exemptions from mandatory registration for intra-state supplies.</p>
+        </div>
+    </div>
+
+    <!-- 2. Critical Supply Nuances -->
+    <h4 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 mt-10"><i class="fa-solid fa-cube text-accent"></i> 2. Critical Supply Nuances</h4>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+        <div class="bg-white border text-left border-gray-200 rounded-xl p-6 shadow-sm">
+            <h5 class="font-bold text-primary mb-2">Composite Supply</h5>
+            <p class="text-sm text-gray-600 mb-3">Naturally bundled goods or services.</p>
+            <p class="text-sm font-semibold text-gray-800 bg-gray-100 p-3 rounded">Taxed at the rate of the Principal Supply (e.g., Hotel stay with breakfast).</p>
+        </div>
+        <div class="bg-white border text-left border-gray-200 rounded-xl p-6 shadow-sm">
+            <h5 class="font-bold text-primary mb-2">Mixed Supply</h5>
+            <p class="text-sm text-gray-600 mb-3">Independent items bundled together for a single price.</p>
+            <p class="text-sm font-semibold text-gray-800 bg-gray-100 p-3 rounded">Taxed at the Highest Rate applicable among the individual items.</p>
+        </div>
+    </div>
+
+    <!-- 3. Input Tax Credit (ITC) Architecture -->
+    <h4 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 mt-10"><i class="fa-solid fa-money-check-dollar text-accent"></i> 3. Input Tax Credit (ITC) Architecture</h4>
+    <p class="text-gray-600 leading-relaxed mb-6">To claim ITC under Section 16, a registered person must meet strict legal benchmarks; missing these leads to tax leakage and interest liabilities.</p>
+    
+    <div class="mb-8">
+        <h5 class="font-semibold text-gray-800 mb-4">Core Conditions for Reaping Credit:</h5>
+        <ul class="space-y-3">
+            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span class="text-gray-600"><strong>Documentation:</strong> Possession of a tax invoice or debit note issued by a registered supplier.</span></li>
+            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span class="text-gray-600"><strong>Deemed Receipt (Bill-to-Ship-to):</strong> Goods are deemed received if delivered to a third party on your direction (Sec 16(2)(b)). "Actual receipt" is not always mandatory.</span></li>
+            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span class="text-gray-600"><strong>Supplier Compliance:</strong> Tax must have been paid to the Government and reflect in your GSTR-2B statement.</span></li>
+            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span class="text-gray-600"><strong>The 180-Day Rule Reversal:</strong> If vendor payment is not made within 180 days, ITC must be reversed with interest. Taxpayers are entitled to re-avail this credit once the payment is finally made.</span></li>
+        </ul>
+    </div>
+
+    <!-- Warning Box -->
+    <div class="bg-red-50 border-l-4 border-red-500 p-5 rounded-r-lg mb-10">
+        <div class="flex gap-4 items-start mb-3">
+            <i class="fa-solid fa-triangle-exclamation text-red-500 mt-1"></i>
+            <h5 class="font-bold text-red-900">Blocked Credits: The "Half-Truth" Trap (Section 17(5))</h5>
+        </div>
+        <ul class="space-y-4 text-sm text-red-800 ml-8">
+            <li><strong>Motor Vehicles (≤ 13 Seating Capacity):</strong> Generally blocked, but credit is ALLOWED if the vehicle is used for further supply of such vehicles (Dealers), transportation of passengers, imparting driving training, or transportation of goods.</li>
+            <li><strong>CSR Expenditure (Sec 17(5)(fa)):</strong> ITC is explicitly blocked on goods/services used for Corporate Social Responsibility. (Effective 01-10-2023 as per Finance Act 2023; vital for reconciling past audits).</li>
+        </ul>
+    </div>
+
+    <!-- 4. Compliance & The 30-Day Reporting Rule -->
+    <h4 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 mt-10"><i class="fa-solid fa-file-invoice text-accent"></i> 4. Compliance & The 30-Day Reporting Rule</h4>
+    <p class="text-gray-600 leading-relaxed mb-6">The transition to real-time digital compliance has introduced "hard deadlines" directly impacting customers' credit.</p>
+
+    <!-- Highlight Box -->
+    <div class="bg-yellow-50 border border-yellow-200 p-5 rounded-lg mb-8 shadow-sm">
+        <h5 class="font-bold text-yellow-800 mb-3 flex items-center gap-2"><i class="fa-solid fa-bolt text-yellow-600"></i> The 30-Day Reporting Rule (IRP)</h5>
+        <div class="space-y-3 text-sm text-yellow-900">
+            <p><strong>New Regulatory Standard:</strong> For businesses with turnover > 10 Crores, e-invoices must be reported to the IRP within 30 days of the invoice date.</p>
+            <p><strong>The Risk:</strong> The IRP will reject invoices older than 30 days. This makes the invoice legally invalid for claiming ITC by your recipient.</p>
+        </div>
+    </div>
+
+    <!-- Table Returns Roadmap -->
+    <h5 class="font-bold text-gray-800 mb-4">Returns Roadmap (2026)</h5>
+    <div class="overflow-x-auto mb-6">
+        <table class="min-w-full bg-white border border-gray-200 rounded-lg overflow-hidden">
+            <thead class="bg-gray-50 border-b border-gray-200">
+                <tr>
+                    <th class="py-3 px-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Form</th>
+                    <th class="py-3 px-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Purpose</th>
+                    <th class="py-3 px-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Description</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+                <tr class="hover:bg-gray-50">
+                    <td class="py-3 px-4 font-medium text-primary">GSTR-1</td>
+                    <td class="py-3 px-4 text-gray-600 text-sm">Sales Reporting</td>
+                    <td class="py-3 px-4 text-gray-600 text-sm">Enables ITC for your customers via GSTR-2B.</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                    <td class="py-3 px-4 font-medium text-primary">GSTR-3B</td>
+                    <td class="py-3 px-4 text-gray-600 text-sm">Payment & ITC</td>
+                    <td class="py-3 px-4 text-gray-600 text-sm">Summary of tax liability after setting off ITC.</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                    <td class="py-3 px-4 font-medium text-primary">QRMP</td>
+                    <td class="py-3 px-4 text-gray-600 text-sm">Quarterly Filing</td>
+                    <td class="py-3 px-4 text-gray-600 text-sm">Available for turnover < 5 Cr. File quarterly, pay monthly.</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                    <td class="py-3 px-4 font-medium text-primary">IMS</td>
+                    <td class="py-3 px-4 text-gray-600 text-sm">Invoice Mgmt</td>
+                    <td class="py-3 px-4 text-gray-600 text-sm">Accept/Reject/Pending portal to ensure GSTR-2B accuracy.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bg-gray-50 border-l-4 border-gray-400 p-4 mb-10 text-sm text-gray-700">
+        <strong>Maintenance of Records (Section 73):</strong> Proper books of accounts (Production, Stock, Inward/Outward Supply) must be maintained at the principal place of business for 72 months (6 years) from the due date of filing the annual return.
+    </div>
+
+    <!-- 5. Enforcement, Penalties & Arrests -->
+    <h4 class="text-xl font-bold text-primary mb-4 flex items-center gap-2 mt-10"><i class="fa-solid fa-gavel text-accent"></i> 5. Enforcement, Penalties & Arrests</h4>
+    <p class="text-gray-600 leading-relaxed mb-6">The consequences of non-compliance are financial, and in cases of fraud, criminal.</p>
+
+    <!-- Table Penalty Structure -->
+    <h5 class="font-bold text-gray-800 mb-4">Revised Penalty Structure (Section 122-125)</h5>
+    <div class="overflow-x-auto mb-8">
+        <table class="min-w-full bg-white border border-gray-200 rounded-lg overflow-hidden">
+            <thead class="bg-gray-50 border-b border-gray-200">
+                <tr>
+                    <th class="py-3 px-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Nature of Offense</th>
+                    <th class="py-3 px-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Effective Penalty</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 text-sm">
+                <tr class="hover:bg-gray-50">
+                    <td class="py-3 px-4 font-medium text-gray-800">General Offense (Sec 125)</td>
+                    <td class="py-3 px-4 text-gray-600">₹50,000 Total (25k CGST + 25k SGST).</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                    <td class="py-3 px-4 font-medium text-gray-800">Tax Evasion / Fraud</td>
+                    <td class="py-3 px-4 text-gray-600">100% of tax evaded (Minimum ₹20k total).</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                    <td class="py-3 px-4 font-medium text-gray-800">Late Fee</td>
+                    <td class="py-3 px-4 text-gray-600">Restricted daily caps for MSMEs.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="space-y-6 mb-10">
+        <div>
+            <h5 class="font-bold text-primary mb-2">Arrest & Prosecution (Section 132)</h5>
+            <p class="text-gray-600 text-sm leading-relaxed">Authorities have the power to arrest for serious offenses; the "2 Crore" threshold is not a universal shield.</p>
+        </div>
+        <div>
+            <h5 class="font-bold text-primary mb-2">Fake Invoicing (Bill Trading)</h5>
+            <p class="text-gray-600 text-sm leading-relaxed">Issuing an invoice without actual supply is a non-bailable offense. In specific "High-Fraud Zones" or organized rackets, enforcement is significantly stricter and arrest can be immediate regardless of threshold technicalities.</p>
+        </div>
+    </div>
+
+    <!-- Appeals -->
+    <h5 class="font-bold text-gray-800 mb-4">Appeals (Fast-Track)</h5>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+        <div class="bg-gray-50 p-4 rounded border border-gray-100">
+            <div class="font-semibold text-primary mb-1">First Appeal</div>
+            <div class="text-sm text-gray-600">Must be filed within 3 months of the order.</div>
+        </div>
+        <div class="bg-gray-50 p-4 rounded border border-gray-100">
+            <div class="font-semibold text-primary mb-1">GSTAT (GST Tribunal)</div>
+            <div class="text-sm text-gray-600">The 2025-26 operational focus is on the GST Appellate Tribunal for speedier resolution of tax disputes.</div>
+        </div>
+        <div class="bg-gray-50 p-4 rounded border border-gray-100">
+            <div class="font-semibold text-primary mb-1">Pre-Deposit</div>
+            <div class="text-sm text-gray-600">A portion of the disputed tax must be paid (usually 10-20%) to keep the recovery stay active during the appeal.</div>
+        </div>
+    </div>
+            </div>
+            <div class="bg-primary p-8 text-center flex flex-col items-center border-t border-primary/20">
+                <div class="max-w-2xl text-white/90 text-sm mb-6 border border-white/20 p-4 rounded bg-black/10">
+                    <p class="font-serif font-bold text-accent mb-2 uppercase tracking-wide">Godbole Office Advisory</p>
+                    <p>This guide is for educational use on your website. GST law is dynamic; ensure annual audits are conducted by a qualified professional to safeguard against "Deemed Supply" and "Reversal" risks.</p>
+                    <p class="mt-2 text-accent font-medium">Contact: <a href="mailto:tax.support@godbole.office" class="hover:text-white transition underline">tax.support@godbole.office</a></p>
+                </div>
+                <p class="text-white text-lg font-medium mb-6">Need expert assistance with these tax updates?</p>
+                <a href="contact-us.html" class="inline-block bg-accent hover:bg-[#b88c4d] text-white px-8 py-3 rounded-full font-bold text-lg transition duration-300 shadow-lg transform hover:-translate-y-1">Schedule a Consultation</a>
+            </div>
+        </div>
+    </div>
+    
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b1120] text-gray-400 py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="bg-white p-2 rounded max-w-[60px]"><img src="images/calogo.png" class="h-auto w-full object-contain" onerror="this.style.display='none'"></div>
+                    <div>
+                        <span class="font-serif font-bold text-white text-2xl tracking-wide uppercase">Rahul Godbole</span>
+                        <p class="text-sm text-gray-500 mt-1 uppercase tracking-widest font-semibold">Chartered Accountants &copy; 2026</p>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-base">Maintained by <a href="http://www.carvingit.com/" target="_blank" class="text-accent font-semibold hover:text-white transition">Carving IT</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    const icon = btn.querySelector('i');
+                    if(menu.classList.contains('hidden')) {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    } else {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-xmark');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
