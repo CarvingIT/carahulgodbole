@@ -1,22 +1,94 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | CA Rahul Godbole</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }, colors: { primary: '#0b3464', accent: '#d1a15e' } } } }
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style> 
-        .glass-header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); } 
-        .page-header-bg { background: linear-gradient(135deg, rgba(11, 52, 100, 0.9) 0%, rgba(11, 52, 100, 0.95) 100%), url('images/bg/contact-bg.jpg'); background-size: cover; background-position: center; } 
+
+    <!-- EmailJS v4 latest CDN (Reliable Loading) -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <style>
+        .glass-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .page-header-bg {
+            background: linear-gradient(135deg, rgba(11, 52, 100, 0.85) 0%, rgba(11, 52, 100, 0.98) 100%), url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1920') no-repeat center center;
+            background-size: cover;
+        }
+
+        .form-message {
+            display: none;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            font-weight: 500;
+            align-items: flex-start;
+            gap: 12px;
+            animation: slideIn 0.3s ease-out;
+            line-height: 1.5;
+        }
+
+        .form-message.show {
+            display: flex;
+        }
+
+        .form-message.success {
+            background-color: #f0fdf4;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+            box-shadow: 0 4px 6px -1px rgba(22, 101, 52, 0.1);
+        }
+
+        .form-message.error {
+            background-color: #fef2f2;
+            color: #991b1b;
+            border: 1px solid #fecaca;
+            box-shadow: 0 4px 6px -1px rgba(153, 27, 27, 0.1);
+        }
+
+        .form-message i {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-loading {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
     </style>
 </head>
+
 <body class="font-sans text-gray-700 bg-gray-50">
 
     <header class="glass-header sticky top-0 z-50 border-b border-gray-200 shadow-sm transition-all duration-300">
@@ -24,54 +96,79 @@
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="flex items-center gap-3">
-                        <img src="images/calogo.png" alt="CA Logo" class="h-12 w-auto" onerror="this.src='https://ui-avatars.com/api/?name=CA&background=0b3464&color=fff&rounded=true'">
+                        <img src="images/calogo.png" alt="CA Logo" class="h-12 w-auto"
+                            onerror="this.src='https://ui-avatars.com/api/?name=CA&background=0b3464&color=fff&rounded=true'">
                         <div>
-                            <h1 class="font-serif text-2xl font-bold text-primary uppercase tracking-wide">Rahul Godbole</h1>
-                            <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold mt-0.5">Chartered Accountants</p>
+                            <h1 class="font-serif text-2xl font-bold text-primary uppercase tracking-wide">Rahul Godbole
+                            </h1>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold mt-0.5">Chartered
+                                Accountants</p>
                         </div>
                     </a>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2 rounded-md">
+                    <button id="mobile-menu-btn"
+                        class="text-gray-600 hover:text-primary focus:outline-none p-2 rounded-md">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
                 <!-- Desktop nav -->
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">Home</a>
-                    <a href="about.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">About Us</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">About
+                        Us</a>
                     <div class="relative group">
-                        <button class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition">
+                        <button
+                            class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition">
                             <a href="services.html">Services</a> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
                         </button>
-                        <div class="absolute left-0 top-full mt-0 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <div
+                            class="absolute left-0 top-full mt-0 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                             <div class="py-2">
-                                <a href="auditing-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Auditing</a>
-                                <a href="taxation-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Taxation</a>
-                                <a href="account-outsource-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Accounts Outsourcing</a>
-                                <a href="financial-planning-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Financial Advisers</a>
-                                <a href="compliance-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Corporate Compliance</a>
+                                <a href="auditing-detail.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Auditing</a>
+                                <a href="taxation-detail.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Taxation</a>
+                                <a href="account-outsource-detail.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Accounts
+                                    Outsourcing</a>
+                                <a href="financial-planning-detail.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Financial
+                                    Advisers</a>
+                                <a href="compliance-detail.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Corporate
+                                    Compliance</a>
                             </div>
                         </div>
                     </div>
-                    <a href="sme-services.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">SME's</a>
-                    <a href="faq-taxation.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">FAQ's</a>
-                
-                                    <div class="relative group">
-                        <button class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition focus:outline-none">
+                    <a href="sme-services.html"
+                        class="text-gray-600 hover:text-primary font-medium py-2 transition">SME's</a>
+                    <a href="faq-taxation.html"
+                        class="text-gray-600 hover:text-primary font-medium py-2 transition">FAQ's</a>
+
+                    <div class="relative group">
+                        <button
+                            class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition focus:outline-none">
                             <span>Compass</span> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
                         </button>
-                        <div class="absolute left-0 top-full mt-0 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
+                        <div
+                            class="absolute left-0 top-full mt-0 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
                             <div class="py-2">
-                                <a href="income-tax-compass.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition" style="white-space: nowrap;">Income Tax Compass</a>
-                                <a href="gst-compass.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition" style="white-space: nowrap;">GST Compass</a>
+                                <a href="income-tax-compass.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition"
+                                    style="white-space: nowrap;">Income Tax Compass</a>
+                                <a href="gst-compass.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition"
+                                    style="white-space: nowrap;">GST Compass</a>
                             </div>
                         </div>
                     </div>
                 </nav>
                 <div class="hidden md:flex">
-                    <a href="contact-us.html" class="bg-primary hover:bg-accent text-white px-6 py-2.5 rounded-md font-semibold transition shadow-md shadow-primary/20">Contact Us</a>
+                    <a href="contact-us.html"
+                        class="bg-primary hover:bg-accent text-white px-6 py-2.5 rounded-md font-semibold transition shadow-md shadow-primary/20">Contact
+                        Us</a>
                 </div>
             </div>
         </div>
@@ -79,32 +176,51 @@
         <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
             <div class="px-4 pt-2 pb-6 space-y-1 max-h-[70vh] overflow-y-auto">
-                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Home</a>
-                <a href="about.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">About Us</a>
+                <a href="index.html"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">About
+                    Us</a>
                 <div class="border-y border-gray-100 py-2 my-2">
-                    <a href="services.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Services</a>
+                    <a href="services.html"
+                        class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Services</a>
                     <div class="pl-6 space-y-1">
-                        <a href="auditing-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Auditing</a>
-                        <a href="taxation-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Taxation</a>
-                        <a href="account-outsource-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Accounts Outsourcing</a>
-                        <a href="financial-planning-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Financial Advisers</a>
-                        <a href="compliance-detail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Corporate Compliance</a>
+                        <a href="auditing-detail.html"
+                            class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Auditing</a>
+                        <a href="taxation-detail.html"
+                            class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Taxation</a>
+                        <a href="account-outsource-detail.html"
+                            class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Accounts
+                            Outsourcing</a>
+                        <a href="financial-planning-detail.html"
+                            class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Financial
+                            Advisers</a>
+                        <a href="compliance-detail.html"
+                            class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Corporate
+                            Compliance</a>
                     </div>
                 </div>
-                <a href="sme-services.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">SME's Services</a>
-                <a href="faq-taxation.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">FAQ's</a>
+                <a href="sme-services.html"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">SME's
+                    Services</a>
+                <a href="faq-taxation.html"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">FAQ's</a>
                 <div class="pt-4">
-                    <a href="contact-us.html" class="block w-full text-center px-4 py-3 rounded-md font-bold text-white bg-primary hover:bg-accent transition shadow-md">Contact Us</a>
+                    <a href="contact-us.html"
+                        class="block w-full text-center px-4 py-3 rounded-md font-bold text-white bg-primary hover:bg-accent transition shadow-md">Contact
+                        Us</a>
                 </div>
             </div>
         </div>
     </header>
 
     <section class="page-header-bg py-20 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row justify-between items-center">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row justify-between items-center">
             <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6 md:mb-0">Contact Us</h2>
             <nav class="flex text-blue-100 text-sm font-medium">
-                <ol class="inline-flex items-center space-x-2 border border-white/20 bg-black/20 backdrop-blur-md px-4 py-2 rounded-full">
+                <ol
+                    class="inline-flex items-center space-x-2 border border-white/20 bg-black/20 backdrop-blur-md px-4 py-2 rounded-full">
                     <li><a href="index.html" class="hover:text-white">Home</a></li>
                     <li><i class="fa-solid fa-chevron-right text-[10px] mx-1 opacity-70"></i></li>
                     <li class="text-accent font-semibold">Contact</li>
@@ -123,19 +239,25 @@
                             <span class="w-12 h-1 bg-accent inline-block"></span>
                             Get In Touch
                         </h2>
-                        <p class="text-gray-600 text-lg">We welcome your inquiries. Please feel free to reach out to our Pune office regarding any of our professional services.</p>
+                        <p class="text-gray-600 text-lg">We welcome your inquiries. Please feel free to reach out to our
+                            Pune office regarding any of our professional services.</p>
                     </div>
 
-                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm relative overflow-hidden group">
+                    <div
+                        class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm relative overflow-hidden group">
                         <!-- Decorative bg -->
-                        <div class="absolute right-0 top-0 w-32 h-32 bg-primary/5 rounded-bl-[100px] z-0 transition-transform duration-500 group-hover:scale-110"></div>
-                        
+                        <div
+                            class="absolute right-0 top-0 w-32 h-32 bg-primary/5 rounded-bl-[100px] z-0 transition-transform duration-500 group-hover:scale-110">
+                        </div>
+
                         <div class="relative z-10">
-                            <h3 class="text-2xl font-serif font-bold text-primary mb-8 border-b border-gray-200 pb-4">Pune Office</h3>
-                            
+                            <h3 class="text-2xl font-serif font-bold text-primary mb-8 border-b border-gray-200 pb-4">
+                                Pune Office</h3>
+
                             <ul class="space-y-6">
                                 <li class="flex gap-4">
-                                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent shadow-sm flex-shrink-0">
+                                    <div
+                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent shadow-sm flex-shrink-0">
                                         <i class="fa-solid fa-location-dot text-xl"></i>
                                     </div>
                                     <div>
@@ -148,26 +270,34 @@
                                         </p>
                                     </div>
                                 </li>
-                                
+
                                 <li class="flex gap-4">
-                                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent shadow-sm flex-shrink-0">
+                                    <div
+                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent shadow-sm flex-shrink-0">
                                         <i class="fa-solid fa-envelope text-xl"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-bold text-gray-900 mb-1">Email Us</h4>
-                                        <a href="mailto:contact@carahulgodbole.com" class="text-primary hover:text-accent font-medium transition block">contact@carahulgodbole.com</a>
-                                        <a href="mailto:god_rahul@yahoo.com" class="text-primary hover:text-accent font-medium transition block mt-1">god_rahul@yahoo.com</a>
+                                        <a href="mailto:contact@carahulgodbole.com"
+                                            class="text-primary hover:text-accent font-medium transition block">contact@carahulgodbole.com</a>
+                                        <a href="mailto:god_rahul@yahoo.com"
+                                            class="text-primary hover:text-accent font-medium transition block mt-1">god_rahul@yahoo.com</a>
                                     </div>
                                 </li>
 
                                 <li class="flex gap-4">
-                                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent shadow-sm flex-shrink-0">
+                                    <div
+                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent shadow-sm flex-shrink-0">
                                         <i class="fa-solid fa-phone text-xl"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-bold text-gray-900 mb-1">Call Us</h4>
-                                        <a href="tel:+919890417695" class="text-primary hover:text-accent font-medium transition text-lg">+91 98904 17695</a> <br>
-                                        <a href="tel:+917755907695" class="text-primary hover:text-accent font-medium transition text-lg">+91 77559 07695</a>
+                                        <a href="tel:+919890417695"
+                                            class="text-primary hover:text-accent font-medium transition text-lg">+91
+                                            98904 17695</a> <br>
+                                        <a href="tel:+917755907695"
+                                            class="text-primary hover:text-accent font-medium transition text-lg">+91
+                                            77559 07695</a>
                                     </div>
                                 </li>
                             </ul>
@@ -177,48 +307,66 @@
 
                 <!-- Contact Form -->
                 <div>
-                    <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] h-full">
+                    <div
+                        class="bg-white rounded-2xl p-8 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] h-full">
                         <h3 class="text-2xl font-serif font-bold text-primary mb-6">Send a Message</h3>
-                        <form action="#" method="POST" class="space-y-6">
+
+                        <!-- Status Message -->
+                        <div id="form-message" class="form-message">
+                            <i id="message-icon"></i>
+                            <span id="message-text"></span>
+                        </div>
+
+                        <form id="contactForm" class="space-y-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
-                                    <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-accent outline-none transition bg-gray-50 focus:bg-white" placeholder="John Doe">
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your
+                                        Name</label>
+                                    <input type="text" id="name" name="name" required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-accent outline-none transition bg-gray-50 focus:bg-white"
+                                        placeholder="John Doe">
                                 </div>
                                 <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Your Email</label>
-                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-accent outline-none transition bg-gray-50 focus:bg-white" placeholder="john@example.com">
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Your
+                                        Email</label>
+                                    <input type="email" id="email" name="email" required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-accent outline-none transition bg-gray-50 focus:bg-white"
+                                        placeholder="john@example.com">
                                 </div>
                             </div>
-                            
+
                             <div>
-                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-accent outline-none transition bg-gray-50 focus:bg-white" placeholder="How can we help you?">
+                                <label for="subject"
+                                    class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-accent outline-none transition bg-gray-50 focus:bg-white"
+                                    placeholder="How can we help you?">
                             </div>
-                            
+
                             <div>
-                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-accent outline-none transition bg-gray-50 focus:bg-white resize-none" placeholder="Write your message here..."></textarea>
+                                <label for="message"
+                                    class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-accent outline-none transition bg-gray-50 focus:bg-white resize-none"
+                                    placeholder="Write your message here..."></textarea>
                             </div>
-                            
-                            <button type="button" class="w-full bg-primary hover:bg-accent text-white font-bold py-4 rounded-xl transition duration-300 shadow-md transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
-                                Send Message <i class="fa-solid fa-paper-plane"></i>
+
+                            <button type="submit"
+                                class="w-full bg-primary hover:bg-accent text-white font-bold py-4 rounded-xl transition duration-300 shadow-md transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                                <span id="btn-text">Send Message</span>
+                                <i id="btn-icon" class="fa-solid fa-paper-plane"></i>
                             </button>
                         </form>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Map Section -->
             <div class="mt-16 rounded-2xl overflow-hidden shadow-lg border border-gray-200 h-96 relative">
                 <!-- Embedded Google Map targeting Paud Road, Pune -->
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.560155054942!2d73.8159!3d18.5036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMwJzEzLjAiTiA3M8KwNDgnNTcuMiJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.560155054942!2d73.8159!3d18.5036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMwJzEzLjAiTiA3M8KwNDgnNTcuMiJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
                 </iframe>
                 <!-- Map Overlay Gradient for aesthetics -->
                 <div class="absolute inset-0 pointer-events-none shadow-[inset_0_0_20px_rgba(0,0,0,0.1)]"></div>
@@ -231,29 +379,44 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="flex items-center gap-4">
-                    <div class="bg-white p-2 rounded max-w-[60px]"><img src="images/calogo.png" class="h-auto w-full object-contain" onerror="this.style.display='none'"></div>
+                    <div class="bg-white p-2 rounded max-w-[60px]"><img src="images/calogo.png"
+                            class="h-auto w-full object-contain" onerror="this.style.display='none'"></div>
                     <div>
-                        <span class="font-serif font-bold text-white text-2xl tracking-wide uppercase">Rahul Godbole</span>
-                        <p class="text-sm text-gray-500 mt-1 uppercase tracking-widest font-semibold">Chartered Accountants &copy; 2026</p>
+                        <span class="font-serif font-bold text-white text-2xl tracking-wide uppercase">Rahul
+                            Godbole</span>
+                        <p class="text-sm text-gray-500 mt-1 uppercase tracking-widest font-semibold">Chartered
+                            Accountants &copy; 2026</p>
                     </div>
                 </div>
                 <div class="text-center md:text-right">
-                    <p class="text-base">Maintained by <a href="http://www.carvingit.com/" target="_blank" class="text-accent font-semibold hover:text-white transition">Carving IT</a></p>
+                    <p class="text-base">Maintained by <a href="http://www.carvingit.com/" target="_blank"
+                            class="text-accent font-semibold hover:text-white transition">Carving IT</a></p>
                 </div>
             </div>
         </div>
     </footer>
-    
+
     <script>
+        // Initialize EmailJS with error handling
+        console.log('Initializing EmailJS...');
+        if (typeof emailjs !== 'undefined') {
+            emailjs.init('Z7iP__VVKGg31MfC5');
+            console.log('EmailJS initialized successfully');
+        } else {
+            console.error('EmailJS library not loaded');
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM loaded, setting up event listeners...');
+
             // Mobile Menu Toggle
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
-            if(btn && menu) {
+            if (btn && menu) {
                 btn.addEventListener('click', () => {
                     menu.classList.toggle('hidden');
                     const icon = btn.querySelector('i');
-                    if(menu.classList.contains('hidden')) {
+                    if (menu.classList.contains('hidden')) {
                         icon.classList.remove('fa-xmark');
                         icon.classList.add('fa-bars');
                     } else {
@@ -262,7 +425,103 @@
                     }
                 });
             }
+
+            // Contact Form Handler
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('form-message');
+            const messageText = document.getElementById('message-text');
+            const messageIcon = document.getElementById('message-icon');
+            const btnText = document.getElementById('btn-text');
+            const btnIcon = document.getElementById('btn-icon');
+
+            console.log('Form found:', !!contactForm);
+            console.log('Form message element found:', !!formMessage);
+
+            if (!contactForm) {
+                console.error('Contact form not found!');
+                return;
+            }
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            console.log('Submit button found:', !!submitBtn);
+
+            contactForm.addEventListener('submit', async (e) => {
+                console.log('Form submitted');
+                e.preventDefault();
+
+                // Disable button and show loading state
+                submitBtn.disabled = true;
+                btnText.textContent = 'Sending...';
+                btnIcon.classList.remove('fa-paper-plane');
+                btnIcon.classList.add('fa-spinner', 'fa-spin');
+
+                // Prepare template parameters
+                const templateParams = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value,
+                    time: new Date().toLocaleString('en-IN', {
+                        dateStyle: 'medium',
+                        timeStyle: 'short',
+                        timeZone: 'Asia/Kolkata'
+                    })
+                };
+
+                console.log('Template params:', templateParams);
+
+                try {
+                    // Send email via EmailJS (explictly passing public key along with service & template ID)
+                    console.log('Sending email...');
+                    const response = await emailjs.send(
+                        'service_qumsgsg',
+                        'template_a08mt0r',
+                        templateParams,
+                        'Z7iP__VVKGg31MfC5'  // Added cleanly to eliminate initialization edge cases
+                    );
+
+                    console.log('EmailJS Response:', response);
+
+                    if (response.status === 200) {
+                        // Success message
+                        formMessage.classList.remove('error');
+                        formMessage.classList.add('show', 'success');
+                        messageIcon.className = 'fa-solid fa-circle-check mt-0.5 text-green-600';
+                        messageText.innerHTML = '<strong class="block mb-1 text-green-800">Message Sent Successfully!</strong><span class="text-sm font-normal text-green-700">Thank you for reaching out. We have received your inquiry and will get back to you shortly.</span>';
+
+                        // Reset form
+                        contactForm.reset();
+
+                        // Auto-hide message after 8 seconds
+                        setTimeout(() => {
+                            formMessage.classList.remove('show');
+                        }, 8000);
+                    }
+                } catch (error) {
+                    // Error message
+                    console.error('EmailJS Error Detailed:', error);
+                    formMessage.classList.remove('success');
+                    formMessage.classList.add('show', 'error');
+                    messageIcon.className = 'fa-solid fa-circle-exclamation mt-0.5 text-red-500';
+
+                    // Extract exact error for debugging
+                    const exactError = (error && error.text) ? error.text : (error && error.message) ? error.message : 'Unknown Error - Check EmailJS Dashboard';
+
+                    messageText.innerHTML = `<strong class="block mb-1 text-red-800">Submission Failed </strong><span class="text-sm font-normal text-red-700 block mb-2">Error Detail: ${exactError}</span><span class="text-sm font-normal text-red-700">Please try emailing us directly at <a href="mailto:contact@carahulgodbole.com" class="font-medium underline hover:text-red-900">contact@carahulgodbole.com</a>.</span>`;
+                } finally {
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    btnText.textContent = 'Send Message';
+                    btnIcon.classList.remove('fa-spinner', 'fa-spin');
+                    btnIcon.classList.add('fa-paper-plane');
+                }
+            });
         });
     </script>
+    }
+    });
+    });
+    </script>
 </body>
+
 </html>
