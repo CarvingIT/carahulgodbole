@@ -1,0 +1,10 @@
+# Dependency directories
+node_modules/
+
+# Build output
+css/tailwind-output.css
+
+# Misc
+.DS_Store
+.env
+*.log
