@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Compass | CA Rahul Godbole</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN/Local stylesheet reference) -->
+    <link rel="stylesheet" href="css/tailwind-output.css" />
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <style>
+        .glass-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .page-header-bg {
+            background: linear-gradient(135deg, rgba(11, 52, 100, 0.9) 0%, rgba(11, 52, 100, 0.95) 100%), url('images/audit.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .step-container {
+            display: none;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .step-container.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            #step4,
+            #step4 * {
+                visibility: visible;
+            }
+
+            #step4 {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-700 antialiased bg-gray-50 selection:bg-accent selection:text-white">
+
+    <!-- Navigation -->
+    <header class="glass-header sticky top-0 z-50 border-b border-gray-200 shadow-sm transition-all duration-300 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-3 group">
+                        <img src="images/calogo.png" alt="CA Logo" class="h-12 w-auto transition transform group-hover:scale-105" onerror="this.src='https://ui-avatars.com/api/?name=CA&background=0b3464&color=fff&rounded=true'">
+                        <div>
+                            <h1 class="font-serif text-2xl font-bold text-primary uppercase tracking-wide">Rahul Godbole</h1>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold mt-0.5">Chartered Accountant</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">Home</a>
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition focus:outline-none">
+                            <a href="about.html">About Us</a> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <!-- Submenu -->
+                        <div class="absolute left-0 top-full mt-0 w-48 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
+                            <div class="py-2">
+                                <a href="careers.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Careers</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition focus:outline-none">
+                            <a href="services.html">Services</a> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <!-- Submenu -->
+                        <div class="absolute left-0 top-full mt-0 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
+                            <div class="py-2">
+                                <a href="auditing-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Auditing</a>
+                                <a href="taxation-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Taxation</a>
+                                <a href="account-outsource-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Accounts Outsourcing</a>
+                                <a href="financial-planning-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Financial Advisers</a>
+                                <a href="compliance-detail.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Corporate Compliance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="sme-services.html" class="text-gray-600 hover:text-primary font-medium py-2 transition">SME's</a>
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition focus:outline-none">
+                            <a href="faq-taxation.html">FAQ's</a> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-0 w-48 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
+                            <div class="py-2">
+                                <a href="faq-taxation.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition">Taxation</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-primary font-medium py-2 flex items-center gap-1 transition focus:outline-none">
+                            <span>Compass</span> <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-0 w-56 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
+                            <div class="py-2">
+                                <a href="income-tax-compass.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition" style="white-space: nowrap;">Income Tax Compass</a>
+                                <a href="form.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition" style="white-space: nowrap;">Income Tax Intake Form</a>
+                                <a href="gst-compass.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition" style="white-space: nowrap;">GST Compass</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex">
+                    <a href="contact-us.html" class="bg-primary hover:bg-accent text-white px-6 py-2.5 rounded-md font-semibold transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Contact Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu-panel" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl overflow-hidden transition-all duration-300 origin-top">
+            <div class="px-4 py-4 space-y-2">
+                <a href="index.html" class="block px-4 py-3 rounded-md text-base font-semibold text-primary bg-blue-50/50">Home</a>
+                <a href="about.html" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50">About Us</a>
+                <a href="services.html" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Services</a>
+                <a href="sme-services.html" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50">SME's</a>
+                <a href="faq-taxation.html" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50">FAQ's</a>
+                <a href="income-tax-compass.html" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Income Tax Compass</a>
+                <a href="form.html" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Income Tax Intake Form</a>
+                <a href="gst-compass.html" class="block px-4 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50">GST Compass</a>
+
+                <a href="contact-us.html" class="block px-4 py-3 mt-4 text-center rounded-md text-base font-semibold text-white bg-primary hover:bg-accent transition drop-shadow-md">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header (Breadcrumb Section) -->
+    <section class="page-header-bg py-16 relative no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <h2 class="text-4xl font-serif font-bold text-white mb-2 drop-shadow-md">Income Tax Compass</h2>
+                <p class="text-blue-100 text-sm">Godbole Office | Client Information Intake - AY 2026-27</p>
+            </div>
+            <nav class="flex text-blue-100 text-sm font-medium mt-4 md:mt-0">
+                <ol class="inline-flex items-center space-x-2 border border-white/20 bg-black/20 backdrop-blur-md px-4 py-2 rounded-full">
+                    <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                    <li><i class="fa-solid fa-chevron-right text-[10px] mx-1 opacity-70"></i></li>
+                    <li class="text-accent font-semibold">Income Tax Compass</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Step Progress Indicator -->
+        <div class="mb-12 max-w-3xl mx-auto no-print">
+            <div class="flex items-center justify-between relative">
+                <!-- Progress Line Background -->
+                <div class="absolute left-0 top-1/2 transform -translate-y-1/2 w-full h-1 bg-gray-200 z-0 rounded-full"></div>
+                <!-- Progress Line Fill -->
+                <div id="step-line-progress" class="absolute left-0 top-1/2 transform -translate-y-1/2 h-1 bg-accent z-0 transition-all duration-500 rounded-full" style="width: 0%;"></div>
+
+                <!-- Step 1 Dot -->
+                <div class="relative z-10 flex flex-col items-center">
+                    <div id="step-dot-1" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold shadow-md border-2 border-primary ring-4 ring-primary/20 transition-all duration-300">1</div>
+                    <span class="text-xs font-semibold mt-2 text-primary">Basic Info</span>
+                </div>
+                <!-- Step 2 Dot -->
+                <div class="relative z-10 flex flex-col items-center">
+                    <div id="step-dot-2" class="w-10 h-10 rounded-full bg-white text-gray-400 flex items-center justify-center font-bold shadow-md border-2 border-gray-200 transition-all duration-300">2</div>
+                    <span class="text-xs font-medium mt-2 text-gray-400">Income Sources</span>
+                </div>
+                <!-- Step 3 Dot -->
+                <div class="relative z-10 flex flex-col items-center">
+                    <div id="step-dot-3" class="w-10 h-10 rounded-full bg-white text-gray-400 flex items-center justify-center font-bold shadow-md border-2 border-gray-200 transition-all duration-300">3</div>
+                    <span class="text-xs font-medium mt-2 text-gray-400">Common Details</span>
+                </div>
+                <!-- Step 4 Dot -->
+                <div class="relative z-10 flex flex-col items-center">
+                    <div id="step-dot-4" class="w-10 h-10 rounded-full bg-white text-gray-400 flex items-center justify-center font-bold shadow-md border-2 border-gray-200 transition-all duration-300">4</div>
+                    <span class="text-xs font-medium mt-2 text-gray-400">Checklist</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Wrapper -->
+        <form id="taxForm" method="POST" action="/" class="space-y-8">
+
+            <!-- STEP 1: Instructions & Basic Information -->
+            <div id="step1" class="step-container active">
+                
+                <!-- Instruction Box -->
+                <div class="bg-blue-50 border-l-4 border-accent p-6 rounded-r-2xl shadow-sm mb-8">
+                    <h5 class="text-primary font-serif font-bold text-lg mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-info text-accent"></i> Instructions & Guidelines
+                    </h5>
+                    <ul class="space-y-3 text-gray-700 text-sm leading-relaxed">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-clock text-accent mt-0.5 flex-shrink-0 text-xs"></i>
+                            <span>It will take approximately <strong>8-9 minutes</strong> to fill out this intake form.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-calendar-days text-accent mt-0.5 flex-shrink-0 text-xs"></i>
+                            <span>Please provide information for the <strong>Financial Year 2025-26</strong> only (April 1, 2025 to March 31, 2026).</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-envelope text-accent mt-0.5 flex-shrink-0 text-xs"></i>
+                            <span>Please email us all documents as per the checklist generated after submission.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5 text-red-600 font-semibold">
+                            <i class="fa-solid fa-circle-exclamation text-red-500 mt-0.5 flex-shrink-0 text-xs"></i>
+                            <span>Do not share any documents on WhatsApp.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-address-book text-accent mt-0.5 flex-shrink-0 text-xs"></i>
+                            <span>Use email <a href="mailto:contact@carahulgodbole.com" class="text-primary hover:underline font-semibold">contact@carahulgodbole.com</a> and Mobile No. <span class="font-semibold">7755907695</span> for all communications.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-calendar-xmark text-accent mt-0.5 flex-shrink-0 text-xs"></i>
+                            <span>This link is valid only up to <strong>30th June 2026</strong>. Please contact us for revisions.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-shield-halved text-accent mt-0.5 flex-shrink-0 text-xs"></i>
+                            <span>This tool gathers required information for internal communication between you and the Godbole Office.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Basic Info Card -->
+                <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden mb-8">
+                    <div class="border-t-4 border-accent px-6 py-4 bg-gray-50/50 flex items-center border-b border-gray-100">
+                        <h3 class="text-lg font-serif font-bold text-primary flex items-center gap-2">
+                            <i class="fa-solid fa-user text-accent"></i> Basic Information
+                        </h3>
+                    </div>
+                    
+                    <div class="p-6 md:p-8 space-y-6">
+                        <!-- Full Name -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2" for="client_name">Full Name (As per PAN)</label>
+                            <input type="text" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" name="client_name" id="client_name" required placeholder="Enter your full name">
+                        </div>
+
+                        <!-- Client Status -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-3">Client Status</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <label class="flex items-center gap-3 p-4 bg-gray-50 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-100/50 transition">
+                                    <input class="h-5 w-5 text-accent border-gray-300 focus:ring-accent cursor-pointer" type="radio" name="clientStatus" id="newClient" value="Yes" onchange="toggleBasicInfo()">
+                                    <span class="text-sm font-semibold text-gray-700">I am a New Client</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-4 bg-gray-50 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-100/50 transition">
+                                    <input class="h-5 w-5 text-accent border-gray-300 focus:ring-accent cursor-pointer" type="radio" name="clientStatus" id="existingClient" value="No" onchange="toggleBasicInfo()">
+                                    <span class="text-sm font-semibold text-gray-700">I am an Existing Client</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- New Client Fields -->
+                        <div id="newClientFields" style="display: none;" class="space-y-5 border-l-4 border-accent/40 pl-4 py-2">
+                            <div>
+                                <label class="block text-sm font-semibold text-red-600 mb-2" for="pan_number_new">PAN Number (Mandatory - 10 Digits)</label>
+                                <input type="text" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm uppercase" name="pan_number_new" id="pan_number_new" placeholder="Enter your 10-digit PAN" maxlength="10">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2" for="mobile_no">Mobile No.</label>
+                                <input type="text" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" name="mobile_no" id="mobile_no" placeholder="Enter mobile number">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2" for="email_id">Email ID</label>
+                                <input type="email" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" name="email_id" id="email_id" placeholder="Enter email address">
+                            </div>
+                        </div>
+
+                        <!-- Existing Client Fields -->
+                        <div id="existingClientFields" style="display: none;" class="space-y-5 border-l-4 border-accent/40 pl-4 py-2">
+                            <div>
+                                <label class="block text-sm font-semibold text-red-600 mb-2" for="pan_number_existing">PAN Number (Mandatory - 10 Digits)</label>
+                                <input type="text" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm uppercase" name="pan_number_existing" id="pan_number_existing" placeholder="Enter your 10-digit PAN" maxlength="10">
+                            </div>
+                        </div>
+
+                        <!-- Category -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2" for="category">Select Category</label>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="category" name="category" onchange="toggleCategoryForms()" required>
+                                <option value="" selected disabled>Select...</option>
+                                <option value="A">Resident - Transactions in Mutual Funds and Shares</option>
+                                <option value="B">Resident - NO Transactions in Mutual Funds and Shares</option>
+                                <option value="C">Non Resident - Income from any source arising in India</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="flex justify-end pt-6 border-t border-gray-200">
+                    <button type="button" id="btnNext1" onclick="validateAndNext1()" class="bg-primary hover:bg-accent text-white px-8 py-3.5 rounded-lg font-semibold transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 flex items-center gap-2">
+                        Next Step <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2: Income Sources -->
+            <div id="step2" class="step-container">
+
+                <!-- 1. Salary -->
+                <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden mb-8">
+                    <div class="border-t-4 border-accent px-6 py-4 bg-gray-50/50 flex items-center border-b border-gray-100">
+                        <h3 class="text-lg font-serif font-bold text-primary flex items-center gap-2">
+                            <i class="fa-solid fa-wallet text-accent"></i> 1. Income from Salaries
+                        </h3>
+                    </div>
+                    <div class="p-6 md:p-8 space-y-4">
+                        <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_salary">I have income from salaries</label>
+                        <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_salary" name="q_salary" onchange="toggleDisplay('salary_subset', this.value)">
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+
+                        <div id="salary_subset" style="display: none;" class="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-4 mt-3 shadow-sm">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2" for="q_salary_employer">From one employer only?</label>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_salary_employer" name="q_salary_employer" onchange="document.getElementById('multi_employer_msg').style.display = (this.value === 'No') ? 'block' : 'none';">
+                                <option value="" selected disabled>Select...</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No (From more than 1 employer)</option>
+                            </select>
+                            <span id="multi_employer_msg" class="block text-xs font-semibold text-primary mt-2" style="display: none;">
+                                <i class="fa-solid fa-circle-exclamation mr-1"></i> Please obtain Form 16 and 12BA from all employers.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. House Property -->
+                <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden mb-8">
+                    <div class="border-t-4 border-accent px-6 py-4 bg-gray-50/50 flex items-center border-b border-gray-100">
+                        <h3 class="text-lg font-serif font-bold text-primary flex items-center gap-2">
+                            <i class="fa-solid fa-house-chimney text-accent"></i> 2. House Property & Housing Loan
+                        </h3>
+                    </div>
+                    <div class="p-6 md:p-8 space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_house">I have rental income/housing loan in India.</label>
+                            <span class="block text-xs text-gray-500 mb-2">Residential and Commercial both types of properties are included here.</span>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_house" name="q_house" onchange="toggleDisplay('house_subset', this.value)">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+
+                        <div id="house_subset" style="display: none;" class="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-4 mt-3 shadow-sm">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2" for="num_properties">Number of Properties held in your / joint name</label>
+                            <input type="number" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="num_properties" name="num_properties" min="1" max="10" oninput="generatePropertySubsets()">
+                            <div id="propertySubsetsContainer" class="mt-4 space-y-4"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Shares and Mutual Funds -->
+                <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden mb-8" id="section_shares">
+                    <div class="border-t-4 border-accent px-6 py-4 bg-gray-50/50 flex items-center border-b border-gray-100">
+                        <h3 class="text-lg font-serif font-bold text-primary flex items-center gap-2">
+                            <i class="fa-solid fa-chart-line text-accent"></i> 3. Transactions in Shares and Mutual Funds (VDAs)
+                        </h3>
+                    </div>
+                    <div class="p-6 md:p-8 space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_shares">I have entered into transactions in shares, mutual funds, or VDAs.</label>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_shares" name="q_shares" onchange="toggleDisplay('shares_subset', this.value)">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+
+                        <div id="shares_subset" style="display: none;" class="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-4 mt-3 shadow-sm space-y-5">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2" for="q_demat">I have Demat Account(s)</label>
+                                <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm mb-3" id="q_demat" name="q_demat" onchange="toggleDisplay('demat_subset', this.value)">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+                            
+                            <div id="demat_subset" style="display: none;" class="mb-3 pl-4 border-l-4 border-accent">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2" for="num_demat">Number of Demat Accounts I have</label>
+                                <input type="number" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm mb-3" id="num_demat" name="num_demat" min="1" max="10" oninput="generateDematSubsets()">
+                                <div id="dematSubsetsContainer" class="space-y-2 mt-3"></div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2" for="q_fno">I have transactions in Futures and Options (F&O)</label>
+                                <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm mb-3" id="q_fno" name="q_fno">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2" for="q_vda">I have transactions in Virtual Digital Assets (Crypto, NFTs)</label>
+                                <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm mb-3" id="q_vda" name="q_vda">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2" for="q_speculation">I have transactions in the nature of speculation (e.g., Day trading)</label>
+                                <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_speculation" name="q_speculation">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Other Expenditures -->
+                <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden mb-8">
+                    <div class="border-t-4 border-accent px-6 py-4 bg-gray-50/50 flex items-center border-b border-gray-100">
+                        <h3 class="text-lg font-serif font-bold text-primary flex items-center gap-2">
+                            <i class="fa-solid fa-receipt text-accent"></i> 4. Other Expenditures & Directorships
+                        </h3>
+                    </div>
+                    <div class="p-6 md:p-8 space-y-6">
+                        <!-- Foreign Travel -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_travel">Incurred expenditure > Rs. 2 lakhs for foreign travel?</label>
+                            <span class="block text-xs font-semibold text-red-500 mb-2">These are mandatory disclosures in ITR 2. Please provide correct information.</span>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_travel" name="q_travel" onchange="toggleDisplay('travel_subset', this.value)">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                            <div id="travel_subset" style="display: none;" class="mt-3">
+                                <input type="number" id="amt_travel" name="amt_travel" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" placeholder="Enter Amount (Rs.)">
+                            </div>
+                        </div>
+
+                        <!-- Electricity -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_electric">Incurred expenditure > Rs. 1 lakh on electricity consumption?</label>
+                            <span class="block text-xs font-semibold text-red-500 mb-2">These are mandatory disclosures in ITR 2. Please provide correct information.</span>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_electric" name="q_electric" onchange="toggleDisplay('electric_subset', this.value)">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                            <div id="electric_subset" style="display: none;" class="mt-3">
+                                <input type="number" id="amt_electric" name="amt_electric" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" placeholder="Enter Amount (Rs.)">
+                            </div>
+                        </div>
+
+                        <!-- Director -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_director">Were you a Director in a company at any time during the previous year?</label>
+                            <span class="block text-xs font-semibold text-red-500 mb-2">These are mandatory disclosures in ITR 2. Please provide correct information.</span>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_director" name="q_director" onchange="toggleDisplay('director_subset', this.value)">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                            <div id="director_subset" style="display: none;" class="mt-3">
+                                <input type="text" id="director_din" name="director_din" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" placeholder="Enter Director Identification Number (DIN)">
+                            </div>
+                        </div>
+
+                        <!-- Unlisted Shares -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_unlisted">Held unlisted equity shares during the previous year?</label>
+                            <span class="block text-xs font-semibold text-red-500 mb-2">These are mandatory disclosures in ITR 2. Please provide correct information.</span>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_unlisted" name="q_unlisted">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+
+                        <!-- Real Estate -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_realestate">Transferred any immovable property (Real Estate) during the year?</label>
+                            <span class="block text-xs font-semibold text-red-500 mb-2">These are mandatory disclosures in ITR 2. Please provide correct information.</span>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_realestate" name="q_realestate">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Other Sources -->
+                <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden mb-8">
+                    <div class="border-t-4 border-accent px-6 py-4 bg-gray-50/50 flex items-center border-b border-gray-100">
+                        <h3 class="text-lg font-serif font-bold text-primary flex items-center gap-2">
+                            <i class="fa-solid fa-coins text-accent"></i> 5. Income From Other Sources
+                        </h3>
+                    </div>
+                    <div class="p-6 md:p-8 space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_other_sources">I have income from other sources (Interest, Dividend, Pension, etc.)</label>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_other_sources" name="q_other_sources" onchange="toggleDisplay('other_sources_subset', this.value)">
+                                <option value="No">Select...</option>
+                                <option value="Yes">Yes, I will provide details</option>
+                                <option value="AIS">Yes but I would like to pick up details from AIS/TIS instead of giving info here.</option>
+                            </select>
+                        </div>
+
+                        <div id="other_sources_subset" style="display: none;" class="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-4 mt-3 shadow-sm space-y-5">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2" for="q_div_comp">I have Dividend Income (Companies)</label>
+                                <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm mb-3" id="q_div_comp" name="q_div_comp">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2" for="q_div_coop">I have Dividend Income (Co-op societies/banks)</label>
+                                <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm mb-3" id="q_div_coop" name="q_div_coop">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2" for="q_interest">I have Interest Income</label>
+                                <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm mb-3" id="q_interest" name="q_interest" onchange="toggleDisplay('interest_subset', this.value)">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+                            
+                            <div id="interest_subset" style="display: none;" class="mb-3 pl-4 border-l-4 border-accent space-y-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_int_sb">Interest from Savings Bank Account</label>
+                                    <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_int_sb" name="q_int_sb">
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_int_po">Interest from Post Office</label>
+                                    <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_int_po" name="q_int_po">
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_int_bond">Interest from Bonds etc.</label>
+                                    <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_int_bond" name="q_int_bond">
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_int_fd">Interest from FDs</label>
+                                    <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_int_fd" name="q_int_fd">
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_int_other">Other interest income</label>
+                                    <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_int_other" name="q_int_other">
+                                        <option value="No">No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2" for="q_pension">I have family pension</label>
+                                <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_pension" name="q_pension">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Foreign Assets -->
+                <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden mb-8" id="section_foreign">
+                    <div class="border-t-4 border-accent px-6 py-4 bg-gray-50/50 flex items-center border-b border-gray-100">
+                        <h3 class="text-lg font-serif font-bold text-primary flex items-center gap-2">
+                            <i class="fa-solid fa-earth-americas text-accent"></i> 6. Foreign Assets & High Income Disclosures
+                        </h3>
+                    </div>
+                    <div class="p-6 md:p-8 space-y-6">
+                        <!-- Foreign Income -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_foreign_inc">I have income already taxed in other countries</label>
+                            <span class="block text-xs font-semibold text-red-500 mb-2">These are mandatory disclosures in ITR 2. Please provide correct information.</span>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm mb-3" id="q_foreign_inc" name="q_foreign_inc" onchange="toggleDisplay('foreign_inc_subset', this.value)">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                            <div id="foreign_inc_subset" style="display: none;" class="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-4 mt-3 shadow-sm space-y-3">
+                                <input type="text" id="foreign_country" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm mb-2" name="foreign_country" placeholder="Country of Residence - Tax Residence">
+                                <input type="text" id="foreign_tin" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" name="foreign_tin" placeholder="Tax Identification Number">
+                            </div>
+                        </div>
+
+                        <!-- Foreign Assets -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_foreign_assets">I have assets outside India</label>
+                            <span class="block text-xs font-semibold text-red-500 mb-2">These are mandatory disclosures in ITR 2. Please provide correct information.</span>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm mb-3" id="q_foreign_assets" name="q_foreign_assets">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+
+                        <!-- 1 Crore Disclosure -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_1crore">My Income is more than 1 Crore (Additional disclosures of assets & liabilities)</label>
+                            <span class="block text-xs font-semibold text-red-500 mb-2">These are mandatory disclosures in ITR 2. Please provide correct information.</span>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_1crore" name="q_1crore">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="flex justify-between pt-6 border-t border-gray-200">
+                    <button type="button" onclick="showStep(1)" class="border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg font-semibold transition duration-300 flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-left"></i> Previous
+                    </button>
+                    <button type="button" onclick="validateAndNext2()" class="bg-primary hover:bg-accent text-white px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 flex items-center gap-2">
+                        Next Step <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3: Common Details -->
+            <div id="step3" class="step-container">
+                
+                <!-- 7. Common Details & Confirmations -->
+                <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden mb-8">
+                    <div class="border-t-4 border-accent px-6 py-4 bg-gray-50/50 flex items-center border-b border-gray-100">
+                        <h3 class="text-lg font-serif font-bold text-primary flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-accent"></i> 7. Common Details & Confirmations
+                        </h3>
+                    </div>
+                    <div class="p-6 md:p-8 space-y-6">
+                        <!-- Number of Banks -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="num_banks">Number of Bank Accounts</label>
+                            <span class="block text-xs text-gray-500 mb-2">Please declare all operational bank accounts. It is mandatory to disclose all bank accounts.</span>
+                            <input type="number" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm mb-3" id="num_banks" name="num_banks" min="1" max="20" oninput="generateBankSubsets()">
+                            <div id="bankSubsetsContainer" class="space-y-4"></div>
+                            
+                            <div class="mt-4 p-4 bg-green-50 border border-green-200 rounded-xl hidden-section" id="bankConfirmBox" style="display: none;">
+                                <label class="flex items-start gap-3 cursor-pointer">
+                                    <input class="mt-1 h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500 cursor-pointer" type="checkbox" id="bankConfirm" name="bankConfirm">
+                                    <span class="text-sm font-bold text-green-800 select-none">Yes, I confirm I have provided accurate details for all my bank accounts.</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Opt Out -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">I want to opt out of new regime (New Regime is default)</label>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm mb-3" name="opt_out_new_regime">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+
+                        <!-- Deductions -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_deductions">I would like to claim typical deductions from Income Tax (Old Regime)</label>
+                            <span class="block text-xs text-gray-500 mb-2">E.g., Mediclaim, 80C, School Fees, NPS, etc.</span>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm mb-3" id="q_deductions" name="q_deductions">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+
+                        <!-- Agriculture -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1" for="q_agri">I have income from agriculture</label>
+                            <span class="block text-xs text-gray-500 mb-2">Detailed income and expense documentation will be required.</span>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm mb-3" id="q_agri" name="q_agri">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+
+                        <!-- Exempt PPF -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2" for="q_exempt">I have exempt interest income (e.g. PPF)</label>
+                            <select class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition duration-150 text-gray-800 text-sm" id="q_exempt" name="q_exempt">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="flex justify-between pt-6 border-t border-gray-200">
+                    <button type="button" onclick="showStep(2)" class="border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg font-semibold transition duration-300 flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-left"></i> Previous
+                    </button>
+                    <button type="button" onclick="validateAndGenerateChecklist()" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 flex items-center gap-2">
+                        Submit & Generate Checklist <i class="fa-solid fa-square-check"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 4: Generated Checklist Area -->
+            <div id="step4" class="step-container">
+                
+                <!-- Notice Alert -->
+                <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-2xl shadow-sm mb-6 no-print">
+                    <h5 class="text-green-800 font-serif font-bold text-lg mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-green-600"></i> Intake Information Submitted Successfully
+                    </h5>
+                    <p class="text-green-700 text-sm leading-relaxed">
+                        Thank you for completing the template. Please review your personalized document checklist below, mark the items as you prepare them, and export the checklist as a PDF or CSV file.
+                    </p>
+                </div>
+
+                <!-- Checklist Card -->
+                <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden mb-8">
+                    <div class="border-t-4 border-green-500 px-6 py-4 bg-gray-50/50 flex items-center border-b border-gray-100 justify-between">
+                        <h3 class="text-lg font-serif font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fa-solid fa-list-check text-green-600"></i> Generated Document Checklist
+                        </h3>
+                        <span class="text-xs bg-green-100 text-green-800 px-3 py-1 rounded-full font-bold uppercase tracking-wide no-print">Ready</span>
+                    </div>
+                    
+                    <div class="p-6 md:p-8">
+                        <p class="text-gray-500 text-sm mb-6 no-print">
+                            Please check the items below as you gather the required documents. This guarantees that all required proofs are submitted for your tax filing.
+                        </p>
+
+                        <!-- Checklist Items Container -->
+                        <div id="checklistContainer" class="border border-gray-100 rounded-xl overflow-hidden divide-y divide-gray-100 bg-white"></div>
+
+                        <!-- Answers Summary Container (Included in Prints) -->
+                        <div id="answersSummaryContainer"></div>
+
+                        <!-- Submission Success Area -->
+                        <div id="submissionSuccess" class="bg-green-50 border border-green-100 p-6 rounded-2xl text-center max-w-2xl mx-auto mb-6 no-print" style="display: none;">
+                            <div class="inline-flex items-center justify-center w-12 h-12 bg-green-100 text-green-600 rounded-full mb-3 shadow-inner">
+                                <i class="fa-solid fa-check text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-1">Information Submitted Successfully</h4>
+                            <p class="text-gray-600 text-sm max-w-md mx-auto leading-relaxed">
+                                Your answers have been compiled and sent to the CA Rahul Godbole Office. You can edit your responses, download the files again, or print/save the checklist below.
+                            </p>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div id="actionButtons" class="flex flex-wrap items-center justify-between gap-4 mt-8 pt-6 border-t border-gray-100 no-print">
+                            <div class="flex flex-wrap items-center gap-3">
+                                <button type="button" onclick="showStep(3)" class="border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg font-semibold transition duration-300 flex items-center gap-2">
+                                    <i class="fa-solid fa-arrow-left"></i> Edit Details
+                                </button>
+                                <button type="button" onclick="clearData()" class="border border-red-200 text-red-600 hover:bg-red-50/50 px-6 py-3 rounded-lg font-semibold transition duration-300 flex items-center gap-2">
+                                    <i class="fa-solid fa-arrow-rotate-left"></i> Clear & Start Over
+                                </button>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-3">
+                                <button type="button" id="btnSubmitForm" onclick="exportAndSubmit('submit')" class="bg-[#0b3464] hover:bg-[#08274a] text-white px-6 py-3 rounded-lg font-semibold transition duration-300 shadow-md hover:shadow-lg flex items-center gap-2">
+                                    <i class="fa-solid fa-paper-plane"></i> Submit Details to Office
+                                </button>
+                                <button type="button" id="btnExportPDF" onclick="exportAndSubmit('pdf')" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition duration-300 shadow-md hover:shadow-lg flex items-center gap-2">
+                                    <i class="fa-solid fa-file-pdf"></i> Export to PDF
+                                </button>
+                                <button type="button" id="btnExportExcel" onclick="exportAndSubmit('excel')" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition duration-300 shadow-md hover:shadow-lg flex items-center gap-2">
+                                    <i class="fa-solid fa-file-excel"></i> Export to Excel
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b1120] text-gray-400 py-16 border-t border-gray-800 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                
+                <div class="flex items-center gap-4">
+                    <div class="bg-white p-2 rounded max-w-[60px]">
+                        <img src="images/calogo.png" alt="CA Logo" class="h-auto w-full object-contain" onerror="this.style.display='none'">
+                    </div>
+                    <div>
+                        <span class="font-serif font-bold text-white text-2xl tracking-wide uppercase">Rahul Godbole</span>
+                        <p class="text-sm text-gray-500 mt-1 uppercase tracking-widest font-semibold">Chartered Accountant &copy; 2026</p>
+                    </div>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <p class="text-base">Maintained by <a href="http://www.carvingit.com/" target="_blank" class="text-accent font-semibold hover:text-white transition">Carving IT</a></p>
+                    <div class="flex flex-wrap gap-6 mt-4 justify-center md:justify-end text-sm font-medium">
+                        <a href="#" class="hover:text-accent transition">Terms of use</a>
+                        <a href="#" class="hover:text-accent transition">Privacy policy</a>
+                        <a href="#" class="hover:text-accent transition">License</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        // Core navigation and step control
+        function showStep(step) {
+            document.querySelectorAll('.step-container').forEach(el => el.classList.remove('active'));
+            document.getElementById('step' + step).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Update step indicator
+            const progressLine = document.getElementById('step-line-progress');
+            if (progressLine) {
+                progressLine.style.width = ((step - 1) * 33.33) + '%';
+            }
+
+            for (let i = 1; i <= 4; i++) {
+                const dot = document.getElementById('step-dot-' + i);
+                const label = dot.nextElementSibling;
+                if (dot) {
+                    if (i < step) {
+                        dot.className = "w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center font-bold shadow-md border-2 border-green-600 transition-all duration-300 cursor-pointer";
+                        dot.innerHTML = '<i class="fa-solid fa-check"></i>';
+                        dot.setAttribute('onclick', 'showStep(' + i + ')'); // Allow clicking back to completed steps
+                        label.className = "text-xs font-semibold mt-2 text-green-600";
+                    } else if (i === step) {
+                        dot.className = "w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold shadow-md border-2 border-primary ring-4 ring-primary/20 transition-all duration-300";
+                        dot.innerHTML = i;
+                        dot.removeAttribute('onclick');
+                        label.className = "text-xs font-semibold mt-2 text-primary";
+                    } else {
+                        dot.className = "w-10 h-10 rounded-full bg-white text-gray-400 flex items-center justify-center font-bold shadow-md border-2 border-gray-200 transition-all duration-300";
+                        dot.innerHTML = i;
+                        dot.removeAttribute('onclick');
+                        label.className = "text-xs font-medium mt-2 text-gray-400";
+                    }
+                }
+            }
+        }
+
+        function nextStep(step) {
+            showStep(step);
+        }
+
+        // Toggle Basic Info fields based on client type
+        function toggleBasicInfo() {
+            const isNew = document.getElementById('newClient').checked;
+            const isExisting = document.getElementById('existingClient').checked;
+
+            document.getElementById('newClientFields').style.display = isNew ? 'block' : 'none';
+            document.getElementById('existingClientFields').style.display = isExisting ? 'block' : 'none';
+        }
+
+        // Toggle category specific containers
+        function toggleCategoryForms() {
+            const category = document.getElementById('category').value;
+            if (category === 'B') {
+                document.getElementById('section_shares').style.display = 'none';
+                document.getElementById('section_foreign').style.display = 'none';
+            } else {
+                document.getElementById('section_shares').style.display = 'block';
+                document.getElementById('section_foreign').style.display = 'block';
+            }
+        }
+
+        // Validation utilities
+        function showError(inputId, message) {
+            const input = document.getElementById(inputId);
+            if (!input) return;
+            
+            clearError(inputId);
+            
+            if (input.type !== 'checkbox' && input.type !== 'radio') {
+                input.classList.add('border-red-500', 'focus:ring-red-200');
+                input.classList.remove('border-gray-300', 'focus:ring-accent/20');
+            }
+            
+            const errEl = document.createElement('p');
+            errEl.className = 'error-msg text-red-500 text-xs mt-1 font-semibold flex items-center gap-1';
+            errEl.id = `error_${inputId}`;
+            errEl.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> ${message}`;
+            
+            if (input.type === 'checkbox') {
+                const container = document.getElementById('bankConfirmBox') || input.parentNode;
+                container.parentNode.appendChild(errEl);
+            } else {
+                input.parentNode.appendChild(errEl);
+            }
+        }
+
+        function clearError(inputId) {
+            const input = document.getElementById(inputId);
+            if (!input) return;
+            
+            input.classList.remove('border-red-500', 'focus:ring-red-200');
+            input.classList.add('border-gray-300', 'focus:ring-accent/20');
+            
+            const errEl = document.getElementById(`error_${inputId}`);
+            if (errEl) {
+                errEl.remove();
+            }
+        }
+
+        function showRadioError(name, message) {
+            const radios = document.getElementsByName(name);
+            if (radios.length === 0) return;
+            const container = radios[0].closest('.grid') || radios[0].parentNode;
+            
+            clearRadioError(name);
+            
+            const errEl = document.createElement('p');
+            errEl.className = 'radio-error-msg text-red-500 text-xs mt-2 font-semibold flex items-center gap-1';
+            errEl.id = `error_radio_${name}`;
+            errEl.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> ${message}`;
+            
+            container.parentNode.appendChild(errEl);
+        }
+
+        function clearRadioError(name) {
+            const errEl = document.getElementById(`error_radio_${name}`);
+            if (errEl) {
+                errEl.remove();
+            }
+        }
+
+        // Validation for step 1
+        function validateStep1() {
+            let isValid = true;
+            let firstInvalidEl = null;
+
+            const clientName = document.getElementById('client_name');
+            if (!clientName.value.trim()) {
+                showError('client_name', "Please enter your Full Name.");
+                isValid = false;
+                if (!firstInvalidEl) firstInvalidEl = clientName;
+            } else {
+                clearError('client_name');
+            }
+
+            const isNew = document.getElementById('newClient').checked;
+            const isExisting = document.getElementById('existingClient').checked;
+            if (!isNew && !isExisting) {
+                showRadioError('clientStatus', "Please select your Client Status (New or Existing).");
+                isValid = false;
+            } else {
+                clearRadioError('clientStatus');
+            }
+
+            const panRegex = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+            if (isNew) {
+                const panInput = document.getElementById('pan_number_new');
+                const panVal = panInput.value.trim().toUpperCase();
+                panInput.value = panVal;
+                if (!panVal) {
+                    showError('pan_number_new', "PAN Number is mandatory for new clients.");
+                    isValid = false;
+                    if (!firstInvalidEl) firstInvalidEl = panInput;
+                } else if (!panRegex.test(panVal)) {
+                    showError('pan_number_new', "Invalid PAN format. Standard format is 5 letters, 4 digits, 1 letter (e.g. ABCDE1234F).");
+                    isValid = false;
+                    if (!firstInvalidEl) firstInvalidEl = panInput;
+                } else {
+                    clearError('pan_number_new');
+                }
+
+                const mobile = document.getElementById('mobile_no');
+                if (mobile.value.trim() && !/^[0-9]{10}$/.test(mobile.value.trim())) {
+                    showError('mobile_no', "Please enter a valid 10-digit mobile number.");
+                    isValid = false;
+                    if (!firstInvalidEl) firstInvalidEl = mobile;
+                } else {
+                    clearError('mobile_no');
+                }
+
+                const email = document.getElementById('email_id');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (email.value.trim() && !emailRegex.test(email.value.trim())) {
+                    showError('email_id', "Please enter a valid email address.");
+                    isValid = false;
+                    if (!firstInvalidEl) firstInvalidEl = email;
+                } else {
+                    clearError('email_id');
+                }
+            }
+
+            if (isExisting) {
+                const panInput = document.getElementById('pan_number_existing');
+                const panVal = panInput.value.trim().toUpperCase();
+                panInput.value = panVal;
+                if (!panVal) {
+                    showError('pan_number_existing', "PAN Number is mandatory for existing clients.");
+                    isValid = false;
+                    if (!firstInvalidEl) firstInvalidEl = panInput;
+                } else if (!panRegex.test(panVal)) {
+                    showError('pan_number_existing', "Invalid PAN format. Standard format is 5 letters, 4 digits, 1 letter (e.g. ABCDE1234F).");
+                    isValid = false;
+                    if (!firstInvalidEl) firstInvalidEl = panInput;
+                } else {
+                    clearError('pan_number_existing');
+                }
+            }
+
+            const category = document.getElementById('category');
+            if (!category.value) {
+                showError('category', "Please select a Category.");
+                isValid = false;
+                if (!firstInvalidEl) firstInvalidEl = category;
+            } else {
+                clearError('category');
+            }
+
+            if (firstInvalidEl) {
+                firstInvalidEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                firstInvalidEl.focus();
+            }
+
+            return isValid;
+        }
+
+        function validateAndNext1() {
+            if (validateStep1()) {
+                nextStep(2);
+            }
+        }
+
+        // Validation for step 2
+        function validateStep2() {
+            let isValid = true;
+            let firstInvalidEl = null;
+
+            const qSalary = document.getElementById('q_salary').value;
+            if (qSalary === 'Yes') {
+                const emp = document.getElementById('q_salary_employer');
+                if (!emp.value) {
+                    showError('q_salary_employer', "Please specify if you had salary from one employer only.");
+                    isValid = false;
+                    if (!firstInvalidEl) firstInvalidEl = emp;
+                } else {
+                    clearError('q_salary_employer');
+                }
+            }
+
+            const qHouse = document.getElementById('q_house').value;
+            if (qHouse === 'Yes') {
+                const numProp = document.getElementById('num_properties');
+                const val = parseInt(numProp.value) || 0;
+                if (val < 1) {
+                    showError('num_properties', "Please enter the number of properties held (at least 1).");
+                    isValid = false;
+                    if (!firstInvalidEl) firstInvalidEl = numProp;
+                } else {
+                    clearError('num_properties');
+                    for (let i = 1; i <= val; i++) {
+                        ['prop_res', 'prop_loan', 'prop_joint', 'prop_rent', 'prop_tax'].forEach(field => {
+                            const el = document.getElementById(`${field}_${i}`);
+                            if (el && !el.value) {
+                                showError(`${field}_${i}`, "Please select an option.");
+                                isValid = false;
+                                if (!firstInvalidEl) firstInvalidEl = el;
+                            } else if (el) {
+                                clearError(`${field}_${i}`);
+                            }
+                        });
+                    }
+                }
+            }
+
+            const category = document.getElementById('category').value;
+            if (category !== 'B') {
+                const qShares = document.getElementById('q_shares').value;
+                if (qShares === 'Yes') {
+                    const qDemat = document.getElementById('q_demat').value;
+                    if (qDemat === 'Yes') {
+                        const numDemat = document.getElementById('num_demat');
+                        const val = parseInt(numDemat.value) || 0;
+                        if (val < 1) {
+                            showError('num_demat', "Please enter the number of Demat accounts held (at least 1).");
+                            isValid = false;
+                            if (!firstInvalidEl) firstInvalidEl = numDemat;
+                        } else {
+                            clearError('num_demat');
+                        }
+                    }
+                }
+            }
+
+            const qTravel = document.getElementById('q_travel').value;
+            if (qTravel === 'Yes') {
+                const amt = document.getElementById('amt_travel');
+                if (!amt.value || parseFloat(amt.value) <= 0) {
+                    showError('amt_travel', "Please enter a valid amount greater than 0.");
+                    isValid = false;
+                    if (!firstInvalidEl) firstInvalidEl = amt;
+                } else {
+                    clearError('amt_travel');
+                }
+            }
+
+            const qElectric = document.getElementById('q_electric').value;
+            if (qElectric === 'Yes') {
+                const amt = document.getElementById('amt_electric');
+                if (!amt.value || parseFloat(amt.value) <= 0) {
+                    showError('amt_electric', "Please enter a valid amount greater than 0.");
+                    isValid = false;
+                    if (!firstInvalidEl) firstInvalidEl = amt;
+                } else {
+                    clearError('amt_electric');
+                }
+            }
+
+            const qDirector = document.getElementById('q_director').value;
+            if (qDirector === 'Yes') {
+                const din = document.getElementById('director_din');
+                if (!din.value.trim()) {
+                    showError('director_din', "DIN is mandatory if you were a Director.");
+                    isValid = false;
+                    if (!firstInvalidEl) firstInvalidEl = din;
+                } else {
+                    clearError('director_din');
+                }
+            }
+
+            const qOther = document.getElementById('q_other_sources').value;
+            if (qOther === 'Yes') {
+                const qInt = document.getElementById('q_interest').value;
+                if (qInt === 'Yes') {
+                    const interests = ['q_int_sb', 'q_int_po', 'q_int_bond', 'q_int_fd', 'q_int_other'];
+                    let anyYes = false;
+                    interests.forEach(id => {
+                        if (document.getElementById(id).value === 'Yes') anyYes = true;
+                    });
+                    if (!anyYes) {
+                        showError('q_interest', "You indicated you have Interest Income. Please select 'Yes' for at least one interest source below.");
+                        isValid = false;
+                        if (!firstInvalidEl) firstInvalidEl = document.getElementById('q_interest');
+                    } else {
+                        clearError('q_interest');
+                    }
+                }
+            }
+
+            if (category !== 'B') {
+                const qForeign = document.getElementById('q_foreign_inc').value;
+                if (qForeign === 'Yes') {
+                    const country = document.getElementById('foreign_country');
+                    const tin = document.getElementById('foreign_tin');
+                    if (!country.value.trim()) {
+                        showError('foreign_country', "Please enter the Country of Residence / Tax Residence.");
+                        isValid = false;
+                        if (!firstInvalidEl) firstInvalidEl = country;
+                    } else {
+                        clearError('foreign_country');
+                    }
+                    if (!tin.value.trim()) {
+                        showError('foreign_tin', "Please enter your Tax Identification Number (TIN).");
+                        isValid = false;
+                        if (!firstInvalidEl) firstInvalidEl = tin;
+                    } else {
+                        clearError('foreign_tin');
+                    }
+                }
+            }
+
+            if (firstInvalidEl) {
+                firstInvalidEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (firstInvalidEl.focus) firstInvalidEl.focus();
+            }
+
+            return isValid;
+        }
+
+        function validateAndNext2() {
+            if (validateStep2()) {
+                nextStep(3);
+            }
+        }
+
+        // Validation for step 3
+        function validateStep3() {
+            let isValid = true;
+            let firstInvalidEl = null;
+
+            const numBanks = document.getElementById('num_banks');
+            const val = parseInt(numBanks.value) || 0;
+            if (val < 1) {
+                showError('num_banks', "Please enter the number of bank accounts you hold (at least 1).");
+                isValid = false;
+                if (!firstInvalidEl) firstInvalidEl = numBanks;
+            } else {
+                clearError('num_banks');
+                
+                for (let i = 1; i <= val; i++) {
+                    ['bank_type', 'bank_acc', 'bank_ifsc'].forEach(field => {
+                        const el = document.getElementById(`${field}_${i}`);
+                        if (el && !el.value.trim()) {
+                            showError(`${field}_${i}`, "This field is mandatory.");
+                            isValid = false;
+                            if (!firstInvalidEl) firstInvalidEl = el;
+                        } else if (el) {
+                            clearError(`${field}_${i}`);
+                        }
+                    });
+                }
+
+                const bankConfirm = document.getElementById('bankConfirm');
+                if (bankConfirm && !bankConfirm.checked) {
+                    showError('bankConfirm', "Please check the box to confirm that bank details are accurate.");
+                    isValid = false;
+                    if (!firstInvalidEl) firstInvalidEl = bankConfirm;
+                } else if (bankConfirm) {
+                    clearError('bankConfirm');
+                }
+            }
+
+            if (firstInvalidEl) {
+                firstInvalidEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (firstInvalidEl.focus) firstInvalidEl.focus();
+            }
+
+            return isValid;
+        }
+
+        function validateAndGenerateChecklist() {
+            if (validateStep3()) {
+                generateChecklist();
+            }
+        }
+
+        // Toggle display utility
+        function toggleDisplay(id, val) {
+            document.getElementById(id).style.display = (val === 'Yes') ? 'block' : 'none';
+        }
+
+        // Dynamically add bank accounts
+        function generateBankSubsets() {
+            const count = parseInt(document.getElementById('num_banks').value) || 0;
+            const container = document.getElementById('bankSubsetsContainer');
+
+            if (count > 0) {
+                document.getElementById('bankConfirmBox').style.display = 'block';
+            } else {
+                document.getElementById('bankConfirmBox').style.display = 'none';
+            }
+
+            const currentCount = container.children.length;
+            if (currentCount === count) return;
+
+            if (count > currentCount) {
+                for (let i = currentCount + 1; i <= count; i++) {
+                    const div = document.createElement('div');
+                    div.className = 'bg-gray-50 border border-gray-200 rounded-xl p-5 mb-5 mt-4 shadow-sm';
+                    div.id = `bank_subset_${i}`;
+                    div.innerHTML = `
+                        <div class="text-base font-serif font-bold text-accent border-b border-gray-200 pb-2 mb-4">Bank Account ${i}</div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Type of Account</label>
+                                <input type="text" id="bank_type_${i}" class="w-full rounded-lg border-gray-300 shadow-sm focus:border-accent focus:ring-accent text-sm p-2.5 border bg-white" name="bank_type_${i}" placeholder="Savings, Current, NRO, etc.">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Account Number</label>
+                                <input type="text" id="bank_acc_${i}" class="w-full rounded-lg border-gray-300 shadow-sm focus:border-accent focus:ring-accent text-sm p-2.5 border bg-white" name="bank_acc_${i}" placeholder="Enter Account Number">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">IFSC Code</label>
+                                <input type="text" id="bank_ifsc_${i}" class="w-full rounded-lg border-gray-300 shadow-sm focus:border-accent focus:ring-accent text-sm p-2.5 border bg-white" name="bank_ifsc_${i}" placeholder="Enter IFSC">
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(div);
+                }
+            } else {
+                for (let i = currentCount; i > count; i--) {
+                    const el = document.getElementById(`bank_subset_${i}`);
+                    if (el) el.remove();
+                }
+            }
+        }
+
+        // Dynamically add properties
+        function generatePropertySubsets() {
+            const count = parseInt(document.getElementById('num_properties').value) || 0;
+            const container = document.getElementById('propertySubsetsContainer');
+
+            const currentCount = container.children.length;
+            if (currentCount === count) return;
+
+            if (count > currentCount) {
+                for (let i = currentCount + 1; i <= count; i++) {
+                    const div = document.createElement('div');
+                    div.className = 'bg-gray-50 border border-gray-200 rounded-xl p-5 mb-5 mt-4 shadow-sm';
+                    div.id = `prop_subset_${i}`;
+                    div.innerHTML = `
+                        <div class="text-base font-serif font-bold text-accent border-b border-gray-200 pb-2 mb-4">Details for Property ${i}</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Property for own residential purpose?</label>
+                                <select id="prop_res_${i}" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-accent text-sm p-2.5 border" name="prop_res_${i}">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">I have housing loan on property</label>
+                                <span class="block text-[10px] text-gray-500 mb-1">Please obtain final interest certificate, not provisional.</span>
+                                <select id="prop_loan_${i}" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-accent text-sm p-2.5 border prop-loan" name="prop_loan_${i}" data-prop="${i}">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Its Joint Property and both claim interest</label>
+                                <select id="prop_joint_${i}" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-accent text-sm p-2.5 border" name="prop_joint_${i}">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">I earn rent from house property</label>
+                                <span class="block text-[10px] text-gray-500 mb-1">Ensure rent agreements are ready.</span>
+                                <select id="prop_rent_${i}" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-accent text-sm p-2.5 border prop-rent" name="prop_rent_${i}" data-prop="${i}">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Property Tax Paid for the property</label>
+                                <span class="block text-[10px] text-gray-500 mb-1">Tax actually paid in FY 2025-26.</span>
+                                <select id="prop_tax_${i}" class="w-full rounded-lg border border-gray-300 bg-white p-3 shadow-sm focus:border-accent focus:ring-accent text-sm p-2.5 border prop-tax" name="prop_tax_${i}" data-prop="${i}">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(div);
+                }
+            } else {
+                for (let i = currentCount; i > count; i--) {
+                    const el = document.getElementById(`prop_subset_${i}`);
+                    if (el) el.remove();
+                }
+            }
+        }
+
+        // Dynamically add Demat statements info
+        function generateDematSubsets() {
+            const count = parseInt(document.getElementById('num_demat').value) || 0;
+            const container = document.getElementById('dematSubsetsContainer');
+
+            const currentCount = container.children.length;
+            if (currentCount === count) return;
+
+            if (count > currentCount) {
+                for (let i = currentCount + 1; i <= count; i++) {
+                    const div = document.createElement('div');
+                    div.className = 'p-3 mb-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 shadow-sm flex items-center gap-2';
+                    div.id = `demat_subset_${i}`;
+                    div.innerHTML = `<i class="fa-solid fa-chart-line text-accent"></i> <div><strong>Demat Account ${i}</strong> details will be systematically mapped for P&L/Ledger in the checklist.</div>`;
+                    container.appendChild(div);
+                }
+            } else {
+                for (let i = currentCount; i > count; i--) {
+                    const el = document.getElementById(`demat_subset_${i}`);
+                    if (el) el.remove();
+                }
+            }
+        }
+
+        let isSubmitted = false;
+        if (typeof emailjs !== 'undefined') {
+            emailjs.init('Z7iP__VVKGg31MfC5');
+        }
+
+        // Get detailed, human-readable answers from the form inputs
+        function getSubmittedAnswers() {
+            const form = document.getElementById('taxForm');
+            const formData = new FormData(form);
+            const answers = [];
+
+            const keyMappings = {
+                'client_name': 'Full Name',
+                'clientStatus': 'Client Status',
+                'pan_number_new': 'PAN (New Client)',
+                'pan_number_existing': 'PAN (Existing Client)',
+                'mobile_no': 'Mobile Number',
+                'email_id': 'Email Address',
+                'category': 'Category Selection',
+                'q_salary': 'Salary Income',
+                'q_salary_employer': 'Salary from Single Employer',
+                'q_house': 'House Property Income',
+                'num_properties': 'Number of Properties',
+                'q_shares': 'Transactions in Shares/Mutual Funds',
+                'q_demat': 'Holds Demat Account',
+                'num_demat': 'Number of Demat Accounts',
+                'q_fno': 'F&O Transactions',
+                'q_vda': 'Crypto/VDA Transactions',
+                'q_speculation': 'Speculative/Day Trading Transactions',
+                'q_travel': 'Travel Expenditure > 2 Lakhs',
+                'amt_travel': 'Travel Expenditure Amount',
+                'q_electric': 'Electricity Bill > 1 Lakh',
+                'amt_electric': 'Electricity Bill Amount',
+                'q_director': 'Director in a Company',
+                'director_din': 'Director DIN',
+                'q_unlisted': 'Held Unlisted Shares',
+                'q_realestate': 'Real Estate Transactions',
+                'q_other_sources': 'Income from Other Sources',
+                'q_div_comp': 'Dividend from Indian Companies',
+                'q_div_coop': 'Dividend from Co-operative Societies',
+                'q_interest': 'Interest Income',
+                'q_int_sb': 'Savings Bank Interest',
+                'q_int_po': 'Post Office Interest',
+                'q_int_bond': 'Bond Interest',
+                'q_int_fd': 'FD Interest',
+                'q_int_other': 'Other Interest',
+                'q_pension': 'Family Pension',
+                'q_foreign_inc': 'Foreign Income',
+                'foreign_country': 'Foreign Residence Country',
+                'foreign_tin': 'Foreign TIN',
+                'q_foreign_assets': 'Foreign Assets',
+                'q_1crore': 'Income > 1 Crore',
+                'num_banks': 'Number of Bank Accounts',
+                'bankConfirm': 'Bank Details Confirmed',
+                'q_deductions': 'Claims Deductions',
+                'q_agri': 'Agricultural Income',
+                'q_exempt': 'Exempt Income (e.g. PPF)'
+            };
+
+            // Temporarily force all steps to render visibly so offsetWidth/offsetHeight work
+            const allSteps = document.querySelectorAll('.step-container');
+            const originalDisplays = Array.from(allSteps).map(step => step.style.display);
+            allSteps.forEach(step => step.style.display = 'block');
+
+            for (let [key, value] of formData.entries()) {
+                if (!value) continue;
+
+                let el = form.elements[key];
+                if (!el) continue;
+
+                if (el.length !== undefined && !el.tagName) {
+                    el = Array.from(el).find(item => item.checked) || el[0];
+                }
+                if (!el) continue;
+
+                let isVisible = false;
+                try {
+                    isVisible = !!(el.offsetWidth || el.offsetHeight || (el.getClientRects && el.getClientRects().length));
+                } catch (e) {
+                    isVisible = true;
+                }
+                if (!isVisible) continue;
+
+                let questionText = key;
+
+                // Attempt to map using pre-configured mappings
+                let mapped = keyMappings[key];
+                if (!mapped) {
+                    if (key.startsWith('bank_type_')) mapped = `Bank Account ${key.split('_')[2]} - Type`;
+                    else if (key.startsWith('bank_acc_')) mapped = `Bank Account ${key.split('_')[2]} - Account Number`;
+                    else if (key.startsWith('bank_ifsc_')) mapped = `Bank Account ${key.split('_')[2]} - IFSC`;
+                    else if (key.startsWith('prop_res_')) mapped = `Property ${key.split('_')[2]} - Own Residential`;
+                    else if (key.startsWith('prop_loan_')) mapped = `Property ${key.split('_')[2]} - Housing Loan`;
+                    else if (key.startsWith('prop_joint_')) mapped = `Property ${key.split('_')[2]} - Joint Property`;
+                    else if (key.startsWith('prop_rent_')) mapped = `Property ${key.split('_')[2]} - Earns Rent`;
+                    else if (key.startsWith('prop_tax_')) mapped = `Property ${key.split('_')[2]} - Property Tax Paid`;
+                }
+
+                if (mapped) {
+                    questionText = mapped;
+                } else {
+                    if (el.id) {
+                        try {
+                            let explicitLabel = document.querySelector(`label[for="${el.id}"]`);
+                            if (explicitLabel) questionText = explicitLabel.innerText;
+                        } catch (e) { }
+                    }
+                    if (questionText === key && el.previousElementSibling && el.previousElementSibling.tagName === 'LABEL') {
+                        questionText = el.previousElementSibling.innerText;
+                    }
+                    questionText = questionText.replace(/\s+/g, ' ').trim();
+                    questionText = questionText.replace(/[:\s?]+$/, '');
+                }
+
+                let displayValue = value;
+                if (key === 'clientStatus') {
+                    displayValue = value === 'Yes' ? "New Client" : "Existing Client";
+                } else if (el.tagName === 'SELECT') {
+                    let option = el.options[el.selectedIndex];
+                    if (option) displayValue = option.text;
+                }
+
+                answers.push({ question: questionText, answer: displayValue });
+            }
+
+            // Restore original step visibility
+            allSteps.forEach((step, idx) => step.style.display = originalDisplays[idx]);
+
+            return answers;
+        }
+
+        // Checklist Generator based on Form inputs
+        function generateChecklist() {
+            let checklistHTML = '';
+            let docIndex = 1;
+
+            const addDoc = (title, remark) => {
+                checklistHTML += `
+                <div class="flex items-start gap-4 p-4 border-b border-gray-100 hover:bg-gray-50/50 transition">
+                    <input type="checkbox" id="doc_${docIndex}" class="mt-1 h-5 w-5 rounded border-gray-300 text-accent focus:ring-accent cursor-pointer"> 
+                    <label for="doc_${docIndex}" class="cursor-pointer select-none text-gray-800 font-medium text-base w-full">
+                        <strong class="text-gray-900 block">${title}</strong>
+                        <span class="block text-xs text-gray-500 mt-1 font-normal">${remark}</span>
+                    </label>
+                </div>`;
+                docIndex++;
+            };
+
+            const isNewClient = document.getElementById('newClient').checked;
+            const isExistingClient = document.getElementById('existingClient').checked;
+            if (isNewClient) {
+                addDoc("Client Onboarding Details", "Please provide PAN, Mobile Number, and Email ID details provided in step 1.");
+            } else if (isExistingClient) {
+                addDoc("Client PAN Details", "Please ensure the PAN provided in step 1 is correct for data mapping.");
+            }
+
+            const numBanks = parseInt(document.getElementById('num_banks').value) || 0;
+            if (numBanks > 0) {
+                addDoc("Bank Account Details", "Provide details/passbook/statement references for all declared bank accounts.");
+            }
+
+            if (document.getElementById('q_deductions').value === 'Yes') addDoc("Deduction Documents", "Provide mediclaim receipts, NPS, life insurance, school fees, donations, etc.");
+            if (document.getElementById('q_agri').value === 'Yes') addDoc("Agricultural Income", "Provide documents detailing agricultural income and related expenses.");
+            if (document.getElementById('q_exempt').value === 'Yes') addDoc("Exempt Income Details", "Provide documents detailing exempt income like PPF, Sukanya Samriddhi, etc.");
+
+            if (document.getElementById('q_salary').value === 'Yes') {
+                const employer = document.getElementById('q_salary_employer').value;
+                if (employer === 'Yes') addDoc("Form 16 and Form 12BA (Single Employer)", "Obtain Part A and Part B of Form 16 & Form 12BA from your employer.");
+                else if (employer === 'No') addDoc("Form 16 and Form 12BA (Multiple Employers)", "Please email us all Form 16s and Form 12BAs corresponding to all employers during the year.");
+            }
+
+            if (document.getElementById('q_house').value === 'Yes') {
+                document.querySelectorAll('.prop-loan').forEach(el => {
+                    if (el.value === 'Yes') addDoc(`Final Interest Certificate (Property ${el.dataset.prop})`, "Must be final certificate generated by the bank, not provisional.");
+                });
+                document.querySelectorAll('.prop-rent').forEach(el => {
+                    if (el.value === 'Yes') addDoc(`Rental Income Documents (Property ${el.dataset.prop})`, "Provide rent agreement copies, tenant details, and bank statements showing credit.");
+                });
+                document.querySelectorAll('.prop-tax').forEach(el => {
+                    if (el.value === 'Yes') addDoc(`Property Tax Receipts (Property ${el.dataset.prop})`, "Receipts for tax actually paid during FY 2025-26 only.");
+                });
+            }
+
+            if (document.getElementById('category').value !== 'B') {
+                if (document.getElementById('q_shares').value === 'Yes') {
+                    if (document.getElementById('q_demat').value === 'Yes') {
+                        const count = parseInt(document.getElementById('num_demat').value) || 1;
+                        for (let i = 1; i <= count; i++) addDoc(`Capital Gains Statement / P&L (Demat ${i})`, "Attach statements covering all transactions for the financial year.");
+                    }
+                    if (document.getElementById('q_fno').value === 'Yes') addDoc("F&O Profit/Loss and Ledger", "Obtain official P&L and Ledger directly from your broker.");
+                    if (document.getElementById('q_vda').value === 'Yes') addDoc("VDA / Crypto Statements", "Acquisition, closing, and consideration details for Virtual Digital Assets.");
+                    if (document.getElementById('q_speculation').value === 'Yes') addDoc("Speculation P&L", "Capital gains/Tax P&L required specifically for day trading activities.");
+                }
+                if (document.getElementById('q_unlisted').value === 'Yes') addDoc("Unlisted Shares Info", "Name of entity, shares transacted, cost of acquisition, and sale consideration info.");
+                if (document.getElementById('q_foreign_inc').value === 'Yes') addDoc("Foreign Income Details", "Provide details of income taxed abroad and tax residency certificates.");
+                if (document.getElementById('q_foreign_assets').value === 'Yes') addDoc("Foreign Assets Details", "Bank accounts, shares, real estate, bonds, etc. held outside India.");
+                if (document.getElementById('q_1crore').value === 'Yes') addDoc("Assets and Liabilities Disclosure (Income > 1Cr)", "Bank accounts, jewellery, insurance, loans, real estate, art, etc. as mandated by Schedule AL.");
+            }
+
+            if (document.getElementById('q_director').value === 'Yes') addDoc("Directorship Details", "Ensure DIN and company details are accurate for reporting.");
+            if (document.getElementById('q_realestate').value === 'Yes') addDoc("Index II & Agreements", "Provide Index II copy, purchase agreements, and sale agreements for real estate transactions.");
+
+            if (document.getElementById('q_other_sources').value === 'Yes') {
+                if (document.getElementById('q_div_comp').value === 'Yes' || document.getElementById('q_div_coop').value === 'Yes') addDoc("Dividend Details", "Amount, company/society name, and credit dates.");
+                if (document.getElementById('q_interest').value === 'Yes') {
+                    if (document.getElementById('q_int_sb').value === 'Yes') addDoc("Savings Bank Interest", "Account wise details or passbook scans.");
+                    if (document.getElementById('q_int_po').value === 'Yes') addDoc("Post Office Interest", "Account wise details or passbook scans.");
+                    if (document.getElementById('q_int_bond').value === 'Yes' || document.getElementById('q_int_fd').value === 'Yes' || document.getElementById('q_int_other').value === 'Yes') addDoc("FD / Bonds / Other Interest", "Account wise interest certificates.");
+                }
+                if (document.getElementById('q_pension').value === 'Yes') addDoc("Family Pension Details", "Pension account details and amount received during the year.");
+            } else if (document.getElementById('q_other_sources').value === 'AIS') {
+                addDoc("AIS/TIS Data Authorization", "You selected to utilize AIS/TIS for other sources; ensure we have access to your compliance portal.");
+            }
+
+            if (checklistHTML === '') {
+                checklistHTML = '<div class="p-6 text-center text-gray-500 font-medium bg-gray-50 rounded-xl">No specific documents required based on your answers. Please ensure your Basic Information and PAN are accurate.</div>';
+            }
+
+            document.getElementById('checklistContainer').innerHTML = checklistHTML;
+
+            // Generate answers summary for printing and previewing
+            const answers = getSubmittedAnswers();
+            let summaryHTML = `
+            <div class="mt-8 pt-6 border-t border-gray-200">
+                <h4 class="text-base font-serif font-bold text-[#0b3464] mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-file-invoice text-[#d1a15e]"></i> Submitted Information Summary
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 bg-gray-50/50 rounded-xl p-5 border border-gray-200 text-sm">
+            `;
+            answers.forEach(item => {
+                summaryHTML += `
+                    <div class="flex flex-col sm:flex-row sm:justify-between border-b border-gray-200/50 pb-2">
+                        <span class="text-gray-500 font-medium sm:max-w-[60%] text-left">${item.question}</span>
+                        <span class="text-gray-900 font-semibold mt-1 sm:mt-0 text-left sm:text-right">${item.answer}</span>
+                    </div>
+                `;
+            });
+            summaryHTML += `
+                </div>
+            </div>
+            `;
+            document.getElementById('answersSummaryContainer').innerHTML = summaryHTML;
+
+            // Reset submission state when generating new checklist
+            isSubmitted = false;
+            document.getElementById('submissionSuccess').style.display = 'none';
+            updateExportButtons();
+
+            showStep(4);
+        }
+
+        // Update button labels dynamically based on submission state
+        function updateExportButtons() {
+            const submitBtn = document.getElementById('btnSubmitForm');
+            const pdfBtn = document.getElementById('btnExportPDF');
+            const excelBtn = document.getElementById('btnExportExcel');
+            if (isSubmitted) {
+                if (submitBtn) submitBtn.style.display = 'none';
+                if (pdfBtn) pdfBtn.innerHTML = '<i class="fa-solid fa-file-pdf"></i> Download PDF Again';
+                if (excelBtn) excelBtn.innerHTML = '<i class="fa-solid fa-file-excel"></i> Download Excel Again';
+            } else {
+                if (submitBtn) submitBtn.style.display = 'flex';
+                if (pdfBtn) pdfBtn.innerHTML = '<i class="fa-solid fa-file-pdf"></i> Export to PDF';
+                if (excelBtn) excelBtn.innerHTML = '<i class="fa-solid fa-file-excel"></i> Export to Excel';
+            }
+        }
+
+        // Export and submit function
+        function exportAndSubmit(type) {
+            // --- 1. Export Logic (PDF or Excel) ---
+            if (type === 'pdf') {
+                window.print();
+            } else if (type === 'excel') {
+                let csvContent = "New Client Submission Intake Data AY 2026-27\n";
+                csvContent += "Question,Answer\n";
+                
+                const answers = getSubmittedAnswers();
+                answers.forEach(item => {
+                    const q = item.question.replace(/"/g, '""');
+                    const a = item.answer.replace(/"/g, '""');
+                    csvContent += `"${q}","${a}"\n`;
+                });
+
+                csvContent += "\nDocument Checklist Items\n";
+                csvContent += "Document Name,Remark,Status\n";
+                const items = document.querySelectorAll('#checklistContainer label');
+
+                if (items.length === 0) {
+                    csvContent += "No specific documents required.,,\n";
+                } else {
+                    items.forEach(label => {
+                        const strongEl = label.querySelector('strong');
+                        const remarkEl = label.querySelector('span');
+                        if (strongEl) {
+                            const title = strongEl.innerText.replace(/"/g, '""');
+                            const remark = remarkEl ? remarkEl.innerText.replace(/"/g, '""') : '';
+                            csvContent += `"${title}","${remark}",Pending\n`;
+                        }
+                    });
+                }
+
+                const encodedUri = "data:text/csv;charset=utf-8," + encodeURIComponent(csvContent);
+                const link = document.createElement("a");
+                link.setAttribute("href", encodedUri);
+                link.setAttribute("download", "Godbole_Office_Income_Tax_Checklist.csv");
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+
+            if (isSubmitted) {
+                // Already submitted, do not call server again
+                return;
+            }
+
+            // --- 2. Build Intelligent Payload for Server ---
+            const form = document.getElementById('taxForm');
+            const formData = new FormData(form);
+
+            let qaText = "New Client Submission for AY 2026-27\n======================================\n\n";
+            let csvServerData = "Question,Answer\n";
+            const escapeCSV = (str) => `"${String(str).replace(/"/g, '""')}"`;
+
+            const allSteps = document.querySelectorAll('.step-container');
+            allSteps.forEach(step => step.style.display = 'block');
+
+            for (let [key, value] of formData.entries()) {
+                if (!value) continue;
+
+                let el = form.elements[key];
+                if (!el) continue;
+
+                if (el.length !== undefined && !el.tagName) {
+                    el = Array.from(el).find(item => item.checked) || el[0];
+                }
+                if (!el) continue;
+
+                let isVisible = false;
+                try {
+                    isVisible = !!(el.offsetWidth || el.offsetHeight || (el.getClientRects && el.getClientRects().length));
+                } catch (e) {
+                    isVisible = true;
+                }
+                if (!isVisible) continue;
+
+                let questionText = key;
+
+                if (el.id) {
+                    try {
+                        let explicitLabel = document.querySelector(`label[for="${el.id}"]`);
+                        if (explicitLabel) questionText = explicitLabel.innerText;
+                    } catch (e) { }
+                }
+
+                if (questionText === key && el.previousElementSibling && el.previousElementSibling.tagName === 'LABEL') {
+                    questionText = el.previousElementSibling.innerText;
+                }
+
+                let subsetBox = el.closest('.subset-box') || el.closest('[id$="_subset"]') || el.closest('[id*="Subset"]');
+                if (subsetBox) {
+                    let header = subsetBox.querySelector('.subset-header') || subsetBox.firstElementChild;
+                    if (header && (header.className.includes('header') || header.className.includes('font-serif'))) {
+                        questionText = header.innerText + " - " + questionText;
+                    }
+                }
+
+                let displayValue = value;
+                if (el.tagName === 'SELECT') {
+                    let option = el.options[el.selectedIndex];
+                    if (option) displayValue = option.text;
+                }
+
+                qaText += `${questionText}:\n> ${displayValue}\n\n`;
+                csvServerData += `${escapeCSV(questionText)},${escapeCSV(displayValue)}\n`;
+            }
+
+            allSteps.forEach(step => step.style.display = '');
+
+            formData.append('email_body_text', qaText);
+
+            const blob = new Blob([csvServerData], { type: 'text/csv' });
+            formData.append('client_excel_data', blob, 'Client_Tax_Data.csv');
+
+            // --- 3. Build & Send Email via EmailJS ---
+            const clientName = document.getElementById('client_name') ? document.getElementById('client_name').value : 'Client';
+            const clientEmail = document.getElementById('email_id') ? document.getElementById('email_id').value : '';
+            const isNewClient = document.getElementById('newClient') && document.getElementById('newClient').checked;
+            const clientStatusText = isNewClient ? 'New Client' : 'Existing Client';
+            const panVal = isNewClient ? (document.getElementById('pan_number_new') ? document.getElementById('pan_number_new').value : '') : (document.getElementById('pan_number_existing') ? document.getElementById('pan_number_existing').value : '');
+            const mobileVal = document.getElementById('mobile_no') ? document.getElementById('mobile_no').value : '';
+
+            let emailBody = `📥 INCOME TAX INTAKE FORM SUBMISSION (AY 2026-27)\n`;
+            emailBody += `==================================================\n\n`;
+            emailBody += `👤 CLIENT INFORMATION\n`;
+            emailBody += `----------------------\n`;
+            emailBody += `• Client Name  : ${clientName}\n`;
+            emailBody += `• Status       : ${clientStatusText}\n`;
+            emailBody += `• PAN Number   : ${panVal}\n`;
+            emailBody += `• Mobile No    : ${mobileVal}\n`;
+            emailBody += `• Email ID     : ${clientEmail}\n\n`;
+
+            emailBody += `📝 ANSWERS SUMMARY\n`;
+            emailBody += `-------------------\n`;
+            const answers = getSubmittedAnswers();
+            answers.forEach(item => {
+                emailBody += `• ${item.question}: ${item.answer}\n`;
+            });
+            emailBody += `\n`;
+
+            emailBody += `📋 GENERATED DOCUMENT CHECKLIST\n`;
+            emailBody += `-------------------------------\n`;
+            const checklistItems = document.querySelectorAll('#checklistContainer label');
+            if (checklistItems.length === 0) {
+                emailBody += `No specific documents required.\n`;
+            } else {
+                let idx = 1;
+                checklistItems.forEach(label => {
+                    const strongEl = label.querySelector('strong');
+                    const remarkEl = label.querySelector('span');
+                    if (strongEl) {
+                        const title = strongEl.innerText;
+                        const remark = remarkEl ? remarkEl.innerText : '';
+                        emailBody += `[ ] ${idx}. ${title}\n`;
+                        if (remark) emailBody += `    Remark: ${remark}\n`;
+                        emailBody += `\n`;
+                        idx++;
+                    }
+                });
+            }
+
+            const templateParams = {
+                name: clientName,
+                email: clientEmail,
+                subject: `Income Tax Intake Form Submission - AY 2026-27 (${clientName})`,
+                message: emailBody,
+                time: new Date().toLocaleString('en-IN', {
+                    dateStyle: 'medium',
+                    timeStyle: 'short',
+                    timeZone: 'Asia/Kolkata'
+                })
+            };
+
+            // Silently submit to form action for backend compatibility
+            if (form.action && !form.action.includes(window.location.hostname)) {
+                fetch(form.action, {
+                    method: form.method,
+                    body: formData
+                }).catch(e => console.warn('Form action submission fallback error:', e));
+            }
+
+            if (typeof emailjs !== 'undefined') {
+                emailjs.send(
+                    'service_qumsgsg',
+                    'template_a08mt0r',
+                    templateParams,
+                    'Z7iP__VVKGg31MfC5'
+                ).then(response => {
+                    console.log('EmailJS Success:', response);
+                    isSubmitted = true;
+                    document.getElementById('submissionSuccess').style.display = 'block';
+                    updateExportButtons();
+                }).catch(error => {
+                    console.error('EmailJS Error:', error);
+                    isSubmitted = true;
+                    document.getElementById('submissionSuccess').style.display = 'block';
+                    updateExportButtons();
+                    showStaticNote();
+                });
+            } else {
+                console.warn('EmailJS SDK not loaded.');
+                isSubmitted = true;
+                document.getElementById('submissionSuccess').style.display = 'block';
+                updateExportButtons();
+                showStaticNote();
+            }
+
+            function showStaticNote() {
+                const noteId = 'static-mode-note';
+                if (!document.getElementById(noteId)) {
+                    const noteEl = document.createElement('div');
+                    noteEl.id = noteId;
+                    noteEl.className = 'mt-6 p-4 bg-blue-50 border border-blue-200 rounded-xl text-left text-sm text-blue-800 leading-relaxed shadow-sm max-w-lg mx-auto';
+                    noteEl.innerHTML = `
+                        <div class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-info text-blue-600 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <strong class="font-semibold block mb-1">Local/Static Mode Submission Note:</strong>
+                                Since this website is running in a static or local environment, the checklist data could not be sent to the server. 
+                                <span class="block mt-2">Please email the downloaded checklist file (or PDF) directly to <strong>contact@carahulgodbole.com</strong> to proceed with your assessment.</span>
+                            </div>
+                        </div>
+                    `;
+                    document.getElementById('submissionSuccess').appendChild(noteEl);
+                }
+            }
+        }
+
+        // Clear and Reset Form
+        function clearData() {
+            document.getElementById('taxForm').reset();
+            isSubmitted = false;
+
+            document.getElementById('bankSubsetsContainer').innerHTML = '';
+            document.getElementById('propertySubsetsContainer').innerHTML = '';
+            document.getElementById('dematSubsetsContainer').innerHTML = '';
+            document.getElementById('checklistContainer').innerHTML = '';
+            document.getElementById('answersSummaryContainer').innerHTML = '';
+
+            document.getElementById('newClientFields').style.display = 'none';
+            document.getElementById('existingClientFields').style.display = 'none';
+            document.getElementById('salary_subset').style.display = 'none';
+            document.getElementById('house_subset').style.display = 'none';
+            document.getElementById('shares_subset').style.display = 'none';
+            document.getElementById('demat_subset').style.display = 'none';
+            document.getElementById('travel_subset').style.display = 'none';
+            document.getElementById('electric_subset').style.display = 'none';
+            document.getElementById('director_subset').style.display = 'none';
+            document.getElementById('other_sources_subset').style.display = 'none';
+            document.getElementById('interest_subset').style.display = 'none';
+            document.getElementById('foreign_inc_subset').style.display = 'none';
+            document.getElementById('bankConfirmBox').style.display = 'none';
+
+            // Clear errors
+            document.querySelectorAll('.error-msg, .radio-error-msg').forEach(el => el.remove());
+            document.querySelectorAll('#taxForm input, #taxForm select').forEach(el => {
+                el.classList.remove('border-red-500', 'focus:ring-red-200');
+                el.classList.add('border-gray-300', 'focus:ring-accent/20');
+            });
+
+            document.getElementById('actionButtons').style.display = 'flex';
+            document.getElementById('submissionSuccess').style.display = 'none';
+            updateExportButtons();
+
+            const noteEl = document.getElementById('static-mode-note');
+            if (noteEl) noteEl.remove();
+
+            showStep(1);
+        }
+
+        // Setup real-time validation listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('taxForm');
+            form.addEventListener('input', (e) => {
+                const target = e.target;
+                if (target.id) {
+                    clearError(target.id);
+                }
+                if (target.name && target.type === 'radio') {
+                    clearRadioError(target.name);
+                }
+            });
+            form.addEventListener('change', (e) => {
+                const target = e.target;
+                if (target.id) {
+                    clearError(target.id);
+                }
+                if (target.name && target.type === 'radio') {
+                    clearRadioError(target.name);
+                }
+            });
+        });
+
+        // Mobile menu toggle scripting
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu-panel');
+            
+            btn.addEventListener('click', () => {
+                if (menu.classList.contains('hidden')) {
+                    menu.classList.remove('hidden');
+                } else {
+                    menu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
